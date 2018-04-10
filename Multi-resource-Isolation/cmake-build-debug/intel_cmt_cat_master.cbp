@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="intel_cmt_cat_master"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="intel_cmt_cat_master">
+				<Option output="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/intel_cmt_cat_master" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 intel_cmt_cat_master"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="intel_cmt_cat_master/fast">
+				<Option output="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/intel_cmt_cat_master" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 intel_cmt_cat_master/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/quximing/graduate\ project/intel-cmt-cat-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/allocation_app.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/association_app.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/reset_app.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CMT_MBM/monitor_app.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/dlock.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/dlock.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/pseudo_lock.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/tsc.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/tsc.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/Makefile">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/README">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/allocation.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/allocation.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/api.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/api.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/api_doxygen.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/cap.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/cap.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/cpuinfo.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/cpuinfo.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/lib_doxygen.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/log.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/log.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/machine.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/machine.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/monitoring.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/monitoring.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_allocation.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_allocation.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_monitoring.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_monitoring.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/perf.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/perf.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/perl/pqos.i">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/pqos.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/resctrl_alloc.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/resctrl_alloc.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/types.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/utils.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/lib/utils.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/Makefile">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/README">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/alloc.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/alloc.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/cap.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/cap.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/README">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_config_cdp.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_reset_cat.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_select_clos.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_set_clos_11LLC_ways.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_set_clos_11LLC_ways_cdp.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_set_clos_12LLC_ways.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_set_clos_12LLC_ways_cdp.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_set_clos_20LLC_ways.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_set_clos_20LLC_ways_cdp.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_set_core_assoc.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/alloc_show_verbose.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/mon_llc_core_text.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/mon_llc_core_xml_file.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/mon_llc_pid_text.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/mon_llc_pid_xml_file.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/mon_mbl_core_text.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/configs/mon_mbr_core_interval.cfg">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/main.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/main.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/monitor.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/monitor.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/pqos-msr">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/pqos-os">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/pqos.8">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/profiles.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/pqos/profiles.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/Makefile">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/README">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/common.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/common.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/cpu.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/cpu.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdt.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdt.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdtset.8">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdtset.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/intel-cmt-cat-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
