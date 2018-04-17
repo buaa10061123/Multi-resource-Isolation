@@ -606,14 +606,15 @@ static struct option long_cmd_opts[] = {
 int main(int argc, char **argv)
 {
         char *llc_flag = "llc:";
-        char *core_group1 = "[0-5]";
+        char *all_flag = "all:";
+        char *core_group1 = "[0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30]";
         char *core_group2 = ",[6-10]";
-        char *llc_core_groups = (char *)malloc(strlen(llc_flag) + strlen(core_group1)+ strlen(core_group2) +1);
+        char *llc_core_groups = (char *)malloc(strlen(all_flag) + strlen(core_group1)+ strlen(core_group2) +1);
         if(llc_core_groups == NULL) exit(1);
 
-        strcpy(llc_core_groups,llc_flag);
+        strcpy(llc_core_groups,all_flag);
         strcat(llc_core_groups,core_group1);
-        strcat(llc_core_groups,core_group2);
+        //strcat(llc_core_groups,core_group2);
 
         struct pqos_config cfg;
         const struct pqos_cpuinfo *p_cpu = NULL;
@@ -629,7 +630,7 @@ int main(int argc, char **argv)
 
         memset(&cfg, 0, sizeof(cfg));
 
-
+        //直接给待监控项赋值，相当于 pqos -m ""
         selfn_monitor_cores(llc_core_groups);
 
 
@@ -923,9 +924,9 @@ int main(int argc, char **argv)
                 exit_val = EXIT_FAILURE;
                 goto error_exit_2;
         }//这里将显示样式设置为text ,sel_output_type = strdup("text");
-       printf("WAYS:%u,cache size:%u KB\n",p_cpu->l3.num_ways,p_cpu->l3.total_size/1024);
-        monitor_loop();
-        //monitor_loop_quxm();
+       //printf("WAYS:%u,cache size:%u KB\n",p_cpu->l3.num_ways,p_cpu->l3.total_size/1024);
+        //monitor_loop();
+        monitor_loop_quxm();
         monitor_stop();
 
  allocation_exit:

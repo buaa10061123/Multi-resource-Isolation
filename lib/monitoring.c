@@ -42,6 +42,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <dirent.h>
+#include <stdbool.h>
 
 #include "pqos.h"
 #include "cap.h"
@@ -595,9 +596,10 @@ pqos_core_poll(struct pqos_mon_data *p)
         int retval = PQOS_RETVAL_OK;
         unsigned i;
 
+        //此监测项包含LLC缓存占用
         if (p->event & PQOS_MON_EVENT_L3_OCCUP) {
                 uint64_t total = 0;
-
+                //这里的num_poll_ctx就是core数目
                 for (i = 0; i < p->num_poll_ctx; i++) {
                         uint64_t tmp = 0;
                         int ret;
@@ -733,6 +735,8 @@ pqos_core_poll(struct pqos_mon_data *p)
                 pv->mbm_total_delta = 0;
                 p->valid_mbm_read = 1;
         }
+
+
  pqos_core_poll__exit:
         return retval;
 }

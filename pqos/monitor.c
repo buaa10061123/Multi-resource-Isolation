@@ -101,6 +101,7 @@ static struct core_group {
         unsigned *cores;
         struct pqos_mon_data *pgrp;
         enum pqos_mon_event events;
+        char *cgroup_cpu_dir;
 } sel_monitor_core_tab[PQOS_MAX_CORES];
 
 /**
@@ -479,6 +480,9 @@ parse_monitor_event(char *str)
                         ++sel_monitor_num;
                 }
         }
+
+        //quxm给第一个监控项的cgroup路径赋值
+        sel_monitor_core_tab[0].cgroup_cpu_dir = "/sys/fs/cpu,cpuacct/mysql_test";
         return;
 }
 
@@ -2244,15 +2248,92 @@ void monitor_loop_quxm(void)
                         fprintf(fp_monitor, "TIME %s\n%s", cb_time, header);*/
 
                 for (i = 0; i < display_num; i++) {
-                        const struct pqos_event_values *pv =
-                                &mon_data[i]->values;
-                        double llc = bytes_to_kb(pv->llc);
+//                        const struct pqos_event_values *pv =
+//                                &mon_data[i]->values;
+                    struct pqos_event_values *pv =
+                            &mon_data[i]->values;
+                        double ipc = pv->ipc;
+                    double llc = bytes_to_kb(pv->llc);
                         double mbr = bytes_to_mb(pv->mbm_remote_delta) * coeff;
                         double mbl = bytes_to_mb(pv->mbm_local_delta) * coeff;
-                        if(i == 0) printf("在线cpu组各资源占用情况\n");
-                        else printf("离线cpu组各资源占用情况\n");
-                        printf("%s %s %s\n","LLC(KB)","mbl(MB)","mbr(MB)");
-                        printf("%f %f %f\n",llc,mbl,mbr);
+
+                    if(1)
+                    {
+                        //quxm add --cpu usage
+                        FILE *fp1,*fp2;
+                        char buf1[128],buf2[32];
+                        char cpu_name[5],user_name[6],sys_name[8];
+                        long int user,nice,sys,idle,iowait,irq,softirq,stealstolen,guest,unknown1;
+                        long int cgroup_user,cgroup_sys;
+                        long int all,use;
+                        fp1 = fopen("/proc/stat","r");
+                        if(fp1 == NULL)
+                        {
+                            perror("fopen:/proc/stat");
+                        }
+
+                        fgets(buf1, sizeof(buf1),fp1);
+                        fclose(fp1);
+                        //printf("buf1=%s",buf1);
+                        sscanf(buf1,"%s%ld%ld%ld%ld%ld%ld%ld%ld%ld%ld",&cpu_name,&user,&nice,&sys,&idle,&iowait,
+                               &irq,&softirq,&stealstolen,&guest,&unknown1);
+
+                        all = user+nice+sys+idle+iowait+irq+softirq+stealstolen+guest+unknown1;
+
+                        pv->cpu_all_delta = all - pv->cpu_all;
+                        pv->cpu_all = all;
+
+                        fp2 = fopen("/sys/fs/cgroup/cpu,cpuacct/mysql_test/cpuacct.stat","r");
+
+                        if(fp2 == NULL)
+                        {
+                            perror("/sys/fs/cgroup/cpu,cpuacct/mysql_test/cpuacct.stat");
+                        }
+                        fgets(buf2, sizeof(buf2),fp2);
+                        sscanf(buf2,"%s%ld",&user_name,&cgroup_user);
+                        memset(buf2,0,sizeof(buf2));
+                        fgets(buf2, sizeof(buf2),fp2);
+
+                        fclose(fp2);
+
+                        sscanf(buf2,"%s%ld",&sys_name,&cgroup_sys);
+                        use = cgroup_user+cgroup_sys;
+                        pv->cpu_use_delta = use - pv->cpu_use;
+                        pv->cpu_use = use;
+
+                        //quxm 这里的*32是因为有32逻辑核，同样hardcode，该结果与top命令一致
+                        if(pv->cpu_all_delta > 0)
+                            pv->cpu_usage = (double)pv->cpu_use_delta/pv->cpu_all_delta*32;
+
+                        //quxm add --memory usage
+
+                        FILE *fp3;
+                        char buf3[32],proc_dir[64],process_id[32],mem_name[10];
+                        long int vmrss;
+                        //目前的实现只读取了一个进程，之后要扩展到读取多进程号
+                        fp3 = fopen("/sys/fs/cgroup/cpu,cpuacct/mysql_test/cgroup.procs","r");
+                        fgets(buf3, sizeof(buf3),fp3);
+                        sscanf(buf3,"%s",&process_id);
+                        fclose(fp3);
+                        proc_dir[0] = '\0';
+                        strcat(proc_dir,"/proc/");
+                        strcat(proc_dir,process_id);
+                        strcat(proc_dir,"/status");
+                        //printf("%s\n",proc_dir);
+                        fp3 = fopen(proc_dir,"r");
+                        //quxm  这里22是VmRSS所在行数，先暂时这么写，hardcode
+                        for(int i=0;i<21;i++)
+                            fgets(buf3,sizeof(buf3),fp3);
+                        fgets(buf3,sizeof(buf3),fp3);
+                        fclose(fp3);
+                        sscanf(buf3,"%s %ld",&mem_name,&vmrss);
+                        pv->mem_vmrss = vmrss;
+                    }
+
+                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPC","CACHE_MISS(K)",
+                               "LLC(KB)","MBL(MB)","MBR(MB)","CPU_Usage","VmRss(KB)");
+                        printf("%lf\t%u\t%.1lf\t%.2lf\t%.2lf\t%.4lf\t%ld\n",ipc,(unsigned)pv->llc_misses_delta/1000,
+                               llc,mbl,mbr,pv->cpu_usage,pv->mem_vmrss);
 
 /*                        if (istext)
                                 print_text_row(fp_monitor, mon_data[i],

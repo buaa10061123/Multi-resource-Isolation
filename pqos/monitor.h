@@ -133,6 +133,7 @@ void monitor_cleanup(void);
  * @brief Monitors resources and writes data into selected stream.
  */
 void monitor_loop(void);
+void monitor_loop_quxm(void);
 
 #ifdef __cplusplus
 }

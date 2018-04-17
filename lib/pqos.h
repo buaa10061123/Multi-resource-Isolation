@@ -359,6 +359,14 @@ struct pqos_event_values {
         double ipc;                     /**< retired instructions / cycles */
         uint64_t llc_misses;            /**< LLC misses - reading */
         uint64_t llc_misses_delta;      /**< LLC misses - delta */
+
+    //quxm 增加cpu使用率和内存情况
+    long int cpu_all;
+    long int cpu_all_delta;
+    long int cpu_use;
+    long int cpu_use_delta;
+    double cpu_usage;
+    long int mem_vmrss;
 };
 
 /**

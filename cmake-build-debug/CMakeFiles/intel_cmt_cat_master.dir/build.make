@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/quximing/graduate project/intel-cmt-cat-master"
+CMAKE_SOURCE_DIR = "/Users/quximing/graduate project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/quximing/graduate project/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/intel_cmt_cat_master.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/intel_cmt_cat_master.dir/flags.make
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o: ../examples/c/CAT/allocation_app.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/allocation_app.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o   -c "/Users/quximing/graduate project/examples/c/CAT/allocation_app.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/allocation_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/examples/c/CAT/allocation_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/allocation_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/examples/c/CAT/allocation_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/allocation_app.c.o.provides.b
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o: ../examples/c/CAT/association_app.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/association_app.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o   -c "/Users/quximing/graduate project/examples/c/CAT/association_app.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/association_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/examples/c/CAT/association_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/association_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/examples/c/CAT/association_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/association_app.c.o.provides.
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o: ../examples/c/CAT/reset_app.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/reset_app.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o   -c "/Users/quximing/graduate project/examples/c/CAT/reset_app.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/reset_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/examples/c/CAT/reset_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CAT/reset_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/examples/c/CAT/reset_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/intel_cmt_cat_master.dir/examples/c/CAT/reset_app.c.o.provides.build:
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o: ../examples/c/CMT_MBM/monitor_app.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CMT_MBM/monitor_app.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o   -c "/Users/quximing/graduate project/examples/c/CMT_MBM/monitor_app.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CMT_MBM/monitor_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/examples/c/CMT_MBM/monitor_app.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/CMT_MBM/monitor_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/examples/c/CMT_MBM/monitor_app.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/intel_cmt_cat_master.dir/examples/c/CMT_MBM/monitor_app.c.o.provides.
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o: ../examples/c/PSEUDO_LOCK/dlock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/dlock.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o   -c "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/dlock.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/dlock.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/dlock.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/dlock.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/dlock.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/dlock.c.o.provides.bu
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o: ../examples/c/PSEUDO_LOCK/pseudo_lock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/pseudo_lock.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o   -c "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/pseudo_lock.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/pseudo_lock.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/pseudo_lock.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/pseudo_lock.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/pseudo_lock.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/pseudo_lock.c.o.provi
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o: ../examples/c/PSEUDO_LOCK/tsc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/tsc.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o   -c "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/tsc.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/tsc.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/tsc.c" > CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/examples/c/PSEUDO_LOCK/tsc.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/examples/c/PSEUDO_LOCK/tsc.c" -o CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/intel_cmt_cat_master.dir/examples/c/PSEUDO_LOCK/tsc.c.o.provides.buil
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o: ../lib/allocation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/allocation.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o   -c "/Users/quximing/graduate project/lib/allocation.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/allocation.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/allocation.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/allocation.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/allocation.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/allocation.c.o.provides.build: CMakeFile
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o: ../lib/api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/api.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o   -c "/Users/quximing/graduate project/lib/api.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/api.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/api.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/api.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/api.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/api.c.o.provides.build: CMakeFiles/intel
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o: ../lib/cap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/cap.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o   -c "/Users/quximing/graduate project/lib/cap.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/cap.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/cap.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/cap.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/cap.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/cap.c.o.provides.build: CMakeFiles/intel
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o: ../lib/cpuinfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/cpuinfo.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o   -c "/Users/quximing/graduate project/lib/cpuinfo.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/cpuinfo.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/cpuinfo.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/cpuinfo.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/cpuinfo.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/cpuinfo.c.o.provides.build: CMakeFiles/i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o: ../lib/log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/log.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o   -c "/Users/quximing/graduate project/lib/log.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/log.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/log.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/log.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/log.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/log.c.o.provides.build: CMakeFiles/intel
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o: ../lib/machine.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/machine.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o   -c "/Users/quximing/graduate project/lib/machine.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/machine.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/machine.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/machine.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/machine.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/machine.c.o.provides.build: CMakeFiles/i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o: ../lib/monitoring.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/monitoring.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o   -c "/Users/quximing/graduate project/lib/monitoring.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/monitoring.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/monitoring.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/monitoring.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/monitoring.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/monitoring.c.o.provides.build: CMakeFile
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o: ../lib/os_allocation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_allocation.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o   -c "/Users/quximing/graduate project/lib/os_allocation.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_allocation.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/os_allocation.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_allocation.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/os_allocation.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/os_allocation.c.o.provides.build: CMakeF
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o: ../lib/os_monitoring.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_monitoring.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o   -c "/Users/quximing/graduate project/lib/os_monitoring.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_monitoring.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/os_monitoring.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/os_monitoring.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/os_monitoring.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/os_monitoring.c.o.provides.build: CMakeF
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o: ../lib/perf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/perf.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o   -c "/Users/quximing/graduate project/lib/perf.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/perf.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/perf.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/perf.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/perf.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/perf.c.o.provides.build: CMakeFiles/inte
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o: ../lib/resctrl_alloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/resctrl_alloc.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o   -c "/Users/quximing/graduate project/lib/resctrl_alloc.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/resctrl_alloc.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/resctrl_alloc.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/resctrl_alloc.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/resctrl_alloc.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/resctrl_alloc.c.o.provides.build: CMakeF
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o: ../lib/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/lib/utils.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o   -c "/Users/quximing/graduate project/lib/utils.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/lib/utils.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/lib/utils.c" > CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/lib/utils.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/lib/utils.c" -o CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/intel_cmt_cat_master.dir/lib/utils.c.o.provides.build: CMakeFiles/int
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o: ../pqos/alloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/alloc.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o   -c "/Users/quximing/graduate project/pqos/alloc.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/alloc.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/pqos/alloc.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/alloc.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/pqos/alloc.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/intel_cmt_cat_master.dir/pqos/alloc.c.o.provides.build: CMakeFiles/in
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o: ../pqos/cap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/cap.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o   -c "/Users/quximing/graduate project/pqos/cap.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/cap.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/pqos/cap.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/cap.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/pqos/cap.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o.requires:
 
@@ -563,16 +563,16 @@ CMakeFiles/intel_cmt_cat_master.dir/pqos/cap.c.o.provides.build: CMakeFiles/inte
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o: ../pqos/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o   -c "/Users/quximing/graduate project/pqos/main.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/main.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/pqos/main.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/main.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/pqos/main.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o.requires:
 
@@ -587,16 +587,16 @@ CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o.provides.build: CMakeFiles/int
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o: ../pqos/monitor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/monitor.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o   -c "/Users/quximing/graduate project/pqos/monitor.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/monitor.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/pqos/monitor.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/monitor.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/pqos/monitor.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o.requires:
 
@@ -611,16 +611,16 @@ CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o: ../pqos/profiles.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/profiles.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o   -c "/Users/quximing/graduate project/pqos/profiles.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/profiles.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/pqos/profiles.c" > CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/pqos/profiles.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/pqos/profiles.c" -o CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o.requires:
 
@@ -635,16 +635,16 @@ CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o.provides.build: CMakeFiles
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o: ../rdtset/common.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/common.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o   -c "/Users/quximing/graduate project/rdtset/common.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/common.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/rdtset/common.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/common.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/rdtset/common.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o.requires:
 
@@ -659,16 +659,16 @@ CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o.provides.build: CMakeFiles
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o: ../rdtset/cpu.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/cpu.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o   -c "/Users/quximing/graduate project/rdtset/cpu.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/cpu.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/rdtset/cpu.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/cpu.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/rdtset/cpu.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o.requires:
 
@@ -683,16 +683,16 @@ CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o.provides.build: CMakeFiles/in
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o: ../rdtset/rdt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdt.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o   -c "/Users/quximing/graduate project/rdtset/rdt.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdt.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/rdtset/rdt.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdt.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/rdtset/rdt.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o.requires:
 
@@ -707,16 +707,16 @@ CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o.provides.build: CMakeFiles/in
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o: CMakeFiles/intel_cmt_cat_master.dir/flags.make
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o: ../rdtset/rdtset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o   -c "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdtset.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o   -c "/Users/quximing/graduate project/rdtset/rdtset.c"
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdtset.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/quximing/graduate project/rdtset/rdtset.c" > CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.i
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/intel-cmt-cat-master/rdtset/rdtset.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/quximing/graduate project/rdtset/rdtset.c" -o CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.s
 
 CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o.requires:
 
@@ -793,7 +793,7 @@ intel_cmt_cat_master: CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o
 intel_cmt_cat_master: CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o
 intel_cmt_cat_master: CMakeFiles/intel_cmt_cat_master.dir/build.make
 intel_cmt_cat_master: CMakeFiles/intel_cmt_cat_master.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Linking C executable intel_cmt_cat_master"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/quximing/graduate project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Linking C executable intel_cmt_cat_master"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/intel_cmt_cat_master.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -837,6 +837,6 @@ CMakeFiles/intel_cmt_cat_master.dir/clean:
 .PHONY : CMakeFiles/intel_cmt_cat_master.dir/clean
 
 CMakeFiles/intel_cmt_cat_master.dir/depend:
-	cd "/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/quximing/graduate project/intel-cmt-cat-master" "/Users/quximing/graduate project/intel-cmt-cat-master" "/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug" "/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug" "/Users/quximing/graduate project/intel-cmt-cat-master/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/quximing/graduate project/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/quximing/graduate project" "/Users/quximing/graduate project" "/Users/quximing/graduate project/cmake-build-debug" "/Users/quximing/graduate project/cmake-build-debug" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/intel_cmt_cat_master.dir/depend
 
