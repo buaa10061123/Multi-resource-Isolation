@@ -605,16 +605,35 @@ static struct option long_cmd_opts[] = {
 
 int main(int argc, char **argv)
 {
-        char *llc_flag = "llc:";
-        char *all_flag = "all:";
-        char *core_group1 = "[0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30]";
-        char *core_group2 = ",[6-10]";
-        char *llc_core_groups = (char *)malloc(strlen(all_flag) + strlen(core_group1)+ strlen(core_group2) +1);
-        if(llc_core_groups == NULL) exit(1);
+        //quxm add : dynamic get cores of online cgroup
+        char *llc_flag = "llc:[";
+        char *all_flag = "all:[";
+        char core_group1[64];
+        char *llc_core_groups = (char *)malloc(strlen(all_flag) + strlen(core_group1) +1);
+
+        FILE *fp1;
+        fp1 = fopen("/sys/fs/cgroup/cpuset/mysql_test/cpuset.cpus","r");
+        if(fp1 == NULL)
+        {
+                //error message
+        }
+        fgets(core_group1,sizeof(core_group1),fp1);
+
+        //delete '\n' and add the ']'
+        int len = strlen(core_group1);
+        if(core_group1[len-1] == '\n')
+            core_group1[len-1] = ']';
+        else
+        {
+            core_group1[len]=']';
+            core_group1[len+1] = '\0';
+        }
+
 
         strcpy(llc_core_groups,all_flag);
         strcat(llc_core_groups,core_group1);
-        //strcat(llc_core_groups,core_group2);
+        //puts(llc_core_groups);
+
 
         struct pqos_config cfg;
         const struct pqos_cpuinfo *p_cpu = NULL;
@@ -630,7 +649,7 @@ int main(int argc, char **argv)
 
         memset(&cfg, 0, sizeof(cfg));
 
-        //直接给待监控项赋值，相当于 pqos -m ""
+        //quxm add: 直接给待监控项赋值，相当于 pqos -m ""
         selfn_monitor_cores(llc_core_groups);
 
 

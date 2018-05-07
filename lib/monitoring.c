@@ -106,6 +106,8 @@
  */
 #define IA32_MSR_INST_RETIRED_ANY     0x309
 #define IA32_MSR_CPU_UNHALTED_THREAD  0x30A
+//quxm add : Counts CPU_CLK_Unhalted.Ref 2018.5.7
+#define IA32_MSR_CPU_UNHALTED_REF     0x30B
 #define IA32_MSR_FIXED_CTR_CTRL       0x38D
 #define IA32_MSR_PERF_GLOBAL_CTRL     0x38F
 #define IA32_MSR_PMC0                 0x0C1
@@ -687,8 +689,11 @@ pqos_core_poll(struct pqos_mon_data *p)
                         }
                         retired += tmp;
 
+                        //ret = msr_read(p->cores[n],
+                        //               IA32_MSR_CPU_UNHALTED_THREAD, &tmp);
+                        //quxm changed: use CPU_CLK_Unhalted.Ref instead. 2018.5.7
                         ret = msr_read(p->cores[n],
-                                       IA32_MSR_CPU_UNHALTED_THREAD, &tmp);
+                                   IA32_MSR_CPU_UNHALTED_REF, &tmp);
                         if (ret != MACHINE_RETVAL_OK) {
                                 retval = PQOS_RETVAL_ERROR;
                                 goto pqos_core_poll__exit;
@@ -765,7 +770,9 @@ ia32_perf_counter_start(const unsigned num_cores,
                 return PQOS_RETVAL_OK;
 
         if (event & PQOS_PERF_EVENT_IPC)
-                global_ctrl_mask |= (0x3ULL << 32); /**< fixed counters 0&1 */
+                //global_ctrl_mask |= (0x3ULL << 32); /**< fixed counters 0&1 */
+                //quxm changed: use fixed counter 0&2. 2018.5.7
+                global_ctrl_mask |= (0x5ULL << 32); /**< fixed counters 0&2 */
 
         if (event & PQOS_PERF_EVENT_LLC_MISS)
                 global_ctrl_mask |= 0x1ULL;     /**< programmable counter 0 */
@@ -795,7 +802,10 @@ ia32_perf_counter_start(const unsigned num_cores,
          * - Enable counters in global control
          */
         for (i = 0; i < num_cores; i++) {
-                const uint64_t fixed_ctrl = 0x33ULL; /**< track usr + os */
+                //const uint64_t fixed_ctrl = 0x33ULL; /**< track usr + os */
+                //quxm changed: IA32_FIXED_CTR_CTRL MSR,use CTR0 & CTR2 instead 0&1
+                const uint64_t fixed_ctrl = 0x303ULL; /**< track usr + os */
+
                 int ret;
 
                 ret = msr_write(cores[i], IA32_MSR_PERF_GLOBAL_CTRL, 0);
@@ -806,8 +816,11 @@ ia32_perf_counter_start(const unsigned num_cores,
                         ret = msr_write(cores[i], IA32_MSR_INST_RETIRED_ANY, 0);
                         if (ret != MACHINE_RETVAL_OK)
                                 break;
+                        //ret = msr_write(cores[i],
+                        //                IA32_MSR_CPU_UNHALTED_THREAD, 0);
+                        //quxm changed: use CPU_CLK_Unhalted.Ref instead. 2018.5.7
                         ret = msr_write(cores[i],
-                                        IA32_MSR_CPU_UNHALTED_THREAD, 0);
+                                    IA32_MSR_CPU_UNHALTED_REF, 0);
                         if (ret != MACHINE_RETVAL_OK)
                                 break;
                         ret = msr_write(cores[i],

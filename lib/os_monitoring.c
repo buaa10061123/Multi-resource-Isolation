@@ -283,8 +283,11 @@ set_arch_event_attrs(enum pqos_mon_event *events)
 
         /* Set unhalted cycles event attributes */
         events_tab[OS_MON_EVT_IDX_CYC].attrs = attr;
+        //events_tab[OS_MON_EVT_IDX_CYC].attrs.config =
+        //        PERF_COUNT_HW_CPU_CYCLES;
+        //quxm changed: use CPU_CLK_Unhalted.Ref instead. 2018.5.7
         events_tab[OS_MON_EVT_IDX_CYC].attrs.config =
-                PERF_COUNT_HW_CPU_CYCLES;
+                PERF_COUNT_HW_REF_CPU_CYCLES;
         *events |= PQOS_PERF_EVENT_CYCLES;
 
         *events |= PQOS_PERF_EVENT_IPC;

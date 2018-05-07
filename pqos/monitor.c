@@ -168,6 +168,11 @@ struct proc_stats {
         int valid; /**< marks if statisctics are fully processed */
 };
 
+/*
+ * Mantains the number of cpu logical cores of the node
+ */
+static int system_cores_num = 32;
+
 /**
  * Mantains single linked list implementation
  */
@@ -2145,6 +2150,7 @@ void monitor_loop_quxm(void)
 {
 #define TERM_MIN_NUM_LINES 3
 
+        //quxm comments: interval = 10 * 10^5 us = 1s
         const long interval =
                 (long)sel_mon_interval * 100000LL; /* interval in [us] units */
         struct timeval tv_start, tv_s;
@@ -2257,6 +2263,10 @@ void monitor_loop_quxm(void)
                         double mbr = bytes_to_mb(pv->mbm_remote_delta) * coeff;
                         double mbl = bytes_to_mb(pv->mbm_local_delta) * coeff;
 
+                    //quxm add: ic(instruction count) and cycles to show
+                    uint64_t ic = pv->ipc_retired_delta;
+                    uint64_t cycles = pv->ipc_unhalted_delta;
+
                     if(1)
                     {
                         //quxm add --cpu usage
@@ -2303,7 +2313,7 @@ void monitor_loop_quxm(void)
 
                         //quxm 这里的*32是因为有32逻辑核，同样hardcode，该结果与top命令一致
                         if(pv->cpu_all_delta > 0)
-                            pv->cpu_usage = (double)pv->cpu_use_delta/pv->cpu_all_delta*32;
+                            pv->cpu_usage = (double)pv->cpu_use_delta/pv->cpu_all_delta*system_cores_num;
 
                         //quxm add --memory usage
 
@@ -2330,9 +2340,9 @@ void monitor_loop_quxm(void)
                         pv->mem_vmrss = vmrss;
                     }
 
-                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPC","CACHE_MISS(K)",
+                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
                                "LLC(KB)","MBL(MB)","MBR(MB)","CPU_Usage","VmRss(KB)");
-                        printf("%lf\t%u\t%.1lf\t%.2lf\t%.2lf\t%.4lf\t%ld\n",ipc,(unsigned)pv->llc_misses_delta/1000,
+                        printf("%lld\t%lld\t%lf\t%u\t%.1lf\t%.2lf\t%.2lf\t%.4lf\t%ld\n",ic,cycles,ipc,(unsigned)pv->llc_misses_delta/1000,
                                llc,mbl,mbr,pv->cpu_usage,pv->mem_vmrss);
 
 /*                        if (istext)
@@ -2362,6 +2372,7 @@ void monitor_loop_quxm(void)
                 usec_end = timeval_to_usec(&tv_e);
                 usec_diff = usec_end - usec_start;
 
+                //quxm comments:do this when measurement time < interval(1s here)
                 if (usec_diff < interval && usec_diff > 0) {
                         struct timespec req, rem;
 
