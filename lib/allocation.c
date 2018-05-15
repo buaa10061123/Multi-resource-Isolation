@@ -867,7 +867,7 @@ hw_mba_set(const unsigned socket,
                 if (actual == NULL)
                         continue;
 
-                retval = msr_read(core, reg, &val);
+                retval = msr_read(core, reg, &val);//mba最终值val是从msr里读出的
                 if (retval != MACHINE_RETVAL_OK)
                         return PQOS_RETVAL_ERROR;
 

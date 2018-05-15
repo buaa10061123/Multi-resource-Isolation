@@ -799,7 +799,9 @@ int main(int argc, char **argv)
                 goto error_exit_1;
         }*/
         //selfn_show_allocation(NULL);
-        selfn_verbose_mode(NULL);
+    //selfn_allocation_class(optarg);  eg. optarg="llc:1=0x7ff;"
+
+    selfn_verbose_mode(NULL);
         cfg.verbose = sel_verbose_mode;
         cfg.interface = sel_interface;
         /**

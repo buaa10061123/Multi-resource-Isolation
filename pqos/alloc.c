@@ -445,7 +445,7 @@ set_allocation_class(char *str, const struct pqos_cpuinfo *cpu)
         /**
          * Set up selected res_ids table
          */
-	q = strchr(str, '@');
+	q = strchr(str, '@'); //llc@socket:1=0x7ff
 	if (q != NULL) {
                 uint64_t ids[max_res_sz];
                 /**
@@ -549,15 +549,15 @@ void selfn_allocation_class(const char *arg)
         if (strlen(arg) <= 0)
                 parse_error(arg, "Empty string!");
 
-        selfn_strdup(&cp, arg);
+        selfn_strdup(&cp, arg);//copy arg to cp
 
         for (str = cp; ; str = NULL) {
                 char *token = NULL;
 
-                token = strtok_r(str, ";", &saveptr);
+                token = strtok_r(str, ";", &saveptr);//以";"分割,eg. token="llc:1=0x7ff"
                 if (token == NULL)
                         break;
-                selfn_strdup(&alloc_opts[sel_alloc_opt_num++], token);
+                selfn_strdup(&alloc_opts[sel_alloc_opt_num++], token);//将token复制进alloc_opt(一个静态字符串数组，保存所有alloc值)
         }
 
         free(cp);

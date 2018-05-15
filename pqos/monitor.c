@@ -52,6 +52,7 @@
 #include "../lib/pqos.h"
 #include "main.h"
 #include "monitor.h"
+#include "../lib/machine.h"
 
 #define PQOS_MAX_PIDS         128
 #define PQOS_MON_EVENT_ALL    -1
@@ -60,6 +61,13 @@
 #define PID_COL_STIME (15) /**< col for cpu-kernel time in /proc/pid/stat*/
 #define PID_CPU_TIME_DELAY_USEC (1200000) /**< delay for cpu stats */
 #define TOP_PROC_MAX (10) /**< maximum number of top-pids to be handled*/
+
+/**
+ * quxm add for getting mba percentage
+ * Allocation class of service (COS) MSR registers
+ */
+#define PQOS_MSR_MBA_MASK_START  0xD50
+#define PQOS_MBA_LINEAR_MAX 100
 
 /**
  * Local data structures
@@ -2263,6 +2271,16 @@ void monitor_loop_quxm(void)
                         double mbr = bytes_to_mb(pv->mbm_remote_delta) * coeff;
                         double mbl = bytes_to_mb(pv->mbm_local_delta) * coeff;
 
+                    //quxm add: mba_cos(mba cos id) to show
+                    int mba_get_cos = 1;
+                    int mba_get_core = 0;
+                    const uint32_t reg_mba = PQOS_MSR_MBA_MASK_START + mba_get_cos;
+                    uint64_t val = 0;
+                    int retval = msr_read(mba_get_core, reg_mba, &val);
+                    if (retval != MACHINE_RETVAL_OK)
+                        return ;
+                    int mba_percent = (unsigned) PQOS_MBA_LINEAR_MAX - val;
+
                     //quxm add: ic(instruction count) and cycles to show
                     uint64_t ic = pv->ipc_retired_delta;
                     uint64_t cycles = pv->ipc_unhalted_delta;
@@ -2340,10 +2358,12 @@ void monitor_loop_quxm(void)
                         pv->mem_vmrss = vmrss;
                     }
 
-                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
-                               "LLC(KB)","MBL(MB)","MBR(MB)","CPU_Usage","VmRss(KB)");
-                        printf("%lld\t%lld\t%lf\t%u\t%.1lf\t%.2lf\t%.2lf\t%.4lf\t%ld\n",ic,cycles,ipc,(unsigned)pv->llc_misses_delta/1000,
-                               llc,mbl,mbr,pv->cpu_usage,pv->mem_vmrss);
+                        //printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
+                        //       "LLC(KB)","MBL(MB)","MBR(MB)","CPU_Usage","VmRss(KB)");
+                    printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPC","CACHE_MISS(K)",
+                           "LLC(KB)","MemBW(MB)","MemBW(%)","CPU_Usage","VmRss(KB)");
+                        printf("%lf\t%u\t%.1lf\t%.2lf\t%d\t%.4lf\t%ld\n",ipc,(unsigned)pv->llc_misses_delta/1000,
+                               llc,mbl+mbr,mba_percent,pv->cpu_usage,pv->mem_vmrss);
 
 /*                        if (istext)
                                 print_text_row(fp_monitor, mon_data[i],
