@@ -1,5 +1,5 @@
 ========================================================================
-README for Multi-resource Isolation Package
+README for Multi-dimensional Resource Isolation Package
 
 April 2018
 
@@ -9,5 +9,4 @@ This software package provides occupancy detection and quota adjustment for reso
 It is based on another open source project called Intel-cmt-cat, which provides basic support for
 Intel(R) Resource Director Technology (Intel(R) RDT) including:
 Cache Monitoring Technology (CMT), Memory Bandwidth Monitoring (MBM),
-Cache Allocation Technology (CAT), Code and Data Prioritization (CDP)
-and Memory Bandwidth Allocation (MBA).
+Cache Allocation Technology (CAT) and Memory Bandwidth Allocation (MBA).
