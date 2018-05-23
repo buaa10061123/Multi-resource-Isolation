@@ -13,10 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b244cc32-4be9-4af6-b21b-eb450475950c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/allocation.c" afterPath="$PROJECT_DIR$/lib/allocation.c" />
-      <change beforePath="$PROJECT_DIR$/pqos/alloc.c" afterPath="$PROJECT_DIR$/pqos/alloc.c" />
-      <change beforePath="$PROJECT_DIR$/pqos/main.c" afterPath="$PROJECT_DIR$/pqos/main.c" />
-      <change beforePath="$PROJECT_DIR$/pqos/monitor.c" afterPath="$PROJECT_DIR$/pqos/monitor.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,8 +80,8 @@
       <file leaf-file-name="monitor.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1068">
-              <caret line="2278" column="55" lean-forward="false" selection-start-line="2278" selection-start-column="55" selection-end-line="2278" selection-end-column="55" />
+            <state relative-caret-position="444">
+              <caret line="2362" column="44" lean-forward="false" selection-start-line="2362" selection-start-column="44" selection-end-line="2362" selection-end-column="44" />
               <folding>
                 <element signature="e#1703#1721#0" expanded="true" />
               </folding>
@@ -275,16 +271,15 @@
       <updated>1523349996215</updated>
       <workItem from="1523349998266" duration="1204000" />
       <workItem from="1523428210317" duration="37566000" />
-      <workItem from="1526347386865" duration="7184000" />
+      <workItem from="1526347386865" duration="7328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45954000" />
+    <option name="totallyTimeSpent" value="46098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -615,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1068">
-          <caret line="2278" column="55" lean-forward="false" selection-start-line="2278" selection-start-column="55" selection-end-line="2278" selection-end-column="55" />
+        <state relative-caret-position="444">
+          <caret line="2362" column="44" lean-forward="false" selection-start-line="2362" selection-start-column="44" selection-end-line="2362" selection-end-column="44" />
           <folding>
             <element signature="e#1703#1721#0" expanded="true" />
           </folding>
