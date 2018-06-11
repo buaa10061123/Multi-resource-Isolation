@@ -54,6 +54,11 @@
 #include "monitor.h"
 #include "../lib/machine.h"
 
+//add by quxm:perf need.2018.6.10
+#include <unistd.h>
+#include <sys/syscall.h>
+#include <linux/perf_event.h>
+
 #define PQOS_MAX_PIDS         128
 #define PQOS_MON_EVENT_ALL    -1
 #define PID_COL_STATUS (3) /**< col for process status letter*/
@@ -2153,6 +2158,17 @@ void monitor_cleanup(void)
         sel_output_type = NULL;
 }
 
+//add by quxm:use for getting ipc.2018.6.10
+static long
+perf_event_open(struct perf_event_attr *hw_event, pid_t pid,
+                int cpu, int group_fd, unsigned long flags)
+{
+    int ret;
+
+    ret = syscall(__NR_perf_event_open, hw_event, pid, cpu,
+                  group_fd, flags);
+    return ret;
+}
 
 void monitor_loop_quxm(void)
 {
@@ -2181,11 +2197,49 @@ void monitor_loop_quxm(void)
         mon_number = get_mon_arrays(&mon_grps, &mon_data);
         display_num = mon_number;
 
-        /**
-         * Capture ctrl-c to gracefully stop the loop
-         */
+        //quxm add:get online_group pid.2018.6.10
+        FILE *fp_pid;
+        char buf_online[32];
+        int online_pid;
+        //目前的实现只读取了一个进程，之后要扩展到读取多进程号
+        fp_pid = fopen("/sys/fs/cgroup/cpu,cpuacct/mysql_test/cgroup.procs","r");
+        fgets(buf_online, sizeof(buf_online),fp_pid);
+        sscanf(buf_online,"%d",&online_pid);
+        printf("===============online_pid==============:%d\n",online_pid);
+        mon_grps[0]->perf_pid_ipc_enable = online_pid;
+        mon_data[0]->perf_pid_ipc_enable = online_pid;
+        fclose(fp_pid);
+    //add by quxm:use perf_event_open to get ipc based on pid.2018.6.10
+        struct perf_event_attr pe;
+
+        memset(&pe, 0, sizeof(struct perf_event_attr));
+        pe.type = PERF_TYPE_HARDWARE;
+        pe.size = sizeof(struct perf_event_attr);
+        pe.config = PERF_COUNT_HW_INSTRUCTIONS;
+        pe.inherit = 1;
+        //pe.exclude_kernel = 0;
+        //pe.exclude_hv = 1;
+
+        mon_grps[0]->values.fd_ins = perf_event_open(&pe, online_pid, -1, -1, 0);
+        if (mon_grps[0]->values.fd_ins == -1) {
+            fprintf(stderr, "Getting IPC : Error opening leader %llx\n", pe.config);
+            exit(EXIT_FAILURE);
+        }
+        ioctl(mon_grps[0]->values.fd_ins, PERF_EVENT_IOC_RESET, 0);
+        ioctl(mon_grps[0]->values.fd_ins, PERF_EVENT_IOC_ENABLE, 0);
+
+
+    /**
+     * Capture ctrl-c to gracefully stop the loop
+     */
         if (signal(SIGINT, monitoring_ctrlc) == SIG_ERR)
                 printf("Failed to catch SIGINT!\n");
+        //else
+        //{
+            //quxm add :close perf_event_open for ipc.2018.6.10
+            //ioctl(mon_grps[0]->values.fd_ins, PERF_EVENT_IOC_DISABLE, 0);
+            //close(mon_grps[0]->values.fd_ins);
+        //}
         if (signal(SIGHUP, monitoring_ctrlc) == SIG_ERR)
                 printf("Failed to catch SIGHUP!\n");
 

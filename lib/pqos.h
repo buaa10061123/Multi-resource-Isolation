@@ -367,6 +367,9 @@ struct pqos_event_values {
     long int cpu_use_delta;
     double cpu_usage;
     long int mem_vmrss;
+
+    //quxm add instructions fd.2018.6.10
+    int fd_ins;
 };
 
 /**
@@ -413,6 +416,8 @@ struct pqos_mon_data {
         unsigned *cores;                /**< list of cores in the group */
         unsigned num_cores;             /**< number of cores in the group */
         int valid_mbm_read;             /**< flag to discard 1st invalid read */
+
+        int perf_pid_ipc_enable ;   //add by quxm, recognize whether use perf_event_open to get ipc or not.2018.6.10
 };
 
 /**
