@@ -104,6 +104,15 @@ static int sel_display = 0;
 static int sel_display_verbose = 0;
 
 /**
+ * CGROUP DIRS
+ * add by quxm 2018.6.22
+ */
+const char *CG_CPUSET_PREFIX = "/sys/fs/cgroup/cpuset/mysql_test/";
+const char *CG_CPU_PREFIX = "/sys/fs/cgroup/cpu/mysql_test/";
+const char *CG_MEM_PREFIX = "/sys/fs/cgroup/memory/mysql_test/";
+const char *CG_CGROUP_PROC_SUFFIX = "cgroup.procs";
+const char *CG_CPUSET_CPUS_SUFFIX = "cpuset.cpus";
+/**
  * Selected library interface
  */
 int sel_interface = PQOS_INTER_MSR;
@@ -480,7 +489,7 @@ parse_config_file(const char *fname)
 
         fclose(fp);
 }
-
+//命令行命令名  quxm comment
 static const char *m_cmd_name = "pqos";                     /**< command name */
 static const char help_printf_short[] =
         "Usage: %s [-h] [--help] [-v] [--verbose] [-V] [--super-verbose]\n"
@@ -605,79 +614,147 @@ static struct option long_cmd_opts[] = {
 
 int main(int argc, char **argv)
 {
+    struct pqos_config cfg;
+    const struct pqos_cpuinfo *p_cpu = NULL;
+    const struct pqos_cap *p_cap = NULL;
+    const struct pqos_capability *cap_mon = NULL, *cap_l3ca = NULL,
+            *cap_l2ca = NULL, *cap_mba = NULL;
+    unsigned sock_count, *sockets = NULL;
+    int cmd, opt,ret, exit_val = EXIT_SUCCESS;
+    int opt_index = 0, pid_flag = 0;
+
+    m_cmd_name = argv[0];
+    print_warning();
+
+    memset(&cfg, 0, sizeof(cfg));
+
+    //-p参数传入在线任务的pid，将其写入各个cgroup组的cgroup.procs，quxm add 2018.6.23
+    char *online_pid = (char*)malloc(20);
+    while ((opt = getopt(argc, argv, "p:")) != -1)
+    {
+        //printf("opt = %c\n", opt);
+        //printf("optarg = %s\n", optarg);
+        //printf("optind = %d\n", optind);
+        //printf("argv[optind - 1] = %s\n\n",  argv[optind - 1]);
+        switch(opt)
+        {
+            case 'p':
+                //在线profiling组的pid
+                sprintf(online_pid,"%.*s", strlen(optarg),optarg);
+                char *cg_cpu_procs_dir = (char*)malloc(100);
+                char *cg_mem_procs_dir = (char*)malloc(100);
+                char *cg_cpuset_procs_dir = (char*)malloc(100);
+                sprintf(cg_cpu_procs_dir,"%.*s%.*s",strlen(CG_CPU_PREFIX),CG_CPU_PREFIX,
+                        strlen(CG_CGROUP_PROC_SUFFIX),CG_CGROUP_PROC_SUFFIX);
+                sprintf(cg_mem_procs_dir,"%.*s%.*s",strlen(CG_MEM_PREFIX),CG_MEM_PREFIX,
+                        strlen(CG_CGROUP_PROC_SUFFIX),CG_CGROUP_PROC_SUFFIX);
+                sprintf(cg_cpuset_procs_dir,"%.*s%.*s",strlen(CG_CPUSET_PREFIX),CG_CPUSET_PREFIX,
+                        strlen(CG_CGROUP_PROC_SUFFIX),CG_CGROUP_PROC_SUFFIX);
+
+                FILE *fp_cpu_proc,*fp_cpuset_proc,*fp_mem_proc;
+                char *current_cg_procs = (char*)malloc(20);
+                fp_cpu_proc = fopen(cg_cpu_procs_dir,"a");
+                fp_cpuset_proc = fopen(cg_cpuset_procs_dir,"a");
+                fp_mem_proc = fopen(cg_mem_procs_dir,"a");
+                if(fp_cpu_proc == NULL || fp_cpuset_proc == NULL || fp_mem_proc == NULL)
+                {
+                    //error msg: .../cgroup.procs文件不存在
+                }
+                //虽然pid之前已经被加入其中，并且进程存活，因此无需再次添加
+                //经过实验，即使重复添加相同pid也不会影响结果和报错，所以此处先不进行处理
+                fprintf(fp_cpu_proc,"%s",online_pid);
+                fprintf(fp_cpuset_proc,"%s",online_pid);
+                fprintf(fp_mem_proc,"%s",online_pid);
+                fclose(fp_cpu_proc);
+                fclose(fp_cpuset_proc);
+                fclose(fp_mem_proc);
+                printf("%s\n","All cgroup.procs write complete!");
+                break;
+        }
+    }
+
         //quxm add : dynamic get cores of online cgroup
-        char *llc_flag = "llc:[";
+        char *llc_flag = "llc:1=";
         char *all_flag = "all:[";
         char core_group1[64];
-        char *llc_core_groups = (char *)malloc(strlen(all_flag) + strlen(core_group1) +1);
+        char *llc_core_groups = (char *)malloc(80);
 
-        FILE *fp1;
-        fp1 = fopen("/sys/fs/cgroup/cpuset/mysql_test/cpuset.cpus","r");
-        if(fp1 == NULL)
+        //for pqos -a "llc:1={core_group_pqos_a}"
+        char *core_group_pqos_a = (char *)malloc(80);
+
+        //目录拼接成"/sys/fs/cgroup/cpuset/在线组/cpuset.cpus"
+        char *cpuset_cpus_dir = (char *)malloc(100);
+        sprintf(cpuset_cpus_dir,"%.*s%.*s",strlen(CG_CPUSET_PREFIX),CG_CPUSET_PREFIX,
+                strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
+        printf("Quxm info:cpuset_cpus_dir = %s\n",cpuset_cpus_dir);
+        FILE *fp_cpuset_cpus;
+        fp_cpuset_cpus = fopen(cpuset_cpus_dir,"r");
+        if(fp_cpuset_cpus == NULL)
         {
                 //error message
         }
-        fgets(core_group1,sizeof(core_group1),fp1);
+        fgets(core_group1,sizeof(core_group1),fp_cpuset_cpus);
 
-        //delete '\n' and add the ']'
         int len = strlen(core_group1);
+
+        //del '\n'
         if(core_group1[len-1] == '\n')
-            core_group1[len-1] = ']';
-        else
-        {
-            core_group1[len]=']';
-            core_group1[len+1] = '\0';
-        }
+            core_group1[len-1] = '\0';
 
 
-        strcpy(llc_core_groups,all_flag);
-        strcat(llc_core_groups,core_group1);
-        //puts(llc_core_groups);
+        //core_group_pqos_a = "llc:1=0-31"
+        sprintf(core_group_pqos_a,"%.*s%.*s",strlen(llc_flag),llc_flag,
+            strlen(core_group1),core_group1);
+
+        printf("Quxm info:pqos -a = %s\n",core_group_pqos_a);
 
 
-        struct pqos_config cfg;
-        const struct pqos_cpuinfo *p_cpu = NULL;
-        const struct pqos_cap *p_cap = NULL;
-        const struct pqos_capability *cap_mon = NULL, *cap_l3ca = NULL,
-                *cap_l2ca = NULL, *cap_mba = NULL;
-        unsigned sock_count, *sockets = NULL;
-        int cmd, ret, exit_val = EXIT_SUCCESS;
-        int opt_index = 0, pid_flag = 0;
+        //delete '\n' and add the ']',core_group1="0-31\n";
+//        if(core_group1[len-1] == '\n' || core_group1[len-1] == '\0') {
+//            core_group1[len - 1] = ']';
+//            core_group1[len] = '\0';
+//        }
+//        else
+//        {
+//            core_group1[len]=']';
+//            core_group1[len+1] = '\0';
+//        }
 
-        m_cmd_name = argv[0];
-        print_warning();
+        //llc_core_groups="all:[0-31]";
+        sprintf(llc_core_groups,"%.*s%.*s%s",strlen(all_flag),all_flag,
+            strlen(core_group1),core_group1,"]");
+        printf("Quxm info:pqos -m = %s\n",llc_core_groups);
 
-        memset(&cfg, 0, sizeof(cfg));
+
 
         //quxm add: 直接给待监控项赋值，相当于 pqos -m ""
         selfn_monitor_cores(llc_core_groups);
 
-
-        /*while ((cmd = getopt_long(argc, argv,
-                                  ":Hhf:i:m:Tt:l:o:u:e:c:a:p:sdDrvVIR:",
-                                  long_cmd_opts, &opt_index)) != -1) {
-                switch (cmd) {
-                case 'h':
-                        print_help(1);
-                        return EXIT_SUCCESS;
-                case 'H':
-                        profile_l3ca_list(stdout);
-                        return EXIT_SUCCESS;
-                case 'f':
-                        if (sel_config_file != NULL) {
-                                printf("Only one config file argument is "
-                                       "accepted!\n");
-                                return EXIT_FAILURE;
-                        }
-                        selfn_strdup(&sel_config_file, optarg);
-                        parse_config_file(sel_config_file);
-                        break;
-                case 'i':
-                        selfn_monitor_interval(optarg);
-                        break;
-                case 'p':
-                        if (optarg != NULL && *optarg == '-') {
-                                *//**
+    /*while ((cmd = getopt_long(argc, argv,
+                              ":Hhf:i:m:Tt:l:o:u:e:c:a:p:sdDrvVIR:",
+                              long_cmd_opts, &opt_index)) != -1) {
+            switch (cmd) {
+            case 'h':
+                    print_help(1);
+                    return EXIT_SUCCESS;
+            case 'H':
+                    profile_l3ca_list(stdout);
+                    return EXIT_SUCCESS;
+            case 'f':
+                    if (sel_config_file != NULL) {
+                            printf("Only one config file argument is "
+                                   "accepted!\n");
+                            return EXIT_FAILURE;
+                    }
+                    selfn_strdup(&sel_config_file, optarg);
+                    parse_config_file(sel_config_file);
+                    break;
+            case 'i':
+                    selfn_monitor_interval(optarg);
+                    break;
+            case 'p':
+                    if (optarg != NULL && *optarg == '-') {
+                            *//**
                                  * Next switch option wrongly assumed to be
                                  * argument to '-p'.
                                  * In order to fix it, we are handling this as
@@ -868,6 +945,22 @@ int main(int argc, char **argv)
                 goto error_exit_2;
         }
 
+        //quxm add: 直接执行pqos -a "llc:1=0-31" 2018.6.21
+        //写到此处是因为必须要先检测功能，才能进行allocation，如果写前面会报错
+        selfn_allocation_assoc(core_group_pqos_a);
+        switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
+            case 0: /* nothing to apply */
+                break;
+            case 1: /* new allocation config applied and all is good */
+                //goto allocation_exit;
+                printf("%s\n","Quxm info Online_llc_group : COS1 setting complete!");
+                break;
+            case -1: /* something went wrong */
+            default:
+                exit_val = EXIT_FAILURE;
+                goto error_exit_2;
+                break;
+        }
 /*        if (sel_mon_reset && cap_mon != NULL) {
                 if (pqos_mon_reset() != PQOS_RETVAL_OK) {
                         exit_val = EXIT_FAILURE;

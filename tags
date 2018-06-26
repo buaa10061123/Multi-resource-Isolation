@@ -1,0 +1,1245 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALLOCAPP	./examples/c/CAT/Makefile	/^ALLOCAPP = allocation_app$/;"	m
+API_H	./lib/api.h	/^#define API_H$/;"	d
+APP	./examples/c/PSEUDO_LOCK/Makefile	/^APP = pseudo_lock$/;"	m
+APP	./pqos/Makefile	/^APP = pqos$/;"	m
+APP	./rdtset/Makefile	/^APP = rdtset$/;"	m
+AP_BUFFER_SIZE	./lib/log.c	/^#define AP_BUFFER_SIZE /;"	d	file:
+ARCHITECTURE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
+ARCHITECTURE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
+ASSERT	./lib/types.h	/^#define ASSERT /;"	d
+ASSERT	./lib/types.h	/^#define ASSERT(/;"	d
+ASSERT	./pqos/main.h	/^#define ASSERT /;"	d
+ASSERT	./pqos/main.h	/^#define ASSERT(/;"	d
+ASSOCAPP	./examples/c/CAT/Makefile	/^ASSOCAPP = association_app$/;"	m
+BIN_DIR	./pqos/Makefile	/^BIN_DIR = $(PREFIX)\/bin$/;"	m
+BIN_DIR	./rdtset/Makefile	/^BIN_DIR = $(PREFIX)\/bin$/;"	m
+BUFFER_SIZE	./pqos/cap.c	/^#define BUFFER_SIZE /;"	d	file:
+BaggingRegressor	./py_modeling/train_model.py	/^from sklearn.ensemble import BaggingRegressor #0.59$/;"	i
+CAT_UPDATE_SCOPE_BOTH	./pqos/alloc.c	/^#define CAT_UPDATE_SCOPE_BOTH /;"	d	file:
+CAT_UPDATE_SCOPE_CODE	./pqos/alloc.c	/^#define CAT_UPDATE_SCOPE_CODE /;"	d	file:
+CAT_UPDATE_SCOPE_DATA	./pqos/alloc.c	/^#define CAT_UPDATE_SCOPE_DATA /;"	d	file:
+CFLAGS	./examples/c/CAT/Makefile	/^CFLAGS =-I$(LIBDIR) \\$/;"	m
+CFLAGS	./examples/c/CMT_MBM/Makefile	/^CFLAGS =-I$(LIBDIR) -pthread \\$/;"	m
+CFLAGS	./examples/c/PSEUDO_LOCK/Makefile	/^CFLAGS = -I$(LIBDIR) \\$/;"	m
+CFLAGS	./lib/Makefile	/^CFLAGS = -pthread -I.\/ -D_GNU_SOURCE \\$/;"	m
+CFLAGS	./pqos/Makefile	/^CFLAGS = -I$(LIBDIR) \\$/;"	m
+CFLAGS	./rdtset/Makefile	/^CFLAGS = -I$(LIBDIR) \\$/;"	m
+CHECKPATCH	./examples/c/CAT/Makefile	/^CHECKPATCH?=checkpatch.pl$/;"	m
+CHECKPATCH	./examples/c/CMT_MBM/Makefile	/^CHECKPATCH?=checkpatch.pl$/;"	m
+CHECKPATCH	./examples/c/PSEUDO_LOCK/Makefile	/^CHECKPATCH?=checkpatch.pl$/;"	m
+CHECKPATCH	./lib/Makefile	/^CHECKPATCH?=checkpatch.pl$/;"	m
+CHECKPATCH	./pqos/Makefile	/^CHECKPATCH?=checkpatch.pl$/;"	m
+CHECKPATCH	./rdtset/Makefile	/^CHECKPATCH?=checkpatch.pl$/;"	m
+CLEAN_OBJS	./lib/Makefile	/^CLEAN_OBJS = $(SRCS:.c=.o)$/;"	m
+CMAKE_BINARY_DIR	./cmake-build-debug/Makefile	/^CMAKE_BINARY_DIR = "\/Users\/quximing\/graduate project\/cmake-build-debug"$/;"	m
+CMAKE_COMMAND	./cmake-build-debug/Makefile	/^CMAKE_COMMAND = \/Applications\/CLion.app\/Contents\/bin\/cmake\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	./cmake-build-debug/Makefile	/^CMAKE_SOURCE_DIR = "\/Users\/quximing\/graduate project"$/;"	m
+COMPILER_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
+COMPILER_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_ID /;"	d	file:
+COMPILER_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_TWEAK	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+CPPCHECK	./examples/c/CAT/Makefile	/^CPPCHECK?=cppcheck$/;"	m
+CPPCHECK	./examples/c/CMT_MBM/Makefile	/^CPPCHECK?=cppcheck$/;"	m
+CPPCHECK	./examples/c/PSEUDO_LOCK/Makefile	/^CPPCHECK?=cppcheck$/;"	m
+CPPCHECK	./lib/Makefile	/^CPPCHECK?=cppcheck$/;"	m
+CPPCHECK	./pqos/Makefile	/^CPPCHECK?=cppcheck$/;"	m
+CPPCHECK	./rdtset/Makefile	/^CPPCHECK?=cppcheck$/;"	m
+CPUID_LEAF_BRAND_END	./lib/cap.c	/^#define CPUID_LEAF_BRAND_END /;"	d	file:
+CPUID_LEAF_BRAND_NUM	./lib/cap.c	/^#define CPUID_LEAF_BRAND_NUM /;"	d	file:
+CPUID_LEAF_BRAND_START	./lib/cap.c	/^#define CPUID_LEAF_BRAND_START /;"	d	file:
+CPU_COUNT	./rdtset/cpu.h	/^CPU_COUNT(const cpu_set_t *set)$/;"	f
+CPU_MAX	./py_modeling/get_best_quota.py	/^CPU_MAX=4$/;"	v
+CPU_MIN	./py_modeling/get_best_quota.py	/^CPU_MIN=0.6$/;"	v
+CPU_STEP	./py_modeling/get_best_quota.py	/^CPU_STEP=0.2$/;"	v
+C_DIALECT	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define C_DIALECT /;"	d	file:
+C_DIALECT	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define C_DIALECT$/;"	d	file:
+C_DIALECT	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define C_DIALECT /;"	d	file:
+DEC	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
+DEC	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
+DEPFILE	./lib/Makefile	/^DEPFILE = $(LIB).dep$/;"	m
+DEPFILES	./lib/Makefile	/^DEPFILES = $(SRCS:.c=.d)$/;"	m
+DEPFILES	./pqos/Makefile	/^DEPFILES = $(SRCS:.c=.d)$/;"	m
+DEPFILES	./rdtset/Makefile	/^DEPFILES = $(SRCS:.c=.d)$/;"	m
+DIM	./examples/c/PSEUDO_LOCK/dlock.c	/^#define DIM(/;"	d	file:
+DIM	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^#define DIM(/;"	d	file:
+DIM	./lib/types.h	/^#define DIM(/;"	d
+DIM	./pqos/main.h	/^#define DIM(/;"	d
+DIM	./rdtset/common.h	/^#define DIM(/;"	d
+DOXY_DIRS	./lib/Makefile	/^DOXY_DIRS = doc_api doc_lib$/;"	m
+EQUALS	./cmake-build-debug/Makefile	/^EQUALS = =$/;"	m
+EXIT	./lib/perl/test.pl	/^EXIT:$/;"	l
+ElasticNet	./py_modeling/train_model.py	/^from sklearn.linear_model import ElasticNet$/;"	i
+GROUP_VALID_MARKER	./lib/api.c	/^#define GROUP_VALID_MARKER /;"	d	file:
+HDR	./lib/Makefile	/^HDR = pqos.h$/;"	m
+HDR_DIR	./lib/Makefile	/^HDR_DIR ?= $(PREFIX)\/include$/;"	m
+HEX	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
+HEX	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
+IA32_EVENT_LLC_MISS_MASK	./lib/monitoring.c	/^#define IA32_EVENT_LLC_MISS_MASK /;"	d	file:
+IA32_EVENT_LLC_MISS_UMASK	./lib/monitoring.c	/^#define IA32_EVENT_LLC_MISS_UMASK /;"	d	file:
+IA32_MSR_CPU_UNHALTED_REF	./lib/monitoring.c	/^#define IA32_MSR_CPU_UNHALTED_REF /;"	d	file:
+IA32_MSR_CPU_UNHALTED_THREAD	./lib/monitoring.c	/^#define IA32_MSR_CPU_UNHALTED_THREAD /;"	d	file:
+IA32_MSR_FIXED_CTR_CTRL	./lib/monitoring.c	/^#define IA32_MSR_FIXED_CTR_CTRL /;"	d	file:
+IA32_MSR_INST_RETIRED_ANY	./lib/monitoring.c	/^#define IA32_MSR_INST_RETIRED_ANY /;"	d	file:
+IA32_MSR_PERFEVTSEL0	./lib/monitoring.c	/^#define IA32_MSR_PERFEVTSEL0 /;"	d	file:
+IA32_MSR_PERF_GLOBAL_CTRL	./lib/monitoring.c	/^#define IA32_MSR_PERF_GLOBAL_CTRL /;"	d	file:
+IA32_MSR_PMC0	./lib/monitoring.c	/^#define IA32_MSR_PMC0 /;"	d	file:
+ID_VOID_MAIN	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
+L2CA	./pqos/alloc.c	/^	L2CA,$/;"	e	enum:sel_alloc_type	file:
+L3CA	./pqos/alloc.c	/^	L3CA,$/;"	e	enum:sel_alloc_type	file:
+LDFLAGS	./examples/c/CAT/Makefile	/^LDFLAGS=-L$(LIBDIR)$/;"	m
+LDFLAGS	./examples/c/CMT_MBM/Makefile	/^LDFLAGS=-L$(LIBDIR)$/;"	m
+LDFLAGS	./examples/c/PSEUDO_LOCK/Makefile	/^LDFLAGS = -L$(LIBDIR)$/;"	m
+LDFLAGS	./lib/Makefile	/^LDFLAGS = -L. -lpthread -fPIE -z noexecstack -z relro -z now$/;"	m
+LDFLAGS	./pqos/Makefile	/^LDFLAGS = -L$(LIBDIR) -fPIE -z noexecstack -z relro -z now$/;"	m
+LDFLAGS	./rdtset/Makefile	/^LDFLAGS = -L$(LIBDIR) -fPIE -z noexecstack -z relro -z now$/;"	m
+LDLIBS	./examples/c/CAT/Makefile	/^LDLIBS=-lpqos -lpthread$/;"	m
+LDLIBS	./examples/c/CMT_MBM/Makefile	/^LDLIBS=-lpqos -lpthread$/;"	m
+LDLIBS	./examples/c/PSEUDO_LOCK/Makefile	/^LDLIBS = -lpqos -lrt -lpthread$/;"	m
+LDLIBS	./pqos/Makefile	/^LDLIBS = -lpqos -lpthread$/;"	m
+LDLIBS	./rdtset/Makefile	/^LDLIBS = -lpqos -lpthread$/;"	m
+LIB	./lib/Makefile	/^LIB = libpqos$/;"	m
+LIBDIR	./examples/c/CAT/Makefile	/^LIBDIR ?= ..\/..\/..\/lib$/;"	m
+LIBDIR	./examples/c/CMT_MBM/Makefile	/^LIBDIR ?= ..\/..\/..\/lib$/;"	m
+LIBDIR	./examples/c/PSEUDO_LOCK/Makefile	/^LIBDIR ?= ..\/..\/..\/lib$/;"	m
+LIBDIR	./pqos/Makefile	/^LIBDIR ?= ..\/lib$/;"	m
+LIBDIR	./rdtset/Makefile	/^LIBDIR ?= ..\/lib$/;"	m
+LIBNAME	./lib/Makefile	/^LIBNAME = $(LIB).a$/;"	m
+LIBNAME	./lib/Makefile	/^LIBNAME = $(LIB).so.$(VERSION)$/;"	m
+LIBPERM	./lib/Makefile	/^LIBPERM = 0644$/;"	m
+LIBPERM	./lib/Makefile	/^LIBPERM = 0755$/;"	m
+LIB_INSTALL_DIR	./lib/Makefile	/^LIB_INSTALL_DIR ?= $(PREFIX)\/lib$/;"	m
+LLC_MAX	./py_modeling/get_best_quota.py	/^LLC_MAX=11264$/;"	v
+LLC_MIN	./py_modeling/get_best_quota.py	/^LLC_MIN=1024$/;"	v
+LLC_STEP	./py_modeling/get_best_quota.py	/^LLC_STEP=1024$/;"	v
+LOCKFILE	./lib/cap.c	/^#define LOCKFILE /;"	d	file:
+LOG_DEBUG	./lib/log.h	/^#define LOG_DEBUG(/;"	d
+LOG_ERROR	./lib/log.h	/^#define LOG_ERROR(/;"	d
+LOG_INFO	./lib/log.h	/^#define LOG_INFO(/;"	d
+LOG_OPT_DEBUG	./lib/log.h	/^#define LOG_OPT_DEBUG /;"	d
+LOG_OPT_DEFAULT	./lib/log.h	/^#define LOG_OPT_DEFAULT /;"	d
+LOG_OPT_ERROR	./lib/log.h	/^#define LOG_OPT_ERROR /;"	d
+LOG_OPT_INFO	./lib/log.h	/^#define LOG_OPT_INFO /;"	d
+LOG_OPT_SILENT	./lib/log.h	/^#define LOG_OPT_SILENT /;"	d
+LOG_OPT_SUPER_VERBOSE	./lib/log.h	/^#define LOG_OPT_SUPER_VERBOSE /;"	d
+LOG_OPT_VERBOSE	./lib/log.h	/^#define LOG_OPT_VERBOSE /;"	d
+LOG_OPT_WARN	./lib/log.h	/^#define LOG_OPT_WARN /;"	d
+LOG_RETVAL_ERROR	./lib/log.h	/^#define LOG_RETVAL_ERROR /;"	d
+LOG_RETVAL_OK	./lib/log.h	/^#define LOG_RETVAL_OK /;"	d
+LOG_VER_DEFAULT	./lib/log.h	/^#define LOG_VER_DEFAULT /;"	d
+LOG_VER_SILENT	./lib/log.h	/^#define LOG_VER_SILENT /;"	d
+LOG_VER_SUPER_VERBOSE	./lib/log.h	/^#define LOG_VER_SUPER_VERBOSE /;"	d
+LOG_VER_VERBOSE	./lib/log.h	/^#define LOG_VER_VERBOSE /;"	d
+LOG_WARN	./lib/log.h	/^#define LOG_WARN(/;"	d
+MACHINE_DEFAULT_MAX_COREID	./lib/machine.h	/^#define MACHINE_DEFAULT_MAX_COREID /;"	d
+MACHINE_RETVAL_ERROR	./lib/machine.h	/^#define MACHINE_RETVAL_ERROR /;"	d
+MACHINE_RETVAL_OK	./lib/machine.h	/^#define MACHINE_RETVAL_OK /;"	d
+MACHINE_RETVAL_PARAM	./lib/machine.h	/^#define MACHINE_RETVAL_PARAM /;"	d
+MAN	./pqos/Makefile	/^MAN = pqos.8$/;"	m
+MAN	./rdtset/Makefile	/^MAN = rdtset.8$/;"	m
+MAN_DIR	./pqos/Makefile	/^MAN_DIR = $(PREFIX)\/man\/man8$/;"	m
+MAN_DIR	./rdtset/Makefile	/^MAN_DIR = $(PREFIX)\/man\/man8$/;"	m
+MAX	./pqos/main.h	/^#define MAX(/;"	d
+MAX	./rdtset/common.h	/^#define MAX(/;"	d
+MAX_BRAND_STRING_LEN	./lib/cap.c	/^#define MAX_BRAND_STRING_LEN /;"	d	file:
+MAX_SOCK_NUM	./examples/c/PSEUDO_LOCK/dlock.c	/^#define MAX_SOCK_NUM /;"	d	file:
+MB	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^#define MB /;"	d	file:
+MBA	./pqos/alloc.c	/^        MBA$/;"	e	enum:sel_alloc_type	file:
+MBM_MAX_VALUE	./lib/monitoring.c	/^#define MBM_MAX_VALUE /;"	d	file:
+MEMBW_MAX	./py_modeling/get_best_quota.py	/^MEMBW_MAX=100$/;"	v
+MEMBW_MIN	./py_modeling/get_best_quota.py	/^MEMBW_MIN=10$/;"	v
+MEMBW_STEP	./py_modeling/get_best_quota.py	/^MEMBW_STEP=10$/;"	v
+MEM_MAX	./py_modeling/get_best_quota.py	/^MEM_MAX=60000$/;"	v
+MEM_MIN	./py_modeling/get_best_quota.py	/^MEM_MIN=16384$/;"	v
+MEM_STEP	./py_modeling/get_best_quota.py	/^MEM_STEP=2048$/;"	v
+MIN	./rdtset/common.h	/^#define MIN(/;"	d
+MONITORAPP	./examples/c/CMT_MBM/Makefile	/^MONITORAPP = monitor_app$/;"	m
+MY	./lib/perl/Makefile.PL	/^sub MY::postamble {$/;"	s
+NON_VERBOSE	./pqos/cap.c	/^#define NON_VERBOSE /;"	d	file:
+OBJS	./examples/c/PSEUDO_LOCK/Makefile	/^OBJS = pseudo_lock.o dlock.o tsc.o$/;"	m
+OBJS	./lib/Makefile	/^OBJS := $(filter-out perf.o os_allocation.o os_monitoring.o,$(OBJS))$/;"	m
+OBJS	./lib/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+OBJS	./pqos/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+OBJS	./rdtset/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+OS_MON_EVT_IDX_CYC	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_CYC /;"	d	file:
+OS_MON_EVT_IDX_INST	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_INST /;"	d	file:
+OS_MON_EVT_IDX_IPC	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_IPC /;"	d	file:
+OS_MON_EVT_IDX_LLC	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_LLC /;"	d	file:
+OS_MON_EVT_IDX_LLC_MISS	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_LLC_MISS /;"	d	file:
+OS_MON_EVT_IDX_LMBM	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_LMBM /;"	d	file:
+OS_MON_EVT_IDX_RMBM	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_RMBM /;"	d	file:
+OS_MON_EVT_IDX_TMBM	./lib/os_monitoring.c	/^#define OS_MON_EVT_IDX_TMBM /;"	d	file:
+PERLTIDY	./examples/perl/Makefile	/^PERLTIDY?=perltidy$/;"	m
+PERLTIDY	./snmp/Makefile	/^PERLTIDY?=perltidy$/;"	m
+PERLTIDY_STYLE	./examples/perl/Makefile	/^PERLTIDY_STYLE=-bar -ce -pt=2 -sbt=2 -bt=2 -bbt=2 -et=4 -baao -nsfs$/;"	m
+PERLTIDY_STYLE	./snmp/Makefile	/^PERLTIDY_STYLE=-bar -ce -pt=2 -sbt=2 -bt=2 -bbt=2 -et=4 -baao -nsfs -vtc=1 -ci=4$/;"	m
+PERL_SCRIPTS_LIST	./examples/perl/Makefile	/^PERL_SCRIPTS_LIST=hello_world.pl$/;"	m
+PERL_SCRIPTS_LIST	./snmp/Makefile	/^PERL_SCRIPTS_LIST=rdt-agentx.pl$/;"	m
+PID_COL_STATUS	./pqos/monitor.c	/^#define PID_COL_STATUS /;"	d	file:
+PID_COL_STIME	./pqos/monitor.c	/^#define PID_COL_STIME /;"	d	file:
+PID_COL_UTIME	./pqos/monitor.c	/^#define PID_COL_UTIME /;"	d	file:
+PID_CPU_TIME_DELAY_USEC	./pqos/monitor.c	/^#define PID_CPU_TIME_DELAY_USEC /;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
+PQOS_CAP_TYPE_L2CA	./lib/pqos.h	/^        PQOS_CAP_TYPE_L2CA,             \/**< L2 cache allocation *\/$/;"	e	enum:pqos_cap_type
+PQOS_CAP_TYPE_L3CA	./lib/pqos.h	/^        PQOS_CAP_TYPE_L3CA,             \/**< L3\/LLC cache allocation *\/$/;"	e	enum:pqos_cap_type
+PQOS_CAP_TYPE_MBA	./lib/pqos.h	/^        PQOS_CAP_TYPE_MBA,              \/**< Memory Bandwidth Allocation *\/$/;"	e	enum:pqos_cap_type
+PQOS_CAP_TYPE_MON	./lib/pqos.h	/^        PQOS_CAP_TYPE_MON = 0,          \/**< QoS monitoring *\/$/;"	e	enum:pqos_cap_type
+PQOS_CAP_TYPE_NUMOF	./lib/pqos.h	/^        PQOS_CAP_TYPE_NUMOF$/;"	e	enum:pqos_cap_type
+PQOS_CPUID_CAT_CDP_BIT	./lib/cap.c	/^#define PQOS_CPUID_CAT_CDP_BIT /;"	d	file:
+PQOS_INTER_MSR	./lib/pqos.h	/^#define PQOS_INTER_MSR /;"	d
+PQOS_INTER_OS	./lib/pqos.h	/^#define PQOS_INTER_OS /;"	d
+PQOS_MAX_CORES	./examples/c/CAT/association_app.c	/^#define PQOS_MAX_CORES /;"	d	file:
+PQOS_MAX_CORES	./examples/c/CMT_MBM/monitor_app.c	/^#define PQOS_MAX_CORES /;"	d	file:
+PQOS_MAX_CORES	./pqos/main.h	/^#define PQOS_MAX_CORES /;"	d
+PQOS_MAX_L2CA_COS	./lib/pqos.h	/^#define PQOS_MAX_L2CA_COS /;"	d
+PQOS_MAX_L2IDS	./pqos/main.h	/^#define PQOS_MAX_L2IDS /;"	d
+PQOS_MAX_L3CA_COS	./lib/pqos.h	/^#define PQOS_MAX_L3CA_COS /;"	d
+PQOS_MAX_MON_EVENTS	./examples/c/CMT_MBM/monitor_app.c	/^#define PQOS_MAX_MON_EVENTS /;"	d	file:
+PQOS_MAX_PIDS	./examples/c/CMT_MBM/monitor_app.c	/^#define PQOS_MAX_PIDS /;"	d	file:
+PQOS_MAX_PIDS	./pqos/monitor.c	/^#define PQOS_MAX_PIDS /;"	d	file:
+PQOS_MAX_SOCKETS	./pqos/main.h	/^#define PQOS_MAX_SOCKETS /;"	d
+PQOS_MAX_SOCKET_CORES	./pqos/main.h	/^#define PQOS_MAX_SOCKET_CORES /;"	d
+PQOS_MBA_LINEAR_MAX	./lib/allocation.c	/^#define PQOS_MBA_LINEAR_MAX /;"	d	file:
+PQOS_MBA_LINEAR_MAX	./pqos/monitor.c	/^#define PQOS_MBA_LINEAR_MAX /;"	d	file:
+PQOS_MON_EVENT_ALL	./pqos/monitor.c	/^#define PQOS_MON_EVENT_ALL /;"	d	file:
+PQOS_MON_EVENT_L3_OCCUP	./lib/pqos.h	/^    PQOS_MON_EVENT_L3_OCCUP = 1,    \/**< LLC occupancy event *\/$/;"	e	enum:pqos_mon_event
+PQOS_MON_EVENT_LMEM_BW	./lib/pqos.h	/^    PQOS_MON_EVENT_LMEM_BW = 2,     \/**< Local memory bandwidth *\/$/;"	e	enum:pqos_mon_event
+PQOS_MON_EVENT_RMEM_BW	./lib/pqos.h	/^    PQOS_MON_EVENT_RMEM_BW = 8,     \/**< Remote memory bandwidth$/;"	e	enum:pqos_mon_event
+PQOS_MON_EVENT_TMEM_BW	./lib/pqos.h	/^    PQOS_MON_EVENT_TMEM_BW = 4,     \/**< Total memory bandwidth *\/$/;"	e	enum:pqos_mon_event
+PQOS_MSR_ASSOC	./lib/allocation.c	/^#define PQOS_MSR_ASSOC /;"	d	file:
+PQOS_MSR_ASSOC	./lib/cap.c	/^#define PQOS_MSR_ASSOC /;"	d	file:
+PQOS_MSR_ASSOC	./lib/monitoring.c	/^#define PQOS_MSR_ASSOC /;"	d	file:
+PQOS_MSR_ASSOC_QECOS_MASK	./lib/allocation.c	/^#define PQOS_MSR_ASSOC_QECOS_MASK /;"	d	file:
+PQOS_MSR_ASSOC_QECOS_MASK	./lib/cap.c	/^#define PQOS_MSR_ASSOC_QECOS_MASK /;"	d	file:
+PQOS_MSR_ASSOC_QECOS_MASK	./lib/monitoring.c	/^#define PQOS_MSR_ASSOC_QECOS_MASK /;"	d	file:
+PQOS_MSR_ASSOC_QECOS_SHIFT	./lib/allocation.c	/^#define PQOS_MSR_ASSOC_QECOS_SHIFT /;"	d	file:
+PQOS_MSR_ASSOC_QECOS_SHIFT	./lib/cap.c	/^#define PQOS_MSR_ASSOC_QECOS_SHIFT /;"	d	file:
+PQOS_MSR_ASSOC_QECOS_SHIFT	./lib/monitoring.c	/^#define PQOS_MSR_ASSOC_QECOS_SHIFT /;"	d	file:
+PQOS_MSR_ASSOC_RMID_MASK	./lib/monitoring.c	/^#define PQOS_MSR_ASSOC_RMID_MASK /;"	d	file:
+PQOS_MSR_L2CA_MASK_END	./lib/cap.c	/^#define PQOS_MSR_L2CA_MASK_END /;"	d	file:
+PQOS_MSR_L2CA_MASK_START	./lib/allocation.c	/^#define PQOS_MSR_L2CA_MASK_START /;"	d	file:
+PQOS_MSR_L2CA_MASK_START	./lib/cap.c	/^#define PQOS_MSR_L2CA_MASK_START /;"	d	file:
+PQOS_MSR_L3CA_MASK_END	./lib/allocation.c	/^#define PQOS_MSR_L3CA_MASK_END /;"	d	file:
+PQOS_MSR_L3CA_MASK_END	./lib/cap.c	/^#define PQOS_MSR_L3CA_MASK_END /;"	d	file:
+PQOS_MSR_L3CA_MASK_END	./lib/monitoring.c	/^#define PQOS_MSR_L3CA_MASK_END /;"	d	file:
+PQOS_MSR_L3CA_MASK_NUMOF	./lib/allocation.c	/^#define PQOS_MSR_L3CA_MASK_NUMOF /;"	d	file:
+PQOS_MSR_L3CA_MASK_NUMOF	./lib/monitoring.c	/^#define PQOS_MSR_L3CA_MASK_NUMOF /;"	d	file:
+PQOS_MSR_L3CA_MASK_START	./lib/allocation.c	/^#define PQOS_MSR_L3CA_MASK_START /;"	d	file:
+PQOS_MSR_L3CA_MASK_START	./lib/cap.c	/^#define PQOS_MSR_L3CA_MASK_START /;"	d	file:
+PQOS_MSR_L3CA_MASK_START	./lib/monitoring.c	/^#define PQOS_MSR_L3CA_MASK_START /;"	d	file:
+PQOS_MSR_L3_QOS_CFG	./lib/allocation.c	/^#define PQOS_MSR_L3_QOS_CFG /;"	d	file:
+PQOS_MSR_L3_QOS_CFG	./lib/cap.c	/^#define PQOS_MSR_L3_QOS_CFG /;"	d	file:
+PQOS_MSR_L3_QOS_CFG_CDP_EN	./lib/allocation.c	/^#define PQOS_MSR_L3_QOS_CFG_CDP_EN /;"	d	file:
+PQOS_MSR_L3_QOS_CFG_CDP_EN	./lib/cap.c	/^#define PQOS_MSR_L3_QOS_CFG_CDP_EN /;"	d	file:
+PQOS_MSR_MBA_MASK_START	./lib/allocation.c	/^#define PQOS_MSR_MBA_MASK_START /;"	d	file:
+PQOS_MSR_MBA_MASK_START	./pqos/monitor.c	/^#define PQOS_MSR_MBA_MASK_START /;"	d	file:
+PQOS_MSR_MON_EVTSEL	./lib/monitoring.c	/^#define PQOS_MSR_MON_EVTSEL /;"	d	file:
+PQOS_MSR_MON_EVTSEL_EVTID_MASK	./lib/monitoring.c	/^#define PQOS_MSR_MON_EVTSEL_EVTID_MASK /;"	d	file:
+PQOS_MSR_MON_EVTSEL_RMID_MASK	./lib/monitoring.c	/^#define PQOS_MSR_MON_EVTSEL_RMID_MASK /;"	d	file:
+PQOS_MSR_MON_EVTSEL_RMID_SHIFT	./lib/monitoring.c	/^#define PQOS_MSR_MON_EVTSEL_RMID_SHIFT /;"	d	file:
+PQOS_MSR_MON_QMC	./lib/monitoring.c	/^#define PQOS_MSR_MON_QMC /;"	d	file:
+PQOS_MSR_MON_QMC_DATA_MASK	./lib/monitoring.c	/^#define PQOS_MSR_MON_QMC_DATA_MASK /;"	d	file:
+PQOS_MSR_MON_QMC_ERROR	./lib/monitoring.c	/^#define PQOS_MSR_MON_QMC_ERROR /;"	d	file:
+PQOS_MSR_MON_QMC_UNAVAILABLE	./lib/monitoring.c	/^#define PQOS_MSR_MON_QMC_UNAVAILABLE /;"	d	file:
+PQOS_PERF_EVENT_CYCLES	./lib/os_monitoring.c	/^        PQOS_PERF_EVENT_CYCLES = 0x2000,       \/**< Unhalted CPU Clock Cycles *\/$/;"	e	enum:perf_mon_event	file:
+PQOS_PERF_EVENT_INSTRUCTIONS	./lib/os_monitoring.c	/^        PQOS_PERF_EVENT_INSTRUCTIONS = 0x1000, \/**< Retired CPU Instructions *\/$/;"	e	enum:perf_mon_event	file:
+PQOS_PERF_EVENT_IPC	./lib/pqos.h	/^    PQOS_PERF_EVENT_IPC    = 0x8000, \/**< instructions per clock *\/$/;"	e	enum:pqos_mon_event
+PQOS_PERF_EVENT_LLC_MISS	./lib/pqos.h	/^    PQOS_PERF_EVENT_LLC_MISS = 0x4000, \/**< LLC misses *\/$/;"	e	enum:pqos_mon_event
+PQOS_REQUIRE_CDP_ANY	./lib/pqos.h	/^        PQOS_REQUIRE_CDP_ANY            \/**< app will work with any CDP$/;"	e	enum:pqos_cdp_config
+PQOS_REQUIRE_CDP_OFF	./lib/pqos.h	/^        PQOS_REQUIRE_CDP_OFF = 0,       \/**< app not compatible with CDP *\/$/;"	e	enum:pqos_cdp_config
+PQOS_REQUIRE_CDP_ON	./lib/pqos.h	/^        PQOS_REQUIRE_CDP_ON,            \/**< app requires CDP *\/$/;"	e	enum:pqos_cdp_config
+PQOS_RES_ID_L2_ALLOCATION	./lib/cap.c	/^#define PQOS_RES_ID_L2_ALLOCATION /;"	d	file:
+PQOS_RES_ID_L3_ALLOCATION	./lib/cap.c	/^#define PQOS_RES_ID_L3_ALLOCATION /;"	d	file:
+PQOS_RES_ID_MB_ALLOCATION	./lib/cap.c	/^#define PQOS_RES_ID_MB_ALLOCATION /;"	d	file:
+PQOS_RETVAL_BUSY	./lib/pqos.h	/^#define PQOS_RETVAL_BUSY /;"	d
+PQOS_RETVAL_ERROR	./lib/pqos.h	/^#define PQOS_RETVAL_ERROR /;"	d
+PQOS_RETVAL_INIT	./lib/pqos.h	/^#define PQOS_RETVAL_INIT /;"	d
+PQOS_RETVAL_OK	./lib/pqos.h	/^#define PQOS_RETVAL_OK /;"	d
+PQOS_RETVAL_PARAM	./lib/pqos.h	/^#define PQOS_RETVAL_PARAM /;"	d
+PQOS_RETVAL_PERF_CTR	./lib/pqos.h	/^#define PQOS_RETVAL_PERF_CTR /;"	d
+PQOS_RETVAL_RESOURCE	./lib/pqos.h	/^#define PQOS_RETVAL_RESOURCE /;"	d
+PQOS_RETVAL_TRANSPORT	./lib/pqos.h	/^#define PQOS_RETVAL_TRANSPORT /;"	d
+PQOS_VERSION	./lib/pqos.h	/^#define PQOS_VERSION /;"	d
+PREFIX	./Makefile	/^PREFIX ?= \/usr\/local$/;"	m
+PREFIX	./lib/Makefile	/^PREFIX ?= \/usr\/local$/;"	m
+PREFIX	./pqos/Makefile	/^PREFIX ?= \/usr\/local$/;"	m
+PREFIX	./rdtset/Makefile	/^PREFIX ?= \/usr\/local$/;"	m
+PROFILES_MIN_COS	./pqos/profiles.c	/^#define PROFILES_MIN_COS /;"	d	file:
+RDT_MAX_L2IDS	./rdtset/common.h	/^#define RDT_MAX_L2IDS /;"	d
+RDT_MAX_PIDS	./rdtset/common.h	/^#define RDT_MAX_PIDS /;"	d
+RDT_MAX_SOCKETS	./rdtset/common.h	/^#define RDT_MAX_SOCKETS /;"	d
+RESCTRL_ALLOC_MAX_CPUS	./lib/resctrl_alloc.h	/^#define RESCTRL_ALLOC_MAX_CPUS /;"	d
+RESCTRL_ALLOC_PATH	./lib/resctrl_alloc.h	/^#define RESCTRL_ALLOC_PATH /;"	d
+RESCTRL_ALLOC_SCHEMATA_TYPE_L2	./lib/resctrl_alloc.c	/^	RESCTRL_ALLOC_SCHEMATA_TYPE_L2,     \/**< L2 CAT *\/$/;"	e	enum:resctrl_alloc_schemata_type	file:
+RESCTRL_ALLOC_SCHEMATA_TYPE_L3	./lib/resctrl_alloc.c	/^	RESCTRL_ALLOC_SCHEMATA_TYPE_L3,     \/**< L3 CAT without CDP *\/$/;"	e	enum:resctrl_alloc_schemata_type	file:
+RESCTRL_ALLOC_SCHEMATA_TYPE_L3CODE	./lib/resctrl_alloc.c	/^	RESCTRL_ALLOC_SCHEMATA_TYPE_L3CODE, \/**< L3 CAT code *\/$/;"	e	enum:resctrl_alloc_schemata_type	file:
+RESCTRL_ALLOC_SCHEMATA_TYPE_L3DATA	./lib/resctrl_alloc.c	/^	RESCTRL_ALLOC_SCHEMATA_TYPE_L3DATA, \/**< L3 CAT data *\/$/;"	e	enum:resctrl_alloc_schemata_type	file:
+RESCTRL_ALLOC_SCHEMATA_TYPE_MB	./lib/resctrl_alloc.c	/^	RESCTRL_ALLOC_SCHEMATA_TYPE_MB,     \/**< MBA data *\/$/;"	e	enum:resctrl_alloc_schemata_type	file:
+RESCTRL_ALLOC_SCHEMATA_TYPE_NONE	./lib/resctrl_alloc.c	/^	RESCTRL_ALLOC_SCHEMATA_TYPE_NONE,   \/**< unknown *\/$/;"	e	enum:resctrl_alloc_schemata_type	file:
+RESERVED1	./lib/pqos.h	/^    RESERVED1 = 0x1000,$/;"	e	enum:pqos_mon_event
+RESERVED2	./lib/pqos.h	/^    RESERVED2 = 0x2000,$/;"	e	enum:pqos_mon_event
+RESETAPP	./examples/c/CAT/Makefile	/^RESETAPP = reset_app$/;"	m
+RM	./cmake-build-debug/Makefile	/^RM = \/Applications\/CLion.app\/Contents\/bin\/cmake\/bin\/cmake -E remove -f$/;"	m
+RMID0	./lib/monitoring.c	/^#define RMID0 /;"	d	file:
+SHARED	./lib/Makefile	/^SHARED ?= y$/;"	m
+SHELL	./cmake-build-debug/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SIMULATE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SO_VERSION	./lib/Makefile	/^SO_VERSION = 1$/;"	m
+SRCS	./lib/Makefile	/^SRCS = $(sort $(wildcard *.c))$/;"	m
+SRCS	./pqos/Makefile	/^SRCS = $(sort $(wildcard *.c))$/;"	m
+SRCS	./rdtset/Makefile	/^SRCS = $(sort $(wildcard *.c))$/;"	m
+STRINGIFY	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY_HELPER	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
+STRINGIFY_HELPER	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY_HELPER(/;"	d	file:
+SUFFIXES	./cmake-build-debug/Makefile	/^SUFFIXES =$/;"	m
+StandardScaler	./py_modeling/train_model.py	/^from sklearn.preprocessing import StandardScaler$/;"	i
+TERM_MIN_NUM_LINES	./pqos/monitor.c	/^#define TERM_MIN_NUM_LINES /;"	d	file:
+TOPO_OBJ_L2_CLUSTER	./lib/utils.c	/^#define TOPO_OBJ_L2_CLUSTER /;"	d	file:
+TOPO_OBJ_L3_CLUSTER	./lib/utils.c	/^#define TOPO_OBJ_L3_CLUSTER /;"	d	file:
+TOPO_OBJ_SOCKET	./lib/utils.c	/^#define TOPO_OBJ_SOCKET /;"	d	file:
+TOP_PROC_MAX	./pqos/monitor.c	/^#define TOP_PROC_MAX /;"	d	file:
+UNUSED_ARG	./pqos/main.h	/^#define UNUSED_ARG(/;"	d
+UNUSED_PARAM	./lib/types.h	/^#define UNUSED_PARAM(/;"	d
+VERSION	./lib/Makefile	/^VERSION = 1.2.0$/;"	m
+X	./py_modeling/train_model.py	/^X = np.asarray(df_update.values[:, 1:5])$/;"	v
+XGBRegressor	./py_modeling/train_model.py	/^from xgboost import XGBRegressor$/;"	i
+X_test_std	./py_modeling/train_model.py	/^X_test_std = X_test$/;"	v
+X_train_std	./py_modeling/train_model.py	/^X_train_std = X_train$/;"	v
+_COMMON_H	./rdtset/common.h	/^#define _COMMON_H$/;"	d
+_CPU_H	./rdtset/cpu.h	/^#define _CPU_H$/;"	d
+_GNU_SOURCE	./examples/c/PSEUDO_LOCK/dlock.c	/^#define _GNU_SOURCE$/;"	d	file:
+_GNU_SOURCE	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^#define _GNU_SOURCE$/;"	d	file:
+_RDT_H	./rdtset/rdt.h	/^#define _RDT_H$/;"	d
+_WITH_DPRINTF	./lib/machine.c	/^#define _WITH_DPRINTF$/;"	d	file:
+__ALLOCATION_H__	./pqos/alloc.h	/^#define __ALLOCATION_H__$/;"	d
+__CAP_H__	./pqos/cap.h	/^#define __CAP_H__$/;"	d
+__DLOCK_H__	./examples/c/PSEUDO_LOCK/dlock.h	/^#define __DLOCK_H__$/;"	d
+__MAIN_H__	./pqos/main.h	/^#define __MAIN_H__$/;"	d
+__MONITOR_H__	./pqos/monitor.h	/^#define __MONITOR_H__$/;"	d
+__PQOS_ALLOC_H__	./lib/allocation.h	/^#define __PQOS_ALLOC_H__$/;"	d
+__PQOS_CPUINFO_H__	./lib/cpuinfo.h	/^#define __PQOS_CPUINFO_H__$/;"	d
+__PQOS_HOSTCAP_H__	./lib/cap.h	/^#define __PQOS_HOSTCAP_H__$/;"	d
+__PQOS_HOSTMON_H__	./lib/monitoring.h	/^#define __PQOS_HOSTMON_H__$/;"	d
+__PQOS_H__	./lib/pqos.h	/^#define __PQOS_H__$/;"	d
+__PQOS_LOG_H__	./lib/log.h	/^#define __PQOS_LOG_H__$/;"	d
+__PQOS_MACHINE_H__	./lib/machine.h	/^#define __PQOS_MACHINE_H__$/;"	d
+__PQOS_OS_ALLOC_H__	./lib/os_allocation.h	/^#define __PQOS_OS_ALLOC_H__$/;"	d
+__PQOS_OS_MON_H__	./lib/os_monitoring.h	/^#define __PQOS_OS_MON_H__$/;"	d
+__PQOS_PERF_H__	./lib/perf.h	/^#define __PQOS_PERF_H__$/;"	d
+__PQOS_RESCTRL_ALLOC_H__	./lib/resctrl_alloc.h	/^#define __PQOS_RESCTRL_ALLOC_H__$/;"	d
+__PQOS_TYPES_H__	./lib/types.h	/^#define __PQOS_TYPES_H__$/;"	d
+__PQOS_UTILS_H__	./lib/utils.h	/^#define __PQOS_UTILS_H__$/;"	d
+__PROFILES_H__	./pqos/profiles.h	/^#define __PROFILES_H__$/;"	d
+__TSC_H__	./examples/c/PSEUDO_LOCK/tsc.h	/^#define __TSC_H__$/;"	d
+__bitcountl	./rdtset/common.h	/^#define __bitcountl(/;"	d
+__func__	./lib/perl/test.pl	/^sub __func__ {$/;"	s
+__get_cores_per_topology_obj	./lib/utils.c	/^__get_cores_per_topology_obj(const struct pqos_cpuinfo *cpu,$/;"	f	file:
+__measurement_cost	./examples/c/PSEUDO_LOCK/tsc.c	/^static const double __measurement_cost = 0;$/;"	v	file:
+__tsc_end	./examples/c/PSEUDO_LOCK/tsc.h	/^static __attribute__((always_inline)) inline uint64_t __tsc_end(void)$/;"	f
+__tsc_start	./examples/c/PSEUDO_LOCK/tsc.h	/^static __attribute__((always_inline)) inline uint64_t __tsc_start(void)$/;"	f
+_pqos_api_exit	./lib/cap.c	/^_pqos_api_exit(void)$/;"	f	file:
+_pqos_api_init	./lib/cap.c	/^_pqos_api_init(void)$/;"	f	file:
+_pqos_api_lock	./lib/cap.c	/^_pqos_api_lock(void)$/;"	f
+_pqos_api_unlock	./lib/cap.c	/^_pqos_api_unlock(void)$/;"	f
+_pqos_cap_l3cdp_change	./lib/cap.c	/^_pqos_cap_l3cdp_change(const int prev, const int next)$/;"	f
+_pqos_check_init	./lib/cap.c	/^_pqos_check_init(const int expect)$/;"	f
+_pqos_utils_init	./lib/utils.c	/^_pqos_utils_init(int interface)$/;"	f
+add_monitoring_event	./lib/cap.c	/^add_monitoring_event(struct pqos_cap_mon *mon,$/;"	f	file:
+add_pid_for_monitoring	./pqos/monitor.c	/^add_pid_for_monitoring(const pid_t pid, const enum pqos_mon_event evt)$/;"	f	file:
+add_proc_cpu_stat	./pqos/monitor.c	/^add_proc_cpu_stat(struct slist *pslist, const pid_t pid,$/;"	f	file:
+all_evt_mask	./lib/os_monitoring.c	/^static enum pqos_mon_event all_evt_mask = 0;$/;"	v	typeref:enum:pqos_mon_event	file:
+alloc_apply	./pqos/alloc.c	/^int alloc_apply(const struct pqos_capability *cap_l3ca,$/;"	f
+alloc_assoc_reset	./lib/allocation.c	/^alloc_assoc_reset(void)$/;"	f	file:
+alloc_configure	./rdtset/rdt.c	/^alloc_configure(void)$/;"	f
+alloc_cos_reset	./lib/allocation.c	/^alloc_cos_reset(const unsigned msr_start,$/;"	f	file:
+alloc_exit	./rdtset/rdt.c	/^alloc_exit(void)$/;"	f
+alloc_fini	./rdtset/rdt.c	/^alloc_fini(void)$/;"	f
+alloc_get_default_cos	./rdtset/rdt.c	/^alloc_get_default_cos(struct pqos_l2ca *l2_def, struct pqos_l3ca *l3_def,$/;"	f	file:
+alloc_init	./rdtset/rdt.c	/^alloc_init(void)$/;"	f
+alloc_opts	./pqos/alloc.c	/^static char *alloc_opts[32];$/;"	v	file:
+alloc_pid_flag	./pqos/alloc.c	/^int alloc_pid_flag;$/;"	v
+alloc_print_config	./pqos/alloc.c	/^void alloc_print_config(const struct pqos_capability *cap_mon,$/;"	f
+alloc_release	./rdtset/rdt.c	/^alloc_release(const cpu_set_t *cores)$/;"	f	file:
+alloc_reset	./rdtset/rdt.c	/^alloc_reset(void)$/;"	f
+alloc_validate	./rdtset/rdt.c	/^alloc_validate(void)$/;"	f	file:
+allocation_get_input	./examples/c/CAT/allocation_app.c	/^allocation_get_input(int argc, char *argv[])$/;"	f	file:
+allocation_tab	./pqos/profiles.c	/^static const struct llc_allocation allocation_tab[] = {$/;"	v	typeref:struct:llc_allocation	file:
+api_init	./lib/api.c	/^api_init(int interface)$/;"	f
+apic_info	./lib/cpuinfo.c	/^struct apic_info {$/;"	s	file:
+attrs	./lib/os_monitoring.c	/^        struct perf_event_attr attrs;$/;"	m	struct:os_supported_event	typeref:struct:os_supported_event::perf_event_attr	file:
+best_quota	./py_modeling/get_best_quota.py	/^best_quota = get_quota_from_ipc(0.4)$/;"	v
+bits_count	./rdtset/rdt.c	/^bits_count(uint64_t bitmask)$/;"	f	file:
+bits_count	./snmp/rdt-agentx.pl	/^sub bits_count {$/;"	s
+build_header_row	./pqos/monitor.c	/^build_header_row(char *hdr, const size_t sz_hdr,$/;"	f	file:
+bytes_to_cache_ways	./examples/c/PSEUDO_LOCK/dlock.c	/^static int bytes_to_cache_ways(const struct pqos_capability *cat_cap,$/;"	f	file:
+bytes_to_kb	./examples/c/CMT_MBM/monitor_app.c	/^static inline double bytes_to_kb(const double bytes)$/;"	f	file:
+bytes_to_kb	./pqos/monitor.c	/^static inline double bytes_to_kb(const double bytes)$/;"	f	file:
+bytes_to_mb	./examples/c/CMT_MBM/monitor_app.c	/^static inline double bytes_to_mb(const double bytes)$/;"	f	file:
+bytes_to_mb	./pqos/monitor.c	/^static inline double bytes_to_mb(const double bytes)$/;"	f	file:
+callback_log	./lib/pqos.h	/^        void (*callback_log)(void *, const size_t, const char *);$/;"	m	struct:pqos_config
+cap_print_cacheinfo	./pqos/cap.c	/^cap_print_cacheinfo(const unsigned indent, const struct pqos_cacheinfo *cache)$/;"	f	file:
+cap_print_features	./pqos/cap.c	/^cap_print_features(const struct pqos_cap *cap,$/;"	f
+cap_print_features_hw	./pqos/cap.c	/^cap_print_features_hw(const struct pqos_capability *cap_mon,$/;"	f	file:
+cap_print_features_l2ca	./pqos/cap.c	/^cap_print_features_l2ca(const unsigned indent,$/;"	f	file:
+cap_print_features_l3ca	./pqos/cap.c	/^cap_print_features_l3ca(const unsigned indent,$/;"	f	file:
+cap_print_features_mba	./pqos/cap.c	/^cap_print_features_mba(const unsigned indent,$/;"	f	file:
+cap_print_features_mon	./pqos/cap.c	/^cap_print_features_mon(const unsigned indent,$/;"	f	file:
+cap_print_features_os	./pqos/cap.c	/^cap_print_features_os(const struct pqos_capability *cap_mon,$/;"	f	file:
+capabilities	./lib/pqos.h	/^        struct pqos_capability capabilities[0];$/;"	m	struct:pqos_cap	typeref:struct:pqos_cap::pqos_capability
+cdp	./lib/pqos.h	/^        int cdp;                        \/**< code data prioritization feature$/;"	m	struct:pqos_cap_l3ca
+cdp	./lib/pqos.h	/^        int cdp;                        \/**< data & code masks used if true *\/$/;"	m	struct:pqos_l3ca
+cdp_enable	./lib/allocation.c	/^cdp_enable(const unsigned sockets_num,$/;"	f	file:
+cdp_is_enabled	./lib/cap.c	/^cdp_is_enabled(const struct pqos_cpuinfo *cpu,$/;"	f	file:
+cdp_on	./lib/pqos.h	/^        int cdp_on;                     \/**< code data prioritization on or$/;"	m	struct:pqos_cap_l3ca
+cfg_configure_cos	./rdtset/rdt.c	/^cfg_configure_cos(const struct pqos_l2ca *l2ca, const struct pqos_l3ca *l3ca,$/;"	f	file:
+cfg_set_cores_msr	./rdtset/rdt.c	/^cfg_set_cores_msr(const unsigned technology, const cpu_set_t *cores,$/;"	f	file:
+cfg_set_cores_os	./rdtset/rdt.c	/^cfg_set_cores_os(const unsigned technology, const cpu_set_t *cores,$/;"	f	file:
+cfg_set_pids	./rdtset/rdt.c	/^cfg_set_pids(const unsigned technology, const struct pqos_l3ca *l3ca,$/;"	f	file:
+cgroup_cpu_dir	./pqos/monitor.c	/^        char *cgroup_cpu_dir;$/;"	m	struct:core_group	file:
+check_cbm_len_and_contention	./rdtset/rdt.c	/^check_cbm_len_and_contention(const enum pqos_cap_type type)$/;"	f	file:
+check_cbm_len_and_contention_all	./rdtset/rdt.c	/^check_cbm_len_and_contention_all(void)$/;"	f	file:
+check_cdp_support	./rdtset/rdt.c	/^check_cdp_support(void)$/;"	f	file:
+check_cpus	./rdtset/rdt.c	/^check_cpus(void)$/;"	f	file:
+check_cpus_overlapping	./rdtset/rdt.c	/^check_cpus_overlapping(void)$/;"	f	file:
+check_msr_tools	./lib/perl/test.pl	/^sub check_msr_tools {$/;"	s
+check_supported	./rdtset/rdt.c	/^check_supported(void)$/;"	f	file:
+class_id	./examples/c/CAT/association_app.c	/^        unsigned class_id;$/;"	m	struct:__anon1	file:
+class_id	./lib/pqos.h	/^        unsigned class_id;              \/**< class of service *\/$/;"	m	struct:pqos_l3ca
+class_id	./lib/pqos.h	/^        unsigned class_id;      \/**< class of service *\/$/;"	m	struct:pqos_l2ca
+class_id	./lib/pqos.h	/^        unsigned class_id;      \/**< class of service *\/$/;"	m	struct:pqos_mba
+class_id	./pqos/alloc.c	/^        unsigned class_id;$/;"	m	struct:__anon8	file:
+class_id	./pqos/alloc.c	/^        unsigned class_id;$/;"	m	struct:__anon9	file:
+classes_way11_overlapN_equalN	./pqos/profiles.c	/^static const char * const classes_way11_overlapN_equalN[] = {$/;"	v	file:
+classes_way11_overlapN_equalY	./pqos/profiles.c	/^static const char * const classes_way11_overlapN_equalY[] = {$/;"	v	file:
+classes_way11_overlapP0_equalN	./pqos/profiles.c	/^static const char * const classes_way11_overlapP0_equalN[] = {$/;"	v	file:
+classes_way11_overlapY_equalN	./pqos/profiles.c	/^static const char * const classes_way11_overlapY_equalN[] = {$/;"	v	file:
+classes_way12_overlapN_equalN	./pqos/profiles.c	/^static const char * const classes_way12_overlapN_equalN[] = {$/;"	v	file:
+classes_way12_overlapN_equalY	./pqos/profiles.c	/^static const char * const classes_way12_overlapN_equalY[] = {$/;"	v	file:
+classes_way12_overlapP0_equalN	./pqos/profiles.c	/^static const char * const classes_way12_overlapP0_equalN[] = {$/;"	v	file:
+classes_way12_overlapY_equalN	./pqos/profiles.c	/^static const char * const classes_way12_overlapY_equalN[] = {$/;"	v	file:
+classes_way16_overlapN_equalN	./pqos/profiles.c	/^static const char * const classes_way16_overlapN_equalN[] = {$/;"	v	file:
+classes_way16_overlapN_equalY	./pqos/profiles.c	/^static const char * const classes_way16_overlapN_equalY[] = {$/;"	v	file:
+classes_way16_overlapP0_equalN	./pqos/profiles.c	/^static const char * const classes_way16_overlapP0_equalN[] = {$/;"	v	file:
+classes_way16_overlapY_equalN	./pqos/profiles.c	/^static const char * const classes_way16_overlapY_equalN[] = {$/;"	v	file:
+classes_way20_overlapN_equalN	./pqos/profiles.c	/^static const char * const classes_way20_overlapN_equalN[] = {$/;"	v	file:
+classes_way20_overlapN_equalY	./pqos/profiles.c	/^static const char * const classes_way20_overlapN_equalY[] = {$/;"	v	file:
+classes_way20_overlapP0_equalN	./pqos/profiles.c	/^static const char * const classes_way20_overlapP0_equalN[] = {$/;"	v	file:
+classes_way20_overlapY_equalN	./pqos/profiles.c	/^static const char * const classes_way20_overlapY_equalN[] = {$/;"	v	file:
+clk_avg	./examples/c/PSEUDO_LOCK/tsc.h	/^        double clk_avg;               \/**< cumulative sum to$/;"	m	struct:tsc_prof
+clk_avgc	./examples/c/PSEUDO_LOCK/tsc.h	/^        uint64_t clk_avgc;            \/**< count to calculate an average *\/$/;"	m	struct:tsc_prof
+clk_max	./examples/c/PSEUDO_LOCK/tsc.h	/^        double clk_max;               \/**< max cycle cost recorded *\/$/;"	m	struct:tsc_prof
+clk_min	./examples/c/PSEUDO_LOCK/tsc.h	/^        double clk_min;               \/**< min cycle cost recorded *\/$/;"	m	struct:tsc_prof
+clk_result	./examples/c/PSEUDO_LOCK/tsc.h	/^        double clk_result;            \/**< avg cycles cost *\/$/;"	m	struct:tsc_prof
+clk_start	./examples/c/PSEUDO_LOCK/tsc.h	/^        uint64_t clk_start;           \/**< start TSC of an iteration *\/$/;"	m	struct:tsc_prof
+close_pqos	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static int close_pqos(void)$/;"	f	file:
+close_timer	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static int close_timer(void)$/;"	f	file:
+cluster	./lib/pqos.h	/^        unsigned cluster;$/;"	m	struct:pqos_mon_poll_ctx
+cmp_cgrps	./pqos/monitor.c	/^cmp_cgrps(const struct core_group *cg_a,$/;"	f	file:
+cmt_llc_start	./snmp/rdt-agentx.pl	/^sub cmt_llc_start {$/;"	s
+cmt_llc_stop	./snmp/rdt-agentx.pl	/^sub cmt_llc_stop {$/;"	s
+code_mask	./lib/pqos.h	/^                        uint64_t code_mask;$/;"	m	struct:pqos_l3ca::__anon6::__anon7
+command	./rdtset/common.h	/^		 command:1;		\/**< command to be executed detected *\/$/;"	m	struct:rdtset
+config	./pqos/profiles.c	/^        const struct llc_allocation_config *config;$/;"	m	struct:llc_allocation	typeref:struct:llc_allocation::llc_allocation_config	file:
+config	./rdtset/common.h	/^	struct rdt_config config[CPU_SETSIZE];	\/**< RDT configuration *\/$/;"	m	struct:rdtset	typeref:struct:rdtset::rdt_config
+config_cfg0	./pqos/profiles.c	/^static const struct llc_allocation_config config_cfg0[] = {$/;"	v	typeref:struct:llc_allocation_config	file:
+config_cfg1	./pqos/profiles.c	/^static const struct llc_allocation_config config_cfg1[] = {$/;"	v	typeref:struct:llc_allocation_config	file:
+config_cfg2	./pqos/profiles.c	/^static const struct llc_allocation_config config_cfg2[] = {$/;"	v	typeref:struct:llc_allocation_config	file:
+config_cfg3	./pqos/profiles.c	/^static const struct llc_allocation_config config_cfg3[] = {$/;"	v	typeref:struct:llc_allocation_config	file:
+config_count	./rdtset/common.h	/^	unsigned config_count;		\/**< Num of RDT config entries *\/$/;"	m	struct:rdtset
+const	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
+context	./lib/pqos.h	/^        void *context;                  \/**< application specific context$/;"	m	struct:pqos_mon_data
+context_log	./lib/pqos.h	/^        void *context_log;$/;"	m	struct:pqos_config
+core	./examples/c/CAT/association_app.c	/^        unsigned core;$/;"	m	struct:__anon1	file:
+core	./examples/c/CMT_MBM/monitor_app.c	/^        unsigned core;$/;"	m	struct:__anon2	file:
+core	./pqos/alloc.c	/^        unsigned core;$/;"	m	struct:__anon8	file:
+core_group	./pqos/monitor.c	/^static struct core_group {$/;"	s	file:
+core_mask	./lib/cpuinfo.c	/^        uint32_t core_mask;     \/**< mask to get CORE ID *\/$/;"	m	struct:apic_info	file:
+core_smt_mask	./lib/cpuinfo.c	/^        uint32_t core_smt_mask; \/**< mask to get CORE+SMT ID *\/$/;"	m	struct:apic_info	file:
+cores	./lib/pqos.h	/^        struct pqos_coreinfo cores[0];$/;"	m	struct:pqos_cpuinfo	typeref:struct:pqos_cpuinfo::pqos_coreinfo
+cores	./lib/pqos.h	/^        unsigned *cores;                \/**< list of cores in the group *\/$/;"	m	struct:pqos_mon_data
+cores	./pqos/monitor.c	/^        unsigned *cores;$/;"	m	struct:core_group	file:
+cos_assoc_get	./lib/allocation.c	/^cos_assoc_get(const unsigned lcore, unsigned *class_id)$/;"	f	file:
+cos_assoc_set	./lib/allocation.c	/^cos_assoc_set(const unsigned lcore, const unsigned class_id)$/;"	f	file:
+cos_tab	./examples/c/PSEUDO_LOCK/dlock.c	/^        struct pqos_l3ca *cos_tab;$/;"	m	struct:__anon4	typeref:struct:__anon4::pqos_l3ca	file:
+cost	./examples/c/PSEUDO_LOCK/tsc.h	/^        double cost;                  \/**< cost of measurement *\/$/;"	m	struct:tsc_prof
+cpu_aff_cpuset	./rdtset/common.h	/^	cpu_set_t cpu_aff_cpuset;	\/**< CPU affinity configuration *\/$/;"	m	struct:rdtset
+cpu_all	./lib/pqos.h	/^    long int cpu_all;$/;"	m	struct:pqos_event_values
+cpu_all_delta	./lib/pqos.h	/^    long int cpu_all_delta;$/;"	m	struct:pqos_event_values
+cpu_avg_ratio	./pqos/monitor.c	/^        double cpu_avg_ratio; \/**< cpu usage\/running time ratio*\/$/;"	m	struct:proc_stats	file:
+cpu_set_t	./lib/cpuinfo.c	/^typedef cpuset_t cpu_set_t; \/* stick with Linux typedef *\/$/;"	t	file:
+cpu_set_t	./rdtset/cpu.h	/^typedef cpuset_t cpu_set_t;$/;"	t
+cpu_usage	./lib/pqos.h	/^    double cpu_usage;$/;"	m	struct:pqos_event_values
+cpu_use	./lib/pqos.h	/^    long int cpu_use;$/;"	m	struct:pqos_event_values
+cpu_use_delta	./lib/pqos.h	/^    long int cpu_use_delta;$/;"	m	struct:pqos_event_values
+cpuid_out	./lib/machine.h	/^struct cpuid_out {$/;"	s
+cpuinfo_build_topo	./lib/cpuinfo.c	/^cpuinfo_build_topo(void)$/;"	f	file:
+cpuinfo_fini	./lib/cpuinfo.c	/^cpuinfo_fini(void)$/;"	f
+cpuinfo_init	./lib/cpuinfo.c	/^cpuinfo_init(const struct pqos_cpuinfo **topology)$/;"	f
+cpumask	./rdtset/common.h	/^	cpu_set_t cpumask;	\/**< CPUs bitmask *\/$/;"	m	struct:rdt_config
+cpuset_to_str	./rdtset/common.c	/^cpuset_to_str(char *cpustr, const unsigned cpustr_len,$/;"	f
+data	./pqos/monitor.c	/^        void *data; \/**< abstract data that is hold by a list element *\/$/;"	m	struct:slist	file:
+data	./py_modeling/train_model.py	/^data = "\/Users\/quximing\/Desktop\/4d_0525_puredata_20W.xlsx"$/;"	v
+data_mask	./lib/pqos.h	/^                        uint64_t data_mask;$/;"	m	struct:pqos_l3ca::__anon6::__anon7
+data_update	./snmp/rdt-agentx.pl	/^sub data_update {$/;"	s
+data_update_core_prop	./snmp/rdt-agentx.pl	/^sub data_update_core_prop {$/;"	s
+data_update_cos	./snmp/rdt-agentx.pl	/^sub data_update_cos {$/;"	s
+data_update_mon_ctrl	./snmp/rdt-agentx.pl	/^sub data_update_mon_ctrl {$/;"	s
+decimal	./py_modeling/get_best_quota.py	/^import decimal$/;"	i
+desc	./lib/os_monitoring.c	/^        const char *desc;$/;"	m	struct:os_supported_event	file:
+desc	./pqos/monitor.c	/^        char *desc;$/;"	m	struct:core_group	file:
+descr	./pqos/profiles.c	/^        const char *descr;$/;"	m	struct:llc_allocation	file:
+detect_apic_cache_masks	./lib/cpuinfo.c	/^detect_apic_cache_masks(struct apic_info *apic)$/;"	f	file:
+detect_apic_core_masks	./lib/cpuinfo.c	/^detect_apic_core_masks(struct apic_info *apic)$/;"	f	file:
+detect_apic_masks	./lib/cpuinfo.c	/^detect_apic_masks(struct apic_info *apic)$/;"	f	file:
+detect_cpu	./lib/cpuinfo.c	/^detect_cpu(const int cpu,$/;"	f	file:
+detect_os_support	./lib/cap.c	/^detect_os_support(const char *fname, const char *str, int *supported)$/;"	f	file:
+detected	./lib/pqos.h	/^        int detected;                   \/**< Indicates cache detected & valid *\/$/;"	m	struct:pqos_cacheinfo
+df	./py_modeling/train_model.py	/^df = pd.read_excel(data, header=0, parse_cols="A:E")$/;"	v
+df_update	./py_modeling/train_model.py	/^df_update = df[df.CPU > 0]$/;"	v
+df_update	./py_modeling/train_model.py	/^df_update = df_update[(df.IPC\/df.CPU < 0.5)]$/;"	v
+discover_alloc_l2	./lib/cap.c	/^discover_alloc_l2(struct pqos_cap_l2ca **r_cap,$/;"	f	file:
+discover_alloc_l3	./lib/cap.c	/^discover_alloc_l3(struct pqos_cap_l3ca **r_cap,$/;"	f	file:
+discover_alloc_l3_brandstr	./lib/cap.c	/^discover_alloc_l3_brandstr(struct pqos_cap_l3ca *cap)$/;"	f	file:
+discover_alloc_l3_cpuid	./lib/cap.c	/^discover_alloc_l3_cpuid(struct pqos_cap_l3ca *cap,$/;"	f	file:
+discover_alloc_l3_probe	./lib/cap.c	/^discover_alloc_l3_probe(struct pqos_cap_l3ca *cap,$/;"	f	file:
+discover_alloc_mba	./lib/cap.c	/^discover_alloc_mba(struct pqos_cap_mba **r_cap)$/;"	f	file:
+discover_capabilities	./lib/cap.c	/^discover_capabilities(struct pqos_cap **p_cap,$/;"	f	file:
+discover_monitoring	./lib/cap.c	/^discover_monitoring(struct pqos_cap_mon **r_mon,$/;"	f	file:
+discover_os_capabilities	./lib/cap.c	/^discover_os_capabilities(struct pqos_cap *p_cap, int interface)$/;"	f	file:
+discover_os_monitoring	./lib/cap.c	/^discover_os_monitoring(struct pqos_cap_mon *mon) {$/;"	f	file:
+dlock_exit	./examples/c/PSEUDO_LOCK/dlock.c	/^int dlock_exit(void)$/;"	f
+dlock_init	./examples/c/PSEUDO_LOCK/dlock.c	/^int dlock_init(void *ptr, const size_t size, const int clos, const int cpuid)$/;"	f
+drange	./py_modeling/get_best_quota.py	/^def drange(x, y, step):$/;"	f
+eax	./lib/machine.h	/^        uint32_t eax;$/;"	m	struct:cpuid_out
+ebx	./lib/machine.h	/^        uint32_t ebx;$/;"	m	struct:cpuid_out
+ecx	./lib/machine.h	/^        uint32_t ecx;$/;"	m	struct:cpuid_out
+edx	./lib/machine.h	/^        uint32_t edx;$/;"	m	struct:cpuid_out
+enforcement_get_input	./examples/c/CAT/association_app.c	/^enforcement_get_input(int argc, char *argv[])$/;"	f	file:
+ensemble	./py_modeling/train_model.py	/^from sklearn import ensemble #0.54$/;"	i
+ensemble	./py_modeling/train_model.py	/^from sklearn import ensemble #0.60$/;"	i
+ensemble	./py_modeling/train_model.py	/^from sklearn import ensemble #0.65$/;"	i
+event	./lib/os_monitoring.c	/^        enum pqos_mon_event event;$/;"	m	struct:os_supported_event	typeref:enum:os_supported_event::pqos_mon_event	file:
+event	./lib/pqos.h	/^        enum pqos_mon_event event;      \/**< monitored event *\/$/;"	m	struct:pqos_mon_data	typeref:enum:pqos_mon_data::pqos_mon_event
+events	./examples/c/CMT_MBM/monitor_app.c	/^        enum pqos_mon_event events;$/;"	m	struct:__anon2	typeref:enum:__anon2::pqos_mon_event	file:
+events	./examples/c/CMT_MBM/monitor_app.c	/^        enum pqos_mon_event events;$/;"	m	struct:__anon3	typeref:enum:__anon3::pqos_mon_event	file:
+events	./lib/pqos.h	/^        struct pqos_monitor events[0];$/;"	m	struct:pqos_cap_mon	typeref:struct:pqos_cap_mon::pqos_monitor
+events	./pqos/monitor.c	/^        enum pqos_mon_event events;$/;"	m	struct:core_group	typeref:enum:core_group::pqos_mon_event	file:
+events	./pqos/monitor.c	/^        enum pqos_mon_event events;$/;"	m	struct:pid_group	typeref:enum:pid_group::pqos_mon_event	file:
+events_tab	./lib/os_monitoring.c	/^} events_tab[] = {$/;"	v	typeref:struct:os_supported_event	file:
+execute_cmd	./rdtset/rdtset.c	/^execute_cmd(int argc, char **argv)$/;"	f	file:
+fd_ins	./lib/pqos.h	/^    int fd_ins;$/;"	m	struct:pqos_event_values
+fd_log	./lib/pqos.h	/^        int fd_log;$/;"	m	struct:pqos_config
+fds_cyc	./lib/pqos.h	/^        int *fds_cyc;$/;"	m	struct:pqos_mon_data
+fds_inst	./lib/pqos.h	/^        int *fds_inst;$/;"	m	struct:pqos_mon_data
+fds_llc	./lib/pqos.h	/^        int *fds_llc;$/;"	m	struct:pqos_mon_data
+fds_llc_misses	./lib/pqos.h	/^        int *fds_llc_misses;$/;"	m	struct:pqos_mon_data
+fds_mbl	./lib/pqos.h	/^        int *fds_mbl;$/;"	m	struct:pqos_mon_data
+fds_mbt	./lib/pqos.h	/^        int *fds_mbt;$/;"	m	struct:pqos_mon_data
+features	./cmake-build-debug/CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v
+features	./cmake-build-debug/CMakeFiles/feature_tests.cxx	/^  const char features[] = {"\\n"$/;"	v
+fill_core_tab	./pqos/alloc.c	/^fill_core_tab(char *str)$/;"	f	file:
+fill_cpu_avg_ratio	./pqos/monitor.c	/^fill_cpu_avg_ratio(struct proc_stats *pstat, const time_t proc_start_time)$/;"	f	file:
+fill_pid_tab	./pqos/alloc.c	/^fill_pid_tab(char *str)$/;"	f	file:
+fill_top_procs	./pqos/monitor.c	/^fill_top_procs(const struct slist *pslist, struct proc_stats *top_procs,$/;"	f	file:
+fillin_csv_column	./pqos/monitor.c	/^fillin_csv_column(const double val, char data[], const size_t sz_data,$/;"	f	file:
+fillin_text_column	./pqos/monitor.c	/^fillin_text_column(const double val, char data[], const size_t sz_data,$/;"	f	file:
+fillin_xml_column	./pqos/monitor.c	/^fillin_xml_column(const double val, char data[], const size_t sz_data,$/;"	f	file:
+filter	./lib/os_monitoring.c	/^filter(const struct dirent *dir)$/;"	f	file:
+find_proc_stats_by_pid	./pqos/monitor.c	/^find_proc_stats_by_pid(const struct slist *pslist, const pid_t pid)$/;"	f	file:
+fp_monitor	./pqos/monitor.c	/^static FILE *fp_monitor = NULL;$/;"	v	file:
+freq_ms	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^const long long freq_ms = 100;$/;"	v
+g_cfg	./rdtset/common.h	/^struct rdtset g_cfg;$/;"	v	typeref:struct:rdtset
+generate_cos	./lib/perl/test.pl	/^sub generate_cos {$/;"	s
+generate_ways_mask	./lib/perl/test.pl	/^sub generate_ways_mask {$/;"	s
+generic_ptr	./lib/pqos.h	/^                void *generic_ptr;$/;"	m	union:pqos_capability::__anon5
+generic_ptr	./rdtset/common.h	/^		void *generic_ptr;$/;"	m	union:rdt_cfg::__anon10
+get_affinity	./lib/cpuinfo.c	/^get_affinity(cpu_set_t *p_set)$/;"	f	file:
+get_cache_info	./lib/cap.c	/^get_cache_info(const struct pqos_cacheinfo *cache_info,$/;"	f	file:
+get_contention_mask	./rdtset/rdt.c	/^get_contention_mask(const enum pqos_cap_type type)$/;"	f	file:
+get_delta	./lib/monitoring.c	/^get_delta(const uint64_t old_value, const uint64_t new_value)$/;"	f	file:
+get_delta	./lib/os_monitoring.c	/^get_delta(const uint64_t old_value, const uint64_t new_value)$/;"	f	file:
+get_event_id	./lib/monitoring.c	/^get_event_id(const enum pqos_mon_event event)$/;"	f	file:
+get_hi_cos_id	./lib/allocation.c	/^get_hi_cos_id(const unsigned technology,$/;"	f	file:
+get_l2id_cores	./rdtset/rdt.c	/^get_l2id_cores(const cpu_set_t *cores, const unsigned l2_id,$/;"	f	file:
+get_max_res_id	./rdtset/rdt.c	/^get_max_res_id(unsigned technology)$/;"	f	file:
+get_mon_arrays	./pqos/monitor.c	/^get_mon_arrays(struct pqos_mon_data ***parray1,$/;"	f	file:
+get_mon_event_name	./pqos/cap.c	/^get_mon_event_name(int event)$/;"	f	file:
+get_msr_assoc	./lib/perl/test.pl	/^sub get_msr_assoc {$/;"	s
+get_msr_l2_ways_mask	./lib/perl/test.pl	/^sub get_msr_l2_ways_mask {$/;"	s
+get_msr_l3_ways_mask	./lib/perl/test.pl	/^sub get_msr_l3_ways_mask {$/;"	s
+get_msr_ways_mask	./lib/perl/test.pl	/^sub get_msr_ways_mask {$/;"	s
+get_not_cbm	./rdtset/rdt.c	/^get_not_cbm(const enum pqos_cap_type type)$/;"	f	file:
+get_os_event_name	./lib/cap.c	/^get_os_event_name(int event)$/;"	f	file:
+get_pid_cputicks	./pqos/monitor.c	/^get_pid_cputicks(const char *proc_pid_dir_name, unsigned long *cputicks)$/;"	f	file:
+get_pid_num_from_dir	./pqos/monitor.c	/^get_pid_num_from_dir(DIR *proc_dir, const char *pid_dir_name, pid_t *pid)$/;"	f	file:
+get_proc_pids_stats	./pqos/monitor.c	/^get_proc_pids_stats(struct slist **pslist)$/;"	f	file:
+get_proc_start_time	./pqos/monitor.c	/^get_proc_start_time(DIR *proc_dir, const char *pid_dir_name, time_t *start_time)$/;"	f	file:
+get_quota_from_ipc	./py_modeling/get_best_quota.py	/^def get_quota_from_ipc(ipc):$/;"	f
+get_socket_cores	./rdtset/rdt.c	/^get_socket_cores(const cpu_set_t *cores, const unsigned socket_id,$/;"	f	file:
+get_supported_event	./lib/os_monitoring.c	/^get_supported_event(const enum pqos_mon_event event)$/;"	f	file:
+get_unused_cos	./lib/allocation.c	/^get_unused_cos(const unsigned id,$/;"	f	file:
+get_unused_cos	./lib/os_allocation.c	/^get_unused_cos(const unsigned hi_class_id,$/;"	f	file:
+handle_core_prop	./snmp/rdt-agentx.pl	/^sub handle_core_prop {$/;"	s
+handle_cos	./snmp/rdt-agentx.pl	/^sub handle_cos {$/;"	s
+handle_mon_ctrl	./snmp/rdt-agentx.pl	/^sub handle_mon_ctrl {$/;"	s
+handle_snmp_req	./snmp/rdt-agentx.pl	/^sub handle_snmp_req {$/;"	s
+help_printf_long	./pqos/main.c	/^static const char help_printf_long[] =$/;"	v	file:
+help_printf_short	./pqos/main.c	/^static const char help_printf_short[] =$/;"	v	file:
+hw_alloc_assign	./lib/allocation.c	/^hw_alloc_assign(const unsigned technology,$/;"	f
+hw_alloc_assoc_get	./lib/allocation.c	/^hw_alloc_assoc_get(const unsigned lcore,$/;"	f
+hw_alloc_assoc_set	./lib/allocation.c	/^hw_alloc_assoc_set(const unsigned lcore,$/;"	f
+hw_alloc_release	./lib/allocation.c	/^hw_alloc_release(const unsigned *core_array,$/;"	f
+hw_alloc_reset	./lib/allocation.c	/^hw_alloc_reset(const enum pqos_cdp_config l3_cdp_cfg)$/;"	f
+hw_l2ca_get	./lib/allocation.c	/^hw_l2ca_get(const unsigned l2id,$/;"	f
+hw_l2ca_get_min_cbm_bits	./lib/allocation.c	/^hw_l2ca_get_min_cbm_bits(unsigned *min_cbm_bits)$/;"	f
+hw_l2ca_set	./lib/allocation.c	/^hw_l2ca_set(const unsigned l2id,$/;"	f
+hw_l3ca_get	./lib/allocation.c	/^hw_l3ca_get(const unsigned socket,$/;"	f
+hw_l3ca_get_min_cbm_bits	./lib/allocation.c	/^hw_l3ca_get_min_cbm_bits(unsigned *min_cbm_bits)$/;"	f
+hw_l3ca_set	./lib/allocation.c	/^hw_l3ca_set(const unsigned socket,$/;"	f
+hw_mba_get	./lib/allocation.c	/^hw_mba_get(const unsigned socket,$/;"	f
+hw_mba_set	./lib/allocation.c	/^hw_mba_set(const unsigned socket,$/;"	f
+hw_mon_assoc_get	./lib/monitoring.c	/^hw_mon_assoc_get(const unsigned lcore,$/;"	f
+hw_mon_poll	./lib/monitoring.c	/^hw_mon_poll(struct pqos_mon_data **groups,$/;"	f
+hw_mon_reset	./lib/monitoring.c	/^int hw_mon_reset(void)$/;"	f
+hw_mon_start	./lib/monitoring.c	/^hw_mon_start(const unsigned num_cores,$/;"	f
+hw_mon_stop	./lib/monitoring.c	/^hw_mon_stop(struct pqos_mon_data *group)$/;"	f
+ia32_perf_counter_start	./lib/monitoring.c	/^ia32_perf_counter_start(const unsigned num_cores,$/;"	f	file:
+ia32_perf_counter_stop	./lib/monitoring.c	/^ia32_perf_counter_stop(const unsigned num_cores,$/;"	f	file:
+id	./examples/c/PSEUDO_LOCK/dlock.c	/^        unsigned id;$/;"	m	struct:__anon4	file:
+id	./pqos/profiles.c	/^        const char *id;$/;"	m	struct:llc_allocation	file:
+info_arch	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_cray	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_cray	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_language_dialect_default	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_dialect_default =$/;"	v
+info_language_dialect_default	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_dialect_default = "INFO" ":" "dialect_default["$/;"	v
+info_platform	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_simulate	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate_version	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v
+info_simulate_version	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
+info_version	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
+info_version	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
+init_memory	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static void *init_memory(const size_t sz)$/;"	f	file:
+init_pqos	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static int init_pqos(void)$/;"	f	file:
+init_pqos	./lib/perl/test.pl	/^sub init_pqos {$/;"	s
+init_timer	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static int init_timer(const long long freq_nanosecs)$/;"	f	file:
+interface	./examples/c/CMT_MBM/monitor_app.c	/^static int interface = PQOS_INTER_MSR;$/;"	v	file:
+interface	./lib/pqos.h	/^        int interface;$/;"	m	struct:pqos_config
+interface	./rdtset/common.h	/^	int interface;                  \/**< pqos interface to use *\/$/;"	m	struct:rdtset
+ipc	./lib/pqos.h	/^        double ipc;                     \/**< retired instructions \/ cycles *\/$/;"	m	struct:pqos_event_values
+ipc_retired	./lib/pqos.h	/^        uint64_t ipc_retired;           \/**< instructions retired - reading *\/$/;"	m	struct:pqos_event_values
+ipc_retired_delta	./lib/pqos.h	/^        uint64_t ipc_retired_delta;     \/**< instructions retired - delta *\/$/;"	m	struct:pqos_event_values
+ipc_unhalted	./lib/pqos.h	/^        uint64_t ipc_unhalted;          \/**< unhalted cycles - reading *\/$/;"	m	struct:pqos_event_values
+ipc_unhalted_delta	./lib/pqos.h	/^        uint64_t ipc_unhalted_delta;    \/**< unhalted cycles - delta *\/$/;"	m	struct:pqos_event_values
+is_contiguous	./lib/api.c	/^is_contiguous(uint64_t bitmask)$/;"	f	file:
+is_contiguous	./rdtset/rdt.c	/^is_contiguous(const char *cat_type, const uint64_t bitmask)$/;"	f	file:
+is_contiguous	./snmp/rdt-agentx.pl	/^sub is_contiguous {$/;"	s
+is_event_supported	./lib/os_monitoring.c	/^is_event_supported(const enum pqos_mon_event event)$/;"	f	file:
+is_linear	./lib/pqos.h	/^        int is_linear;                  \/**< the type of MBA linear\/nonlinear *\/$/;"	m	struct:pqos_cap_mba
+is_str_conversion_ok	./pqos/monitor.c	/^is_str_conversion_ok(const char *str_remainder)$/;"	f	file:
+is_whole_number	./snmp/rdt-agentx.pl	/^sub is_whole_number {$/;"	s
+isdup	./pqos/main.c	/^isdup(const uint64_t *tab, const unsigned size, const uint64_t val)$/;"	f	file:
+isdup	./rdtset/common.c	/^isdup(const uint64_t *tab, const unsigned size, const uint64_t val)$/;"	f	file:
+joblib	./py_modeling/get_best_quota.py	/^from sklearn.externals import joblib$/;"	i
+joblib	./py_modeling/train_model.py	/^from sklearn.externals import joblib$/;"	i
+l2	./lib/pqos.h	/^        struct pqos_cacheinfo l2;       \/**< L2 cache information *\/$/;"	m	struct:pqos_cpuinfo	typeref:struct:pqos_cpuinfo::pqos_cacheinfo
+l2	./rdtset/common.h	/^		struct pqos_l2ca *l2;$/;"	m	union:rdt_cfg::__anon10	typeref:struct:rdt_cfg::__anon10::pqos_l2ca
+l2	./rdtset/common.h	/^	struct pqos_l2ca l2;	\/**< L2 configuration *\/$/;"	m	struct:rdt_config	typeref:struct:rdt_config::pqos_l2ca
+l2_id	./lib/pqos.h	/^        unsigned l2_id;                 \/**< L2 cluster id *\/$/;"	m	struct:pqos_coreinfo
+l2_shift	./lib/cpuinfo.c	/^        uint32_t l2_shift;      \/**< bits to shift to get L2 ID *\/$/;"	m	struct:apic_info	file:
+l2ca	./lib/pqos.h	/^                struct pqos_cap_l2ca *l2ca;$/;"	m	union:pqos_capability::__anon5	typeref:struct:pqos_capability::__anon5::pqos_cap_l2ca
+l2ca	./lib/resctrl_alloc.h	/^	struct pqos_l2ca *l2ca; \/**< L2 COS definitions *\/$/;"	m	struct:resctrl_alloc_schemata	typeref:struct:resctrl_alloc_schemata::pqos_l2ca
+l2ca_num	./lib/resctrl_alloc.h	/^	unsigned l2ca_num;      \/**< Number of L2 COS held in struct *\/$/;"	m	struct:resctrl_alloc_schemata
+l3	./lib/pqos.h	/^        struct pqos_cacheinfo l3;       \/**< L3 cache information *\/$/;"	m	struct:pqos_cpuinfo	typeref:struct:pqos_cpuinfo::pqos_cacheinfo
+l3	./rdtset/common.h	/^		struct pqos_l3ca *l3;$/;"	m	union:rdt_cfg::__anon10	typeref:struct:rdt_cfg::__anon10::pqos_l3ca
+l3	./rdtset/common.h	/^	struct pqos_l3ca l3;	\/**< L3 configuration *\/$/;"	m	struct:rdt_config	typeref:struct:rdt_config::pqos_l3ca
+l3_id	./lib/pqos.h	/^        unsigned l3_id;                 \/**< L3\/LLC cluster id *\/$/;"	m	struct:pqos_coreinfo
+l3_shift	./lib/cpuinfo.c	/^        uint32_t l3_shift;      \/**< bits to shift to get L3 ID *\/$/;"	m	struct:apic_info	file:
+l3_size	./lib/pqos.h	/^        unsigned l3_size;               \/**< L3 cache size in bytes *\/$/;"	m	struct:pqos_cap_mon
+l3ca	./lib/pqos.h	/^                struct pqos_cap_l3ca *l3ca;$/;"	m	union:pqos_capability::__anon5	typeref:struct:pqos_capability::__anon5::pqos_cap_l3ca
+l3ca	./lib/resctrl_alloc.h	/^	struct pqos_l3ca *l3ca; \/**< L3 COS definitions *\/$/;"	m	struct:resctrl_alloc_schemata	typeref:struct:resctrl_alloc_schemata::pqos_l3ca
+l3ca_num	./lib/resctrl_alloc.h	/^	unsigned l3ca_num;      \/**< Number of L3 COS held in struct *\/$/;"	m	struct:resctrl_alloc_schemata
+lcore	./lib/pqos.h	/^        unsigned lcore;                 \/**< logical core id *\/$/;"	m	struct:pqos_coreinfo
+lcore	./lib/pqos.h	/^        unsigned lcore;$/;"	m	struct:pqos_mon_poll_ctx
+lcpuid	./lib/machine.c	/^lcpuid(const unsigned leaf,$/;"	f
+line_size	./lib/pqos.h	/^        unsigned line_size;             \/**< Cache line size in bytes *\/$/;"	m	struct:pqos_cacheinfo
+linear_model	./py_modeling/train_model.py	/^from sklearn import linear_model #0.42$/;"	i
+llc	./lib/pqos.h	/^	uint64_t llc;                   \/**< cache occupancy *\/$/;"	m	struct:pqos_event_values
+llc_allocation	./pqos/profiles.c	/^struct llc_allocation {$/;"	s	file:
+llc_allocation_config	./pqos/profiles.c	/^struct llc_allocation_config {$/;"	s	file:
+llc_misses	./lib/pqos.h	/^        uint64_t llc_misses;            \/**< LLC misses - reading *\/$/;"	m	struct:pqos_event_values
+llc_misses_delta	./lib/pqos.h	/^        uint64_t llc_misses_delta;      \/**< LLC misses - delta *\/$/;"	m	struct:pqos_event_values
+log_fini	./lib/log.c	/^log_fini(void)$/;"	f
+log_hw_caps	./lib/cap.c	/^log_hw_caps(struct pqos_cap *p_cap)$/;"	f	file:
+log_init	./lib/log.c	/^log_init(int fd_log, void (*callback_log)(void *, const size_t, const char *),$/;"	f
+log_init_successful	./lib/log.c	/^static int log_init_successful = 0;     \/**< log init gatekeeper *\/$/;"	v	file:
+log_printf	./lib/log.c	/^log_printf(int type, const char *str, ...)$/;"	f
+long_cmd_opts	./pqos/main.c	/^static struct option long_cmd_opts[] = {$/;"	v	typeref:struct:option	file:
+m_apilock	./lib/cap.c	/^static int m_apilock = -1;$/;"	v	file:
+m_apilock_mutex	./lib/cap.c	/^static pthread_mutex_t m_apilock_mutex;$/;"	v	file:
+m_callback_log	./lib/log.c	/^static void (*m_callback_log)(void *, const size_t, const char *);$/;"	v	file:
+m_cap	./lib/allocation.c	/^static const struct pqos_cap *m_cap = NULL;$/;"	v	typeref:struct:pqos_cap	file:
+m_cap	./lib/cap.c	/^static struct pqos_cap *m_cap = NULL;$/;"	v	typeref:struct:pqos_cap	file:
+m_cap	./lib/monitoring.c	/^static const struct pqos_cap *m_cap = NULL; \/**< capabilities structure$/;"	v	typeref:struct:pqos_cap	file:
+m_cap	./lib/os_allocation.c	/^static const struct pqos_cap *m_cap = NULL;$/;"	v	typeref:struct:pqos_cap	file:
+m_cap	./lib/os_monitoring.c	/^static const struct pqos_cap *m_cap = NULL;$/;"	v	typeref:struct:pqos_cap	file:
+m_cap	./rdtset/rdt.c	/^static const struct pqos_cap *m_cap;$/;"	v	typeref:struct:pqos_cap	file:
+m_cap_l2ca	./rdtset/rdt.c	/^static const struct pqos_capability *m_cap_l2ca;$/;"	v	typeref:struct:pqos_capability	file:
+m_cap_l3ca	./rdtset/rdt.c	/^static const struct pqos_capability *m_cap_l3ca;$/;"	v	typeref:struct:pqos_capability	file:
+m_cap_mba	./rdtset/rdt.c	/^static const struct pqos_capability *m_cap_mba;$/;"	v	typeref:struct:pqos_capability	file:
+m_chunk_size	./examples/c/PSEUDO_LOCK/dlock.c	/^static size_t m_chunk_size = 0;$/;"	v	file:
+m_chunk_start	./examples/c/PSEUDO_LOCK/dlock.c	/^static char *m_chunk_start = NULL;$/;"	v	file:
+m_cmd_name	./pqos/main.c	/^static const char *m_cmd_name = "pqos";                     \/**< command name *\/$/;"	v	file:
+m_context_log	./lib/log.c	/^static void *m_context_log = NULL;      \/**< log callback context *\/$/;"	v	file:
+m_cpu	./lib/allocation.c	/^static const struct pqos_cpuinfo *m_cpu = NULL;$/;"	v	typeref:struct:pqos_cpuinfo	file:
+m_cpu	./lib/cap.c	/^static const struct pqos_cpuinfo *m_cpu = NULL;$/;"	v	typeref:struct:pqos_cpuinfo	file:
+m_cpu	./lib/cpuinfo.c	/^static struct pqos_cpuinfo *m_cpu = NULL;$/;"	v	typeref:struct:pqos_cpuinfo	file:
+m_cpu	./lib/monitoring.c	/^static const struct pqos_cpuinfo *m_cpu = NULL; \/**< cpu topology passed$/;"	v	typeref:struct:pqos_cpuinfo	file:
+m_cpu	./lib/os_allocation.c	/^static const struct pqos_cpuinfo *m_cpu = NULL;$/;"	v	typeref:struct:pqos_cpuinfo	file:
+m_cpu	./lib/os_monitoring.c	/^static const struct pqos_cpuinfo *m_cpu = NULL;$/;"	v	typeref:struct:pqos_cpuinfo	file:
+m_cpu	./rdtset/rdt.c	/^static const struct pqos_cpuinfo *m_cpu;$/;"	v	typeref:struct:pqos_cpuinfo	file:
+m_fd	./lib/log.c	/^static int m_fd = -1;			\/**< log file descriptor *\/$/;"	v	file:
+m_init_done	./lib/cap.c	/^static int m_init_done = 0;$/;"	v	file:
+m_interface	./lib/allocation.c	/^static int m_interface = PQOS_INTER_MSR;$/;"	v	file:
+m_interface	./lib/api.c	/^static int m_interface = PQOS_INTER_MSR;$/;"	v	file:
+m_interface	./lib/cap.c	/^static int m_interface = PQOS_INTER_MSR;$/;"	v	file:
+m_interface	./lib/monitoring.c	/^static int m_interface = PQOS_INTER_MSR;$/;"	v	file:
+m_interface	./lib/utils.c	/^static int m_interface = PQOS_INTER_MSR;$/;"	v	file:
+m_is_chunk_allocated	./examples/c/PSEUDO_LOCK/dlock.c	/^static int m_is_chunk_allocated = 0;$/;"	v	file:
+m_l2	./lib/cpuinfo.c	/^static struct pqos_cacheinfo m_l2;$/;"	v	typeref:struct:pqos_cacheinfo	file:
+m_l3	./lib/cpuinfo.c	/^static struct pqos_cacheinfo m_l3;$/;"	v	typeref:struct:pqos_cacheinfo	file:
+m_maxcores	./lib/machine.c	/^static unsigned m_maxcores = 0;        \/**< max number of cores (size of the$/;"	v	file:
+m_mon_grps	./examples/c/CMT_MBM/monitor_app.c	/^static struct pqos_mon_data *m_mon_grps[PQOS_MAX_CORES];$/;"	v	typeref:struct:pqos_mon_data	file:
+m_msr_fd	./lib/machine.c	/^static int *m_msr_fd = NULL;           \/**< MSR driver file descriptors table *\/$/;"	v	file:
+m_num_clos	./examples/c/PSEUDO_LOCK/dlock.c	/^static unsigned m_num_clos = 0;$/;"	v	file:
+m_opt	./lib/log.c	/^static int m_opt = 0;                   \/**< log options *\/$/;"	v	file:
+m_rmid_max	./lib/monitoring.c	/^static unsigned m_rmid_max = 0;         \/**< max RMID *\/$/;"	v	file:
+m_socket_cos	./examples/c/PSEUDO_LOCK/dlock.c	/^} m_socket_cos[MAX_SOCK_NUM];$/;"	v	typeref:struct:__anon4	file:
+machine_fini	./lib/machine.c	/^machine_fini(void)$/;"	f
+machine_init	./lib/machine.c	/^machine_init(const unsigned max_core_id)$/;"	f
+main	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
+main	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	./cmake-build-debug/CMakeFiles/feature_tests.c	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
+main	./cmake-build-debug/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
+main	./examples/c/CAT/allocation_app.c	/^int main(int argc, char *argv[])$/;"	f
+main	./examples/c/CAT/association_app.c	/^int main(int argc, char *argv[])$/;"	f
+main	./examples/c/CAT/reset_app.c	/^int main(int argc, char *argv[])$/;"	f
+main	./examples/c/CMT_MBM/monitor_app.c	/^int main(int argc, char *argv[])$/;"	f
+main	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^int main(int argc, char *argv[])$/;"	f
+main	./pqos/main.c	/^int main(int argc, char **argv)$/;"	f
+main	./rdtset/rdtset.c	/^main(int argc, char **argv)$/;"	f
+main_data_ptr	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static void *main_data_ptr = NULL;$/;"	v	file:
+main_data_size	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static const size_t main_data_size = 96 * MB;$/;"	v	file:
+main_thread	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static void main_thread(char *p, const size_t size)$/;"	f	file:
+matplotlib	./py_modeling/train_model.py	/^import matplotlib.pyplot as plt$/;"	i
+max_rmid	./lib/pqos.h	/^        unsigned max_rmid;              \/**< max RMID supported by socket *\/$/;"	m	struct:pqos_cap_mon
+max_rmid	./lib/pqos.h	/^        unsigned max_rmid;              \/**< max RMID supported for$/;"	m	struct:pqos_monitor
+mb_rate	./lib/pqos.h	/^        unsigned mb_rate;       \/**< valve open rate (VOR) in percentage *\/$/;"	m	struct:pqos_mba
+mba	./lib/pqos.h	/^                struct pqos_cap_mba *mba;$/;"	m	union:pqos_capability::__anon5	typeref:struct:pqos_capability::__anon5::pqos_cap_mba
+mba	./lib/resctrl_alloc.h	/^	struct pqos_mba *mba;   \/**< MBA COS definitions *\/$/;"	m	struct:resctrl_alloc_schemata	typeref:struct:resctrl_alloc_schemata::pqos_mba
+mba	./rdtset/common.h	/^		struct pqos_mba *mba;$/;"	m	union:rdt_cfg::__anon10	typeref:struct:rdt_cfg::__anon10::pqos_mba
+mba	./rdtset/common.h	/^	struct pqos_mba mba;	\/**< MBA configuretion *\/$/;"	m	struct:rdt_config	typeref:struct:rdt_config::pqos_mba
+mba_num	./lib/resctrl_alloc.h	/^	unsigned mba_num;       \/**< Number of MBA COS held in struct *\/$/;"	m	struct:resctrl_alloc_schemata
+mbm_local	./lib/pqos.h	/^	uint64_t mbm_local;             \/**< bandwidth local - reading *\/$/;"	m	struct:pqos_event_values
+mbm_local_delta	./lib/pqos.h	/^	uint64_t mbm_local_delta;       \/**< bandwidth local - delta *\/$/;"	m	struct:pqos_event_values
+mbm_remote	./lib/pqos.h	/^	uint64_t mbm_remote;            \/**< bandwidth remote - reading *\/$/;"	m	struct:pqos_event_values
+mbm_remote_delta	./lib/pqos.h	/^	uint64_t mbm_remote_delta;      \/**< bandwidth remote - delta *\/$/;"	m	struct:pqos_event_values
+mbm_total	./lib/pqos.h	/^	uint64_t mbm_total;             \/**< bandwidth total - reading *\/$/;"	m	struct:pqos_event_values
+mbm_total_delta	./lib/pqos.h	/^	uint64_t mbm_total_delta;       \/**< bandwidth total - delta *\/$/;"	m	struct:pqos_event_values
+mean_absolute_error	./py_modeling/train_model.py	/^from sklearn.metrics import mean_absolute_error$/;"	i
+mean_squared_error	./py_modeling/train_model.py	/^from sklearn.metrics import mean_squared_error$/;"	i
+median_absolute_error	./py_modeling/train_model.py	/^from sklearn.metrics import median_absolute_error$/;"	i
+mem_flush	./examples/c/PSEUDO_LOCK/dlock.c	/^static void mem_flush(const void *p, const size_t s)$/;"	f	file:
+mem_init	./examples/c/PSEUDO_LOCK/dlock.c	/^static void mem_init(void *p, const size_t s)$/;"	f	file:
+mem_read	./examples/c/PSEUDO_LOCK/dlock.c	/^static void mem_read(const void *p, const size_t s)$/;"	f	file:
+mem_size	./lib/pqos.h	/^        unsigned mem_size;              \/**< byte size of the structure *\/$/;"	m	struct:pqos_cap
+mem_size	./lib/pqos.h	/^        unsigned mem_size;              \/**< byte size of the structure *\/$/;"	m	struct:pqos_cap_l2ca
+mem_size	./lib/pqos.h	/^        unsigned mem_size;              \/**< byte size of the structure *\/$/;"	m	struct:pqos_cap_l3ca
+mem_size	./lib/pqos.h	/^        unsigned mem_size;              \/**< byte size of the structure *\/$/;"	m	struct:pqos_cap_mba
+mem_size	./lib/pqos.h	/^        unsigned mem_size;              \/**< byte size of the structure *\/$/;"	m	struct:pqos_cap_mon
+mem_size	./lib/pqos.h	/^        unsigned mem_size;              \/**< byte size of the structure *\/$/;"	m	struct:pqos_cpuinfo
+mem_vmrss	./lib/pqos.h	/^    long int mem_vmrss;$/;"	m	struct:pqos_event_values
+model	./py_modeling/get_best_quota.py	/^model=joblib.load('GBRT.model')$/;"	v
+model_AdaBoostRegressor	./py_modeling/train_model.py	/^model_AdaBoostRegressor = ensemble.AdaBoostRegressor(n_estimators=50)#这里使用50个决策树$/;"	v
+model_BaggingRegressor	./py_modeling/train_model.py	/^model_BaggingRegressor = BaggingRegressor()$/;"	v
+model_ElasticNet	./py_modeling/train_model.py	/^model_ElasticNet = ElasticNet()$/;"	v
+model_GradientBoostingRegressor	./py_modeling/train_model.py	/^model_GradientBoostingRegressor = ensemble.GradientBoostingRegressor(n_estimators=100, verbose=1)#这里使用100个决策树$/;"	v
+model_LinearRegression	./py_modeling/train_model.py	/^model_LinearRegression = linear_model.LinearRegression()$/;"	v
+model_RandomForestRegressor	./py_modeling/train_model.py	/^model_RandomForestRegressor = ensemble.RandomForestRegressor(n_estimators=100)#这里使用20个决策树$/;"	v
+model_XGBRegressor	./py_modeling/train_model.py	/^model_XGBRegressor = XGBRegressor(max_depth=6, learning_rate=0.1, n_estimators=160, silent=0, alpha=3, objective='reg:linear',eval_metric='mae')$/;"	v
+mon	./lib/pqos.h	/^                struct pqos_cap_mon *mon;$/;"	m	union:pqos_capability::__anon5	typeref:struct:pqos_capability::__anon5::pqos_cap_mon
+mon_assoc_get	./lib/monitoring.c	/^mon_assoc_get(const unsigned lcore,$/;"	f	file:
+mon_assoc_set	./lib/monitoring.c	/^mon_assoc_set(const unsigned lcore,$/;"	f	file:
+mon_qsort_coreid_cmp_asc	./pqos/monitor.c	/^mon_qsort_coreid_cmp_asc(const void *a, const void *b)$/;"	f	file:
+mon_qsort_llc_cmp_desc	./pqos/monitor.c	/^mon_qsort_llc_cmp_desc(const void *a, const void *b)$/;"	f	file:
+mon_read	./lib/monitoring.c	/^mon_read(const unsigned lcore,$/;"	f	file:
+monitor_cleanup	./pqos/monitor.c	/^void monitor_cleanup(void)$/;"	f
+monitor_loop	./pqos/monitor.c	/^void monitor_loop(void)$/;"	f
+monitor_loop_quxm	./pqos/monitor.c	/^void monitor_loop_quxm(void)$/;"	f
+monitor_setup	./pqos/monitor.c	/^int monitor_setup(const struct pqos_cpuinfo *cpu_info,$/;"	f
+monitor_stop	./pqos/monitor.c	/^void monitor_stop(void)$/;"	f
+monitoring_ctrlc	./examples/c/CMT_MBM/monitor_app.c	/^static void monitoring_ctrlc(int signo)$/;"	f	file:
+monitoring_ctrlc	./pqos/monitor.c	/^static void monitoring_ctrlc(int signo)$/;"	f	file:
+monitoring_get_input	./examples/c/CMT_MBM/monitor_app.c	/^monitoring_get_input(int argc, char *argv[])$/;"	f	file:
+monitoring_loop	./examples/c/CMT_MBM/monitor_app.c	/^static void monitoring_loop(void)$/;"	f	file:
+msr_file_open	./lib/machine.c	/^msr_file_open(const unsigned lcore)$/;"	f	file:
+msr_read	./lib/machine.c	/^msr_read(const unsigned lcore,$/;"	f
+msr_write	./lib/machine.c	/^msr_write(const unsigned lcore,$/;"	f
+name	./examples/c/PSEUDO_LOCK/tsc.h	/^        char name[128];$/;"	m	struct:tsc_prof
+name	./lib/os_monitoring.c	/^        const char *name;$/;"	m	struct:os_supported_event	file:
+nearest_pow2	./lib/cpuinfo.c	/^nearest_pow2(const unsigned n)$/;"	f	file:
+next	./pqos/monitor.c	/^        struct slist *next; \/**< ptr to next list element *\/$/;"	m	struct:slist	typeref:struct:slist::slist	file:
+np	./py_modeling/train_model.py	/^import numpy as np$/;"	i
+num_cap	./lib/pqos.h	/^        unsigned num_cap;               \/**< number of capabilities *\/$/;"	m	struct:pqos_cap
+num_classes	./lib/pqos.h	/^        unsigned num_classes;           \/**< number of classes of service *\/$/;"	m	struct:pqos_cap_l2ca
+num_classes	./lib/pqos.h	/^        unsigned num_classes;           \/**< number of classes of service *\/$/;"	m	struct:pqos_cap_l3ca
+num_classes	./lib/pqos.h	/^        unsigned num_classes;           \/**< number of classes of service *\/$/;"	m	struct:pqos_cap_mba
+num_classes	./pqos/profiles.c	/^        unsigned num_classes;$/;"	m	struct:llc_allocation_config	file:
+num_config	./pqos/profiles.c	/^        unsigned num_config;$/;"	m	struct:llc_allocation	file:
+num_cores	./lib/pqos.h	/^        unsigned num_cores;             \/**< number of cores in the group *\/$/;"	m	struct:pqos_mon_data
+num_cores	./lib/pqos.h	/^        unsigned num_cores;             \/**< number of cores in the system *\/$/;"	m	struct:pqos_cpuinfo
+num_cores	./pqos/monitor.c	/^        int num_cores;$/;"	m	struct:core_group	file:
+num_events	./lib/pqos.h	/^        unsigned num_events;            \/**< number of supported events *\/$/;"	m	struct:pqos_cap_mon
+num_partitions	./lib/pqos.h	/^        unsigned num_partitions;        \/**< Number of partitions *\/$/;"	m	struct:pqos_cacheinfo
+num_poll_ctx	./lib/pqos.h	/^        unsigned num_poll_ctx;          \/**< number of poll contexts *\/$/;"	m	struct:pqos_mon_data
+num_sets	./lib/pqos.h	/^        unsigned num_sets;              \/**< Number of sets *\/$/;"	m	struct:pqos_cacheinfo
+num_ways	./lib/pqos.h	/^        unsigned num_ways;              \/**< Number of cache ways *\/$/;"	m	struct:pqos_cacheinfo
+num_ways	./lib/pqos.h	/^        unsigned num_ways;              \/**< number of cache ways *\/$/;"	m	struct:pqos_cap_l2ca
+num_ways	./lib/pqos.h	/^        unsigned num_ways;              \/**< number of cache ways *\/$/;"	m	struct:pqos_cap_l3ca
+num_ways	./pqos/profiles.c	/^        unsigned num_ways;$/;"	m	struct:llc_allocation_config	file:
+open_proc_stat_file	./pqos/monitor.c	/^open_proc_stat_file(const char *proc_pid_dir_name)$/;"	f	file:
+os_alloc_assign	./lib/os_allocation.c	/^os_alloc_assign(const unsigned technology,$/;"	f
+os_alloc_assign_pid	./lib/os_allocation.c	/^os_alloc_assign_pid(const unsigned technology,$/;"	f
+os_alloc_assoc_get	./lib/os_allocation.c	/^os_alloc_assoc_get(const unsigned lcore,$/;"	f
+os_alloc_assoc_get_pid	./lib/os_allocation.c	/^os_alloc_assoc_get_pid(const pid_t task,$/;"	f
+os_alloc_assoc_set	./lib/os_allocation.c	/^os_alloc_assoc_set(const unsigned lcore,$/;"	f
+os_alloc_assoc_set_pid	./lib/os_allocation.c	/^os_alloc_assoc_set_pid(const pid_t task,$/;"	f
+os_alloc_check	./lib/os_allocation.c	/^os_alloc_check(void)$/;"	f	file:
+os_alloc_fini	./lib/os_allocation.c	/^os_alloc_fini(void)$/;"	f
+os_alloc_init	./lib/os_allocation.c	/^os_alloc_init(const struct pqos_cpuinfo *cpu, const struct pqos_cap *cap)$/;"	f
+os_alloc_prep	./lib/os_allocation.c	/^os_alloc_prep(void)$/;"	f	file:
+os_alloc_release	./lib/os_allocation.c	/^os_alloc_release(const unsigned *core_array, const unsigned core_num)$/;"	f
+os_alloc_release_pid	./lib/os_allocation.c	/^os_alloc_release_pid(const pid_t *task_array,$/;"	f
+os_alloc_reset	./lib/os_allocation.c	/^os_alloc_reset(const enum pqos_cdp_config l3_cdp_cfg)$/;"	f
+os_interface_mount	./lib/os_allocation.c	/^os_interface_mount(const enum pqos_cdp_config l3_cdp_cfg)$/;"	f	file:
+os_l2ca_get	./lib/os_allocation.c	/^os_l2ca_get(const unsigned l2id,$/;"	f
+os_l2ca_get_min_cbm_bits	./lib/os_allocation.c	/^os_l2ca_get_min_cbm_bits(unsigned *min_cbm_bits)$/;"	f
+os_l2ca_set	./lib/os_allocation.c	/^os_l2ca_set(const unsigned l2id,$/;"	f
+os_l3ca_get	./lib/os_allocation.c	/^os_l3ca_get(const unsigned socket,$/;"	f
+os_l3ca_get_min_cbm_bits	./lib/os_allocation.c	/^os_l3ca_get_min_cbm_bits(unsigned *min_cbm_bits)$/;"	f
+os_l3ca_set	./lib/os_allocation.c	/^os_l3ca_set(const unsigned socket,$/;"	f
+os_mba_get	./lib/os_allocation.c	/^os_mba_get(const unsigned socket,$/;"	f
+os_mba_set	./lib/os_allocation.c	/^os_mba_set(const unsigned socket,$/;"	f
+os_mon_fini	./lib/os_monitoring.c	/^os_mon_fini(void)$/;"	f
+os_mon_init	./lib/os_monitoring.c	/^os_mon_init(const struct pqos_cpuinfo *cpu, const struct pqos_cap *cap)$/;"	f
+os_mon_poll	./lib/os_monitoring.c	/^os_mon_poll(struct pqos_mon_data **groups,$/;"	f
+os_mon_start	./lib/os_monitoring.c	/^os_mon_start(const unsigned num_cores,$/;"	f
+os_mon_start_pid	./lib/os_monitoring.c	/^os_mon_start_pid(struct pqos_mon_data *group)$/;"	f
+os_mon_stop	./lib/os_monitoring.c	/^os_mon_stop(struct pqos_mon_data *group)$/;"	f
+os_mon_type	./lib/os_monitoring.c	/^static int os_mon_type = 0;$/;"	v	file:
+os_pid_get_pid_assoc	./lib/os_allocation.c	/^os_pid_get_pid_assoc(const unsigned class_id, unsigned *count)$/;"	f
+os_support	./lib/pqos.h	/^        int os_support;                 \/**< OS support presence *\/$/;"	m	struct:pqos_capability
+os_support	./lib/pqos.h	/^        int os_support;                 \/**< flag to show if OS monitoring$/;"	m	struct:pqos_monitor
+os_supported_event	./lib/os_monitoring.c	/^static struct os_supported_event {$/;"	s	file:
+parse_allocation_assoc	./pqos/alloc.c	/^parse_allocation_assoc(char *str)$/;"	f	file:
+parse_args	./rdtset/rdtset.c	/^parse_args(int argc, char **argv)$/;"	f	file:
+parse_config_file	./pqos/main.c	/^parse_config_file(const char *fname)$/;"	f	file:
+parse_cos_mask_type	./pqos/alloc.c	/^parse_cos_mask_type(char *str, int *scope, unsigned *id)$/;"	f	file:
+parse_cpu	./rdtset/cpu.c	/^parse_cpu(const char *cpustr)$/;"	f
+parse_error	./pqos/main.c	/^parse_error(const char *arg, const char *note)$/;"	f
+parse_event	./pqos/monitor.c	/^parse_event(char *str, enum pqos_mon_event *evt)$/;"	f	file:
+parse_mask_set	./rdtset/rdt.c	/^parse_mask_set(const char *cbm, const int force_dual_mask, uint64_t *mask,$/;"	f	file:
+parse_monitor_event	./pqos/monitor.c	/^parse_monitor_event(char *str)$/;"	f	file:
+parse_pids	./rdtset/rdtset.c	/^parse_pids(char *pidstr)$/;"	f	file:
+parse_rdt	./rdtset/rdt.c	/^parse_rdt(char *rdtstr)$/;"	f
+parse_reset	./rdtset/rdt.c	/^parse_reset(const char *cpustr)$/;"	f
+pd	./py_modeling/train_model.py	/^import pandas as pd$/;"	i
+perf_event_open	./lib/perf.c	/^perf_event_open(struct perf_event_attr *attr, pid_t pid,$/;"	f	file:
+perf_event_open	./pqos/monitor.c	/^perf_event_open(struct perf_event_attr *hw_event, pid_t pid,$/;"	f	file:
+perf_events	./lib/os_monitoring.c	/^static const char *perf_events = "events\/";$/;"	v	file:
+perf_mon_event	./lib/os_monitoring.c	/^enum perf_mon_event {$/;"	g	file:
+perf_path	./lib/os_monitoring.c	/^static const char *perf_path = "\/sys\/devices\/intel_cqm\/";$/;"	v	file:
+perf_pid_ipc_enable	./lib/pqos.h	/^        int perf_pid_ipc_enable ;   \/\/add by quxm, recognize whether use perf_event_open to get ipc or not.2018.6.10$/;"	m	struct:pqos_mon_data
+perf_read_counter	./lib/perf.c	/^perf_read_counter(int counter_fd, uint64_t *value)$/;"	f
+perf_setup_counter	./lib/perf.c	/^perf_setup_counter(struct perf_event_attr *attr,$/;"	f
+perf_shutdown_counter	./lib/perf.c	/^perf_shutdown_counter(int counter_fd)$/;"	f
+perf_start_counter	./lib/perf.c	/^perf_start_counter(int counter_fd)$/;"	f
+perf_stop_counter	./lib/perf.c	/^perf_stop_counter(int counter_fd)$/;"	f
+perf_type	./lib/os_monitoring.c	/^static const char *perf_type = "type";$/;"	v	file:
+pgrp	./examples/c/CMT_MBM/monitor_app.c	/^        struct pqos_mon_data *pgrp;$/;"	m	struct:__anon2	typeref:struct:__anon2::pqos_mon_data	file:
+pgrp	./examples/c/CMT_MBM/monitor_app.c	/^        struct pqos_mon_data *pgrp;$/;"	m	struct:__anon3	typeref:struct:__anon3::pqos_mon_data	file:
+pgrp	./pqos/monitor.c	/^        struct pqos_mon_data *pgrp;$/;"	m	struct:core_group	typeref:struct:core_group::pqos_mon_data	file:
+pgrp	./pqos/monitor.c	/^        struct pqos_mon_data *pgrp;$/;"	m	struct:pid_group	typeref:struct:pid_group::pqos_mon_data	file:
+pid	./examples/c/CMT_MBM/monitor_app.c	/^        pid_t pid;$/;"	m	struct:__anon3	file:
+pid	./lib/pqos.h	/^        pid_t pid; \/**< if not zero then this group tracks a process *\/$/;"	m	struct:pqos_mon_data
+pid	./pqos/monitor.c	/^        pid_t pid; \/**< process pid *\/$/;"	m	struct:proc_stats	file:
+pid	./pqos/monitor.c	/^        pid_t pid;$/;"	m	struct:pid_group	file:
+pid_cfg	./rdtset/common.h	/^        int pid_cfg;            \/**< associate PIDs to this cfg *\/$/;"	m	struct:rdt_config
+pid_count	./rdtset/common.h	/^        unsigned pid_count;             \/**< Num of PIDs selected *\/$/;"	m	struct:rdtset
+pid_group	./pqos/monitor.c	/^static struct pid_group {$/;"	s	file:
+pids	./rdtset/common.h	/^	pid_t pids[RDT_MAX_PIDS];	\/**< process ID table *\/$/;"	m	struct:rdtset
+pkg_mask	./lib/cpuinfo.c	/^        uint32_t pkg_mask;      \/**< mask to get PACKAGE ID *\/$/;"	m	struct:apic_info	file:
+pkg_shift	./lib/cpuinfo.c	/^        uint32_t pkg_shift;     \/**< bits to shift to get PACKAGE ID *\/$/;"	m	struct:apic_info	file:
+plt	./py_modeling/train_model.py	/^import matplotlib.pyplot as plt$/;"	i
+poll_ctx	./lib/pqos.h	/^        struct pqos_mon_poll_ctx *poll_ctx; \/**< core, cluster & RMID *\/$/;"	m	struct:pqos_mon_data	typeref:struct:pqos_mon_data::pqos_mon_poll_ctx
+poll_perf_counters	./lib/os_monitoring.c	/^poll_perf_counters(struct pqos_mon_data *group)$/;"	f	file:
+pqos_alloc_assign	./lib/api.c	/^pqos_alloc_assign(const unsigned technology,$/;"	f
+pqos_alloc_assign_pid	./lib/api.c	/^pqos_alloc_assign_pid(const unsigned technology,$/;"	f
+pqos_alloc_assoc_get	./lib/api.c	/^pqos_alloc_assoc_get(const unsigned lcore,$/;"	f
+pqos_alloc_assoc_get_pid	./lib/api.c	/^pqos_alloc_assoc_get_pid(const pid_t task,$/;"	f
+pqos_alloc_assoc_set	./lib/api.c	/^pqos_alloc_assoc_set(const unsigned lcore,$/;"	f
+pqos_alloc_assoc_set_pid	./lib/api.c	/^pqos_alloc_assoc_set_pid(const pid_t task,$/;"	f
+pqos_alloc_fini	./lib/allocation.c	/^pqos_alloc_fini(void)$/;"	f
+pqos_alloc_init	./lib/allocation.c	/^pqos_alloc_init(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_alloc_release	./lib/api.c	/^pqos_alloc_release(const unsigned *core_array,$/;"	f
+pqos_alloc_release_pid	./lib/api.c	/^pqos_alloc_release_pid(const pid_t *task_array,$/;"	f
+pqos_alloc_reset	./lib/api.c	/^pqos_alloc_reset(const enum pqos_cdp_config l3_cdp_cfg)$/;"	f
+pqos_cacheinfo	./lib/pqos.h	/^struct pqos_cacheinfo {$/;"	s
+pqos_cap	./lib/pqos.h	/^struct pqos_cap {$/;"	s
+pqos_cap_get	./lib/cap.c	/^pqos_cap_get(const struct pqos_cap **cap,$/;"	f
+pqos_cap_get_event	./lib/utils.c	/^pqos_cap_get_event(const struct pqos_cap *cap,$/;"	f
+pqos_cap_get_type	./lib/utils.c	/^pqos_cap_get_type(const struct pqos_cap *cap,$/;"	f
+pqos_cap_l2ca	./lib/pqos.h	/^struct pqos_cap_l2ca {$/;"	s
+pqos_cap_l3ca	./lib/pqos.h	/^struct pqos_cap_l3ca {$/;"	s
+pqos_cap_mba	./lib/pqos.h	/^struct pqos_cap_mba {$/;"	s
+pqos_cap_mon	./lib/pqos.h	/^struct pqos_cap_mon {$/;"	s
+pqos_cap_type	./lib/pqos.h	/^enum pqos_cap_type {$/;"	g
+pqos_capability	./lib/pqos.h	/^struct pqos_capability {$/;"	s
+pqos_cdp_config	./lib/pqos.h	/^enum pqos_cdp_config {$/;"	g
+pqos_config	./lib/pqos.h	/^struct pqos_config {$/;"	s
+pqos_core_poll	./lib/monitoring.c	/^pqos_core_poll(struct pqos_mon_data *p)$/;"	f	file:
+pqos_coreinfo	./lib/pqos.h	/^struct pqos_coreinfo {$/;"	s
+pqos_cpu_check_core	./lib/utils.c	/^pqos_cpu_check_core(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpu_get_clusterid	./lib/utils.c	/^pqos_cpu_get_clusterid(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpu_get_core_info	./lib/utils.c	/^pqos_cpu_get_core_info(const struct pqos_cpuinfo *cpu, unsigned lcore)$/;"	f
+pqos_cpu_get_cores	./lib/utils.c	/^pqos_cpu_get_cores(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpu_get_cores_l3id	./lib/utils.c	/^pqos_cpu_get_cores_l3id(const struct pqos_cpuinfo *cpu, const unsigned l3_id,$/;"	f
+pqos_cpu_get_l2ids	./lib/utils.c	/^pqos_cpu_get_l2ids(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpu_get_one_by_l2id	./lib/utils.c	/^pqos_cpu_get_one_by_l2id(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpu_get_one_core	./lib/utils.c	/^pqos_cpu_get_one_core(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpu_get_socketid	./lib/utils.c	/^pqos_cpu_get_socketid(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpu_get_sockets	./lib/utils.c	/^pqos_cpu_get_sockets(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_cpuinfo	./lib/pqos.h	/^struct pqos_cpuinfo {$/;"	s
+pqos_event_values	./lib/pqos.h	/^struct pqos_event_values {$/;"	s
+pqos_fini	./lib/cap.c	/^pqos_fini(void)$/;"	f
+pqos_init	./lib/cap.c	/^pqos_init(const struct pqos_config *config)$/;"	f
+pqos_init	./snmp/rdt-agentx.pl	/^sub pqos_init {$/;"	s
+pqos_l2ca	./lib/pqos.h	/^struct pqos_l2ca {$/;"	s
+pqos_l2ca_get	./lib/api.c	/^pqos_l2ca_get(const unsigned l2id,$/;"	f
+pqos_l2ca_get_cos_num	./lib/utils.c	/^pqos_l2ca_get_cos_num(const struct pqos_cap *cap,$/;"	f
+pqos_l2ca_get_min_cbm_bits	./lib/api.c	/^pqos_l2ca_get_min_cbm_bits(unsigned *min_cbm_bits)$/;"	f
+pqos_l2ca_set	./lib/api.c	/^pqos_l2ca_set(const unsigned l2id,$/;"	f
+pqos_l3ca	./lib/pqos.h	/^struct pqos_l3ca {$/;"	s
+pqos_l3ca_cdp_enabled	./lib/utils.c	/^pqos_l3ca_cdp_enabled(const struct pqos_cap *cap,$/;"	f
+pqos_l3ca_get	./lib/api.c	/^pqos_l3ca_get(const unsigned socket,$/;"	f
+pqos_l3ca_get_cos_num	./lib/utils.c	/^pqos_l3ca_get_cos_num(const struct pqos_cap *cap,$/;"	f
+pqos_l3ca_get_min_cbm_bits	./lib/api.c	/^pqos_l3ca_get_min_cbm_bits(unsigned *min_cbm_bits)$/;"	f
+pqos_l3ca_set	./lib/api.c	/^pqos_l3ca_set(const unsigned socket,$/;"	f
+pqos_mba	./lib/pqos.h	/^struct pqos_mba {$/;"	s
+pqos_mba_get	./lib/api.c	/^pqos_mba_get(const unsigned socket,$/;"	f
+pqos_mba_get_cos_num	./lib/utils.c	/^pqos_mba_get_cos_num(const struct pqos_cap *cap,$/;"	f
+pqos_mba_set	./lib/api.c	/^pqos_mba_set(const unsigned socket,$/;"	f
+pqos_mon_assoc_get	./lib/api.c	/^pqos_mon_assoc_get(const unsigned lcore,$/;"	f
+pqos_mon_data	./lib/pqos.h	/^struct pqos_mon_data {$/;"	s
+pqos_mon_event	./lib/pqos.h	/^enum pqos_mon_event {$/;"	g
+pqos_mon_fini	./lib/monitoring.c	/^pqos_mon_fini(void)$/;"	f
+pqos_mon_get_event_value	./lib/pqos.h	/^pqos_mon_get_event_value(void * const value,$/;"	f
+pqos_mon_init	./lib/monitoring.c	/^pqos_mon_init(const struct pqos_cpuinfo *cpu,$/;"	f
+pqos_mon_poll	./lib/api.c	/^pqos_mon_poll(struct pqos_mon_data **groups,$/;"	f
+pqos_mon_poll_ctx	./lib/pqos.h	/^struct pqos_mon_poll_ctx {$/;"	s
+pqos_mon_reset	./lib/api.c	/^pqos_mon_reset(void)$/;"	f
+pqos_mon_start	./lib/api.c	/^pqos_mon_start(const unsigned num_cores,$/;"	f
+pqos_mon_start_pid	./lib/api.c	/^pqos_mon_start_pid(const pid_t pid,$/;"	f
+pqos_mon_stop	./lib/api.c	/^pqos_mon_stop(struct pqos_mon_data *group)$/;"	f
+pqos_monitor	./lib/pqos.h	/^struct pqos_monitor {$/;"	s
+pqos_pid_get_pid_assoc	./lib/api.c	/^pqos_pid_get_pid_assoc(const unsigned class_id, unsigned *count)$/;"	f
+pqos_rmid_t	./lib/pqos.h	/^typedef uint32_t pqos_rmid_t;$/;"	t
+print_allocation_config	./examples/c/CAT/allocation_app.c	/^print_allocation_config(const unsigned sock_count,$/;"	f	file:
+print_allocation_config	./examples/c/CAT/association_app.c	/^print_allocation_config(void)$/;"	f	file:
+print_allocation_config	./examples/c/CAT/reset_app.c	/^print_allocation_config(const struct pqos_capability *cap_l3ca,$/;"	f	file:
+print_cfg	./lib/perl/test.pl	/^sub print_cfg {$/;"	s
+print_cmd_line_cpu_config	./rdtset/cpu.c	/^print_cmd_line_cpu_config(void)$/;"	f
+print_cmd_line_rdt_config	./rdtset/rdt.c	/^print_cmd_line_rdt_config(void)$/;"	f
+print_core_assoc	./pqos/alloc.c	/^print_core_assoc(const int is_alloc, const int is_l3cat, const int is_mon,$/;"	f	file:
+print_csv_row	./pqos/monitor.c	/^print_csv_row(FILE *fp, char *time,$/;"	f	file:
+print_help	./pqos/main.c	/^static void print_help(const int is_long)$/;"	f	file:
+print_l3ca_config	./pqos/alloc.c	/^print_l3ca_config(const struct pqos_l3ca *ca, const int is_error)$/;"	f	file:
+print_per_socket_config	./pqos/alloc.c	/^print_per_socket_config(const struct pqos_capability *cap_l3ca,$/;"	f	file:
+print_text_row	./pqos/monitor.c	/^print_text_row(FILE *fp,$/;"	f	file:
+print_usage	./rdtset/rdtset.c	/^print_usage(char *prgname, unsigned short_usage)$/;"	f	file:
+print_warning	./pqos/main.c	/^print_warning(void)$/;"	f	file:
+print_xml_row	./pqos/monitor.c	/^print_xml_row(FILE *fp, char *time,$/;"	f	file:
+printf_indent	./pqos/cap.c	/^printf_indent(const unsigned indent, const char *format, ...)$/;"	f	file:
+proc_pids_dir	./pqos/monitor.c	/^static const char *proc_pids_dir = "\/proc";$/;"	v	file:
+proc_stat_whitelist	./pqos/monitor.c	/^static const char *proc_stat_whitelist = "RSD";$/;"	v	file:
+proc_stats	./pqos/monitor.c	/^struct proc_stats {$/;"	s	file:
+proc_stats_cmp	./pqos/monitor.c	/^proc_stats_cmp(const void *a, const void *b)$/;"	f	file:
+process_mode	./examples/c/CMT_MBM/monitor_app.c	/^static inline int process_mode(void)$/;"	f	file:
+process_mode	./pqos/monitor.c	/^static inline int process_mode(void)$/;"	f	file:
+profile_l3ca_apply	./pqos/profiles.c	/^profile_l3ca_apply(const char *name,$/;"	f
+profile_l3ca_get	./pqos/profiles.c	/^profile_l3ca_get(const char *id, const struct pqos_cap_l3ca *l3ca,$/;"	f	file:
+profile_l3ca_list	./pqos/profiles.c	/^void profile_l3ca_list(FILE *fp)$/;"	f
+qnxnto	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+qnxnto	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+r2_score	./py_modeling/train_model.py	/^from sklearn.metrics import r2_score$/;"	i
+rctl_cpus	./lib/resctrl_alloc.c	/^static const char *rctl_cpus = "cpus";$/;"	v	file:
+rctl_schemata	./lib/resctrl_alloc.c	/^static const char *rctl_schemata = "schemata";$/;"	v	file:
+rctl_tasks	./lib/resctrl_alloc.c	/^static const char *rctl_tasks = "tasks";$/;"	v	file:
+rdt_ca_get_cumulative_cbm	./rdtset/rdt.c	/^rdt_ca_get_cumulative_cbm(const struct rdt_cfg ca)$/;"	f	file:
+rdt_ca_str_to_cbm	./rdtset/rdt.c	/^rdt_ca_str_to_cbm(const char *param, struct rdt_cfg ca)$/;"	f	file:
+rdt_cfg	./rdtset/common.h	/^struct rdt_cfg {$/;"	s
+rdt_cfg_get_type_str	./rdtset/rdt.c	/^rdt_cfg_get_type_str(const struct rdt_cfg cfg)$/;"	f	file:
+rdt_cfg_is_valid	./rdtset/rdt.c	/^rdt_cfg_is_valid(const struct rdt_cfg cfg)$/;"	f	file:
+rdt_cfg_print	./rdtset/rdt.c	/^rdt_cfg_print(FILE *stream, const struct rdt_cfg cfg)$/;"	f	file:
+rdt_config	./rdtset/common.h	/^struct rdt_config {$/;"	s
+rdt_mba_str_to_rate	./rdtset/rdt.c	/^rdt_mba_str_to_rate(const char *param, struct rdt_cfg mba)$/;"	f	file:
+rdtset	./rdtset/common.h	/^struct rdtset {$/;"	s
+read_msr	./lib/perl/test.pl	/^sub read_msr {$/;"	s
+read_perf_counters	./lib/os_monitoring.c	/^read_perf_counters(struct pqos_mon_data *group,$/;"	f	file:
+resctrl_alloc_cpumask	./lib/resctrl_alloc.h	/^struct resctrl_alloc_cpumask {$/;"	s
+resctrl_alloc_cpumask_get	./lib/resctrl_alloc.c	/^resctrl_alloc_cpumask_get(const unsigned lcore,$/;"	f
+resctrl_alloc_cpumask_read	./lib/resctrl_alloc.c	/^resctrl_alloc_cpumask_read(const unsigned class_id,$/;"	f
+resctrl_alloc_cpumask_set	./lib/resctrl_alloc.c	/^resctrl_alloc_cpumask_set(const unsigned lcore,$/;"	f
+resctrl_alloc_cpumask_write	./lib/resctrl_alloc.c	/^resctrl_alloc_cpumask_write(const unsigned class_id,$/;"	f
+resctrl_alloc_fclose	./lib/resctrl_alloc.c	/^resctrl_alloc_fclose(FILE *fd)$/;"	f	file:
+resctrl_alloc_fopen	./lib/resctrl_alloc.c	/^resctrl_alloc_fopen(const unsigned class_id, const char *name, const char *mode)$/;"	f	file:
+resctrl_alloc_get_grps_num	./lib/resctrl_alloc.c	/^resctrl_alloc_get_grps_num(const struct pqos_cap *cap, unsigned *grps_num)$/;"	f
+resctrl_alloc_schemata	./lib/resctrl_alloc.h	/^struct resctrl_alloc_schemata {$/;"	s
+resctrl_alloc_schemata_fini	./lib/resctrl_alloc.c	/^resctrl_alloc_schemata_fini(struct resctrl_alloc_schemata *schemata)$/;"	f
+resctrl_alloc_schemata_init	./lib/resctrl_alloc.c	/^resctrl_alloc_schemata_init(const unsigned class_id,$/;"	f
+resctrl_alloc_schemata_read	./lib/resctrl_alloc.c	/^resctrl_alloc_schemata_read(const unsigned class_id,$/;"	f
+resctrl_alloc_schemata_set	./lib/resctrl_alloc.c	/^resctrl_alloc_schemata_set(const unsigned res_id,$/;"	f	file:
+resctrl_alloc_schemata_type	./lib/resctrl_alloc.c	/^enum resctrl_alloc_schemata_type {$/;"	g	file:
+resctrl_alloc_schemata_type_get	./lib/resctrl_alloc.c	/^resctrl_alloc_schemata_type_get(const char *str)$/;"	f	file:
+resctrl_alloc_schemata_write	./lib/resctrl_alloc.c	/^resctrl_alloc_schemata_write(const unsigned class_id,$/;"	f
+resctrl_alloc_task_file_check	./lib/resctrl_alloc.c	/^resctrl_alloc_task_file_check(const unsigned class_id, unsigned *found)$/;"	f
+resctrl_alloc_task_read	./lib/resctrl_alloc.c	/^resctrl_alloc_task_read(unsigned class_id, unsigned *count)$/;"	f
+resctrl_alloc_task_search	./lib/resctrl_alloc.c	/^resctrl_alloc_task_search(unsigned *class_id,$/;"	f
+resctrl_alloc_task_validate	./lib/resctrl_alloc.c	/^resctrl_alloc_task_validate(const pid_t task)$/;"	f
+resctrl_alloc_task_write	./lib/resctrl_alloc.c	/^resctrl_alloc_task_write(const unsigned class_id, const pid_t task)$/;"	f
+reset_cfg	./lib/perl/test.pl	/^sub reset_cfg {$/;"	s
+reset_cpuset	./rdtset/common.h	/^	cpu_set_t reset_cpuset;		\/**< List of CPUs to reset COS assoc *\/$/;"	m	struct:rdtset
+rmid	./lib/pqos.h	/^        pqos_rmid_t rmid;$/;"	m	struct:pqos_mon_poll_ctx
+rmid_alloc	./lib/monitoring.c	/^rmid_alloc(const unsigned cluster,$/;"	f	file:
+s	./lib/pqos.h	/^                } s;$/;"	m	union:pqos_l3ca::__anon6	typeref:struct:pqos_l3ca::__anon6::__anon7
+scale	./lib/os_monitoring.c	/^        double scale;$/;"	m	struct:os_supported_event	file:
+scale_event	./lib/monitoring.c	/^scale_event(const enum pqos_mon_event event, const uint64_t val)$/;"	f	file:
+scale_factor	./lib/pqos.h	/^        uint32_t scale_factor;          \/**< factor to scale RMID value$/;"	m	struct:pqos_monitor
+sel_alloc_mod	./pqos/alloc.c	/^static unsigned sel_alloc_mod = 0;$/;"	v	file:
+sel_alloc_opt_num	./pqos/alloc.c	/^static unsigned sel_alloc_opt_num = 0;$/;"	v	file:
+sel_alloc_type	./pqos/alloc.c	/^enum sel_alloc_type {$/;"	g	file:
+sel_allocation_profile	./pqos/main.c	/^static char *sel_allocation_profile = NULL;$/;"	v	file:
+sel_assoc_core_num	./pqos/alloc.c	/^static int sel_assoc_core_num = 0;$/;"	v	file:
+sel_assoc_pid_num	./pqos/alloc.c	/^static int sel_assoc_pid_num = 0;$/;"	v	file:
+sel_assoc_pid_tab	./pqos/alloc.c	/^} sel_assoc_pid_tab[128];$/;"	v	typeref:struct:__anon9	file:
+sel_assoc_tab	./pqos/alloc.c	/^} sel_assoc_tab[PQOS_MAX_CORES];$/;"	v	typeref:struct:__anon8	file:
+sel_config_file	./pqos/main.c	/^static char *sel_config_file = NULL;$/;"	v	file:
+sel_display	./pqos/main.c	/^static int sel_display = 0;$/;"	v	file:
+sel_display_verbose	./pqos/main.c	/^static int sel_display_verbose = 0;$/;"	v	file:
+sel_events_max	./examples/c/CMT_MBM/monitor_app.c	/^static enum pqos_mon_event sel_events_max = 0;$/;"	v	typeref:enum:pqos_mon_event	file:
+sel_events_max	./pqos/monitor.c	/^static enum pqos_mon_event sel_events_max = 0;$/;"	v	typeref:enum:pqos_mon_event	file:
+sel_interface	./pqos/main.c	/^int sel_interface = PQOS_INTER_MSR;$/;"	v
+sel_l3ca_assoc_num	./examples/c/CAT/association_app.c	/^static int sel_l3ca_assoc_num = 0;$/;"	v	file:
+sel_l3ca_assoc_tab	./examples/c/CAT/association_app.c	/^} sel_l3ca_assoc_tab[PQOS_MAX_CORES];$/;"	v	typeref:struct:__anon1	file:
+sel_l3ca_cos_num	./examples/c/CAT/allocation_app.c	/^static int sel_l3ca_cos_num = 0;$/;"	v	file:
+sel_l3ca_cos_tab	./examples/c/CAT/allocation_app.c	/^static struct pqos_l3ca sel_l3ca_cos_tab[PQOS_MAX_L3CA_COS];$/;"	v	typeref:struct:pqos_l3ca	file:
+sel_log_file	./pqos/main.c	/^static char *sel_log_file = NULL;$/;"	v	file:
+sel_mon_interval	./pqos/monitor.c	/^static int sel_mon_interval = 10; \/**< 10 = 10x100ms = 1s *\/$/;"	v	file:
+sel_mon_reset	./pqos/main.c	/^static int sel_mon_reset = 0;$/;"	v	file:
+sel_mon_top_like	./pqos/monitor.c	/^static int sel_mon_top_like = 0;$/;"	v	file:
+sel_monitor_core_tab	./examples/c/CMT_MBM/monitor_app.c	/^} sel_monitor_core_tab[PQOS_MAX_CORES];$/;"	v	typeref:struct:__anon2	file:
+sel_monitor_core_tab	./pqos/monitor.c	/^} sel_monitor_core_tab[PQOS_MAX_CORES];$/;"	v	typeref:struct:core_group	file:
+sel_monitor_num	./examples/c/CMT_MBM/monitor_app.c	/^static int sel_monitor_num = 0;$/;"	v	file:
+sel_monitor_num	./pqos/monitor.c	/^static int sel_monitor_num = 0;$/;"	v	file:
+sel_monitor_pid_tab	./examples/c/CMT_MBM/monitor_app.c	/^} sel_monitor_pid_tab[PQOS_MAX_PIDS];$/;"	v	typeref:struct:__anon3	file:
+sel_monitor_pid_tab	./pqos/monitor.c	/^} sel_monitor_pid_tab[PQOS_MAX_PIDS];$/;"	v	typeref:struct:pid_group	file:
+sel_output_file	./pqos/monitor.c	/^static char *sel_output_file = NULL;$/;"	v	file:
+sel_output_type	./pqos/monitor.c	/^static char *sel_output_type = NULL;$/;"	v	file:
+sel_process_num	./examples/c/CMT_MBM/monitor_app.c	/^static int sel_process_num = 0;$/;"	v	file:
+sel_process_num	./pqos/monitor.c	/^static int sel_process_num = 0;$/;"	v	file:
+sel_reset_alloc	./pqos/main.c	/^static int sel_reset_alloc = 0;$/;"	v	file:
+sel_show_allocation_config	./pqos/main.c	/^static int sel_show_allocation_config = 0;$/;"	v	file:
+sel_store_process_id	./pqos/monitor.c	/^sel_store_process_id(char *str)$/;"	f	file:
+sel_timeout	./pqos/monitor.c	/^static int sel_timeout = -1;$/;"	v	file:
+sel_verbose_mode	./pqos/main.c	/^static int sel_verbose_mode = 0;$/;"	v	file:
+selfn_allocation_assoc	./pqos/alloc.c	/^void selfn_allocation_assoc(const char *arg)$/;"	f
+selfn_allocation_class	./pqos/alloc.c	/^void selfn_allocation_class(const char *arg)$/;"	f
+selfn_allocation_select	./pqos/main.c	/^selfn_allocation_select(const char *arg)$/;"	f	file:
+selfn_display	./pqos/main.c	/^static void selfn_display(const char *arg)$/;"	f	file:
+selfn_display_verbose	./pqos/main.c	/^static void selfn_display_verbose(const char *arg)$/;"	f	file:
+selfn_iface_os	./pqos/main.c	/^selfn_iface_os(const char *arg)$/;"	f	file:
+selfn_l3cdp_config	./pqos/main.c	/^static enum pqos_cdp_config selfn_l3cdp_config = PQOS_REQUIRE_CDP_ANY;$/;"	v	typeref:enum:pqos_cdp_config	file:
+selfn_log_file	./pqos/main.c	/^selfn_log_file(const char *arg)$/;"	f	file:
+selfn_monitor_cores	./pqos/monitor.c	/^void selfn_monitor_cores(const char *arg)$/;"	f
+selfn_monitor_file	./pqos/monitor.c	/^void selfn_monitor_file(const char *arg)$/;"	f
+selfn_monitor_file_type	./pqos/monitor.c	/^void selfn_monitor_file_type(const char *arg)$/;"	f
+selfn_monitor_interval	./pqos/monitor.c	/^void selfn_monitor_interval(const char *arg)$/;"	f
+selfn_monitor_pids	./pqos/monitor.c	/^selfn_monitor_pids(const char *arg)$/;"	f
+selfn_monitor_time	./pqos/monitor.c	/^void selfn_monitor_time(const char *arg)$/;"	f
+selfn_monitor_top_like	./pqos/monitor.c	/^void selfn_monitor_top_like(const char *arg)$/;"	f
+selfn_monitor_top_pids	./pqos/monitor.c	/^selfn_monitor_top_pids(void)$/;"	f
+selfn_reset_alloc	./pqos/main.c	/^static void selfn_reset_alloc(const char *arg)$/;"	f	file:
+selfn_show_allocation	./pqos/main.c	/^static void selfn_show_allocation(const char *arg)$/;"	f	file:
+selfn_strdup	./pqos/main.c	/^void selfn_strdup(char **sel, const char *arg)$/;"	f
+selfn_super_verbose_mode	./pqos/main.c	/^selfn_super_verbose_mode(const char *arg)$/;"	f	file:
+selfn_verbose_mode	./pqos/main.c	/^selfn_verbose_mode(const char *arg)$/;"	f	file:
+set_affinity	./lib/cpuinfo.c	/^set_affinity(const int id)$/;"	f	file:
+set_affinity	./rdtset/cpu.c	/^set_affinity(pid_t pid)$/;"	f
+set_affinity_mask	./lib/cpuinfo.c	/^set_affinity_mask(const cpu_set_t *p_set)$/;"	f	file:
+set_alloc	./pqos/alloc.c	/^set_alloc(const struct pqos_cpuinfo *cpu)$/;"	f	file:
+set_allocation_assoc	./examples/c/CAT/association_app.c	/^set_allocation_assoc(void)$/;"	f	file:
+set_allocation_assoc	./pqos/alloc.c	/^set_allocation_assoc(void)$/;"	f	file:
+set_allocation_class	./examples/c/CAT/allocation_app.c	/^set_allocation_class(unsigned sock_count,$/;"	f	file:
+set_allocation_class	./pqos/alloc.c	/^set_allocation_class(char *str, const struct pqos_cpuinfo *cpu)$/;"	f	file:
+set_allocation_cos	./pqos/alloc.c	/^set_allocation_cos(char *str, unsigned *res_ids,$/;"	f	file:
+set_arch_event_attrs	./lib/os_monitoring.c	/^set_arch_event_attrs(enum pqos_mon_event *events)$/;"	f	file:
+set_cgrp	./pqos/monitor.c	/^set_cgrp(struct core_group *cg, char *desc,$/;"	f	file:
+set_l2_cos	./pqos/alloc.c	/^set_l2_cos(const unsigned class_id, const uint64_t mask,$/;"	f	file:
+set_l3_cos	./pqos/alloc.c	/^set_l3_cos(const unsigned class_id, const uint64_t mask,$/;"	f	file:
+set_mba_cos	./pqos/alloc.c	/^set_mba_cos(const unsigned class_id, const uint64_t available_bw,$/;"	f	file:
+set_mon_caps	./lib/os_monitoring.c	/^set_mon_caps(const struct pqos_cap *cap)$/;"	f	file:
+set_mon_events	./lib/os_monitoring.c	/^set_mon_events(void)$/;"	f	file:
+set_mon_type	./lib/os_monitoring.c	/^set_mon_type(void)$/;"	f	file:
+set_rdt_event_attrs	./lib/os_monitoring.c	/^set_rdt_event_attrs(const int idx, const char *fname)$/;"	f	file:
+setup_monitoring	./examples/c/CMT_MBM/monitor_app.c	/^setup_monitoring(const struct pqos_cpuinfo *cpu_info,$/;"	f	file:
+shutdown_agent	./snmp/rdt-agentx.pl	/^sub shutdown_agent {$/;"	s
+shutdown_pqos	./lib/perl/test.pl	/^sub shutdown_pqos {$/;"	s
+signal_handler	./rdtset/rdt.c	/^signal_handler(int signum)$/;"	f	file:
+simplify_feature_str	./rdtset/rdt.c	/^simplify_feature_str(const char *feature)$/;"	f	file:
+slist	./pqos/monitor.c	/^struct slist {$/;"	s	file:
+slist_create_elem	./pqos/monitor.c	/^slist_create_elem(void *data)$/;"	f	file:
+smt_mask	./lib/cpuinfo.c	/^        uint32_t smt_mask;      \/**< mask to get SMT ID *\/$/;"	m	struct:apic_info	file:
+smt_size	./lib/cpuinfo.c	/^        uint32_t smt_size;      \/**< size of SMT ID mask *\/$/;"	m	struct:apic_info	file:
+socket	./lib/pqos.h	/^        unsigned socket;                \/**< socket id in the system *\/$/;"	m	struct:pqos_coreinfo
+sp	./py_modeling/train_model.py	/^import scipy as sp$/;"	i
+start_events	./lib/os_monitoring.c	/^start_events(struct pqos_mon_data *group)$/;"	f	file:
+start_perf_counters	./lib/os_monitoring.c	/^start_perf_counters(const struct pqos_mon_data *group,$/;"	f	file:
+stop_events	./lib/os_monitoring.c	/^stop_events(struct pqos_mon_data *group,$/;"	f	file:
+stop_monitoring	./examples/c/CMT_MBM/monitor_app.c	/^static void stop_monitoring(void)$/;"	f	file:
+stop_monitoring_loop	./pqos/monitor.c	/^static int stop_monitoring_loop = 0;$/;"	v	file:
+stop_perf_counters	./lib/os_monitoring.c	/^stop_perf_counters(struct pqos_mon_data *group, int **fds)$/;"	f	file:
+str_to_cpuset	./rdtset/common.c	/^str_to_cpuset(const char *cpustr, const unsigned cpustr_len, cpu_set_t *cpuset)$/;"	f
+str_to_uint64	./rdtset/rdt.c	/^str_to_uint64(const char *str, int base, uint64_t *value)$/;"	f	file:
+strlisttotab	./pqos/main.c	/^unsigned strlisttotab(char *s, uint64_t *tab, const unsigned max)$/;"	f
+strlisttotab	./rdtset/common.c	/^strlisttotab(char *s, uint64_t *tab, const unsigned max)$/;"	f
+strtocgrps	./pqos/monitor.c	/^strtocgrps(char *s, struct core_group *tab, const unsigned max)$/;"	f	file:
+strtouint64	./examples/c/CAT/allocation_app.c	/^strtouint64(const char *s)$/;"	f	file:
+strtouint64	./lib/resctrl_alloc.c	/^strtouint64(const char *s, int base, uint64_t *value)$/;"	f	file:
+strtouint64	./pqos/main.c	/^uint64_t strtouint64(const char *s)$/;"	f
+strtouint64	./rdtset/common.c	/^strtouint64(const char *s)$/;"	f	file:
+style	./lib/perl/Makefile.PL	/^style:$/;"	l
+sudo_drop	./rdtset/rdtset.c	/^sudo_drop(void)$/;"	f	file:
+sudo_keep	./rdtset/common.h	/^	unsigned sudo_keep:1,		\/**< don't drop elevated privileges *\/$/;"	m	struct:rdtset
+supported	./lib/os_monitoring.c	/^        int supported;$/;"	m	struct:os_supported_event	file:
+system_cores_num	./pqos/monitor.c	/^static int system_cores_num = 32;$/;"	v	file:
+tab	./lib/resctrl_alloc.h	/^	uint8_t tab[RESCTRL_ALLOC_MAX_CPUS \/ CHAR_BIT];  \/**< bit mask table *\/$/;"	m	struct:resctrl_alloc_cpumask
+tab	./pqos/profiles.c	/^        const char * const *tab;$/;"	m	struct:llc_allocation_config	file:
+task_id	./pqos/alloc.c	/^        pid_t task_id;$/;"	m	struct:__anon9	file:
+test_assoc	./lib/perl/test.pl	/^sub test_assoc {$/;"	s
+test_cmt_llc	./lib/perl/test.pl	/^sub test_cmt_llc {$/;"	s
+test_way_masks	./lib/perl/test.pl	/^sub test_way_masks {$/;"	s
+throttle_max	./lib/pqos.h	/^        unsigned throttle_max;          \/**< the max MBA can be throttled *\/$/;"	m	struct:pqos_cap_mba
+throttle_step	./lib/pqos.h	/^        unsigned throttle_step;         \/**< MBA granularity *\/$/;"	m	struct:pqos_cap_mba
+ticks_delta	./pqos/monitor.c	/^        unsigned long ticks_delta; \/**< current cpu_time - previous ticks *\/$/;"	m	struct:proc_stats	file:
+tid_map	./lib/pqos.h	/^        pid_t *tid_map;$/;"	m	struct:pqos_mon_data
+tid_nr	./lib/pqos.h	/^        int tid_nr;$/;"	m	struct:pqos_mon_data
+timer_data_ptr	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static void *timer_data_ptr = NULL;$/;"	v	file:
+timer_data_size	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static const size_t timer_data_size = 2 * MB;$/;"	v	file:
+timer_handler	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static void timer_handler(int sig, siginfo_t *si, void *uc)$/;"	f	file:
+timer_prof	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static struct tsc_prof timer_prof;$/;"	v	typeref:struct:tsc_prof	file:
+timer_rand	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static int timer_rand(void)$/;"	f	file:
+timerid	./examples/c/PSEUDO_LOCK/pseudo_lock.c	/^static timer_t timerid;$/;"	v	file:
+timeval_to_usec	./pqos/monitor.c	/^static long timeval_to_usec(const struct timeval *tv)$/;"	f	file:
+total_size	./lib/pqos.h	/^        unsigned total_size;            \/**< Total cache size in bytes *\/$/;"	m	struct:pqos_cacheinfo
+train_test_split	./py_modeling/train_model.py	/^from sklearn.model_selection import train_test_split$/;"	i
+try_different_method	./py_modeling/train_model.py	/^def try_different_method(model):$/;"	f
+tsc_end	./examples/c/PSEUDO_LOCK/tsc.h	/^tsc_end(struct tsc_prof *p, const unsigned inc)$/;"	f
+tsc_end_ex	./examples/c/PSEUDO_LOCK/tsc.h	/^tsc_end_ex(struct tsc_prof *p, const unsigned inc, const uint64_t clk_start)$/;"	f
+tsc_get_avg	./examples/c/PSEUDO_LOCK/tsc.h	/^double tsc_get_avg(struct tsc_prof *p)$/;"	f
+tsc_init	./examples/c/PSEUDO_LOCK/tsc.c	/^void tsc_init(struct tsc_prof *p, const char *name, ...)$/;"	f
+tsc_print	./examples/c/PSEUDO_LOCK/tsc.c	/^void tsc_print(struct tsc_prof *p)$/;"	f
+tsc_prof	./examples/c/PSEUDO_LOCK/tsc.h	/^struct tsc_prof {$/;"	s
+tsc_start	./examples/c/PSEUDO_LOCK/tsc.h	/^tsc_start(struct tsc_prof *p)$/;"	f
+type	./lib/pqos.h	/^        enum pqos_cap_type type;$/;"	m	struct:pqos_capability	typeref:enum:pqos_capability::pqos_cap_type
+type	./lib/pqos.h	/^        enum pqos_mon_event type;$/;"	m	struct:pqos_monitor	typeref:enum:pqos_monitor::pqos_mon_event
+type	./rdtset/common.h	/^	enum pqos_cap_type type;$/;"	m	struct:rdt_cfg	typeref:enum:rdt_cfg::pqos_cap_type
+types	./py_modeling/train_model.py	/^import types$/;"	i
+u	./lib/pqos.h	/^        } u;$/;"	m	struct:pqos_capability	typeref:union:pqos_capability::__anon5
+u	./lib/pqos.h	/^        } u;$/;"	m	struct:pqos_l3ca	typeref:union:pqos_l3ca::__anon6
+u	./rdtset/common.h	/^	} u;$/;"	m	struct:rdt_cfg	typeref:union:rdt_cfg::__anon10
+uinttostr	./pqos/monitor.c	/^static char *uinttostr(const unsigned val)$/;"	f	file:
+update_proc_cpu_stat	./pqos/monitor.c	/^update_proc_cpu_stat(const struct slist *pslist, const pid_t pid,$/;"	f	file:
+usec_to_timeval	./pqos/monitor.c	/^static void usec_to_timeval(struct timeval *tv, const long usec)$/;"	f	file:
+valid	./lib/pqos.h	/^        int valid;                      \/**< structure validity marker *\/$/;"	m	struct:pqos_mon_data
+valid	./pqos/monitor.c	/^        int valid; \/**< marks if statisctics are fully processed *\/$/;"	m	struct:proc_stats	file:
+valid_mbm_read	./lib/pqos.h	/^        int valid_mbm_read;             \/**< flag to discard 1st invalid read *\/$/;"	m	struct:pqos_mon_data
+validate_args	./rdtset/rdtset.c	/^validate_args(const int f_r, __attribute__((unused)) const int f_t,$/;"	f	file:
+values	./lib/pqos.h	/^        struct pqos_event_values values; \/**< RMID events value *\/$/;"	m	struct:pqos_mon_data	typeref:struct:pqos_mon_data::pqos_event_values
+verbose	./lib/pqos.h	/^        int verbose;$/;"	m	struct:pqos_config
+verbose	./rdtset/common.h	/^		 verbose:1,		\/**< be verbose *\/$/;"	m	struct:rdtset
+version	./lib/pqos.h	/^        unsigned version;               \/**< version of PQoS library *\/$/;"	m	struct:pqos_cap
+volatile	./cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
+way_contention	./lib/pqos.h	/^        uint64_t way_contention;        \/**< ways contention bit mask *\/$/;"	m	struct:pqos_cap_l2ca
+way_contention	./lib/pqos.h	/^        uint64_t way_contention;        \/**< ways contention bit mask *\/$/;"	m	struct:pqos_cap_l3ca
+way_size	./lib/pqos.h	/^        unsigned way_size;              \/**< Cache way size in bytes *\/$/;"	m	struct:pqos_cacheinfo
+way_size	./lib/pqos.h	/^        unsigned way_size;              \/**< way size in bytes *\/$/;"	m	struct:pqos_cap_l2ca
+way_size	./lib/pqos.h	/^        unsigned way_size;              \/**< way size in bytes *\/$/;"	m	struct:pqos_cap_l3ca
+ways_mask	./lib/pqos.h	/^                uint64_t ways_mask;     \/**< bit mask for L3 cache ways *\/$/;"	m	union:pqos_l3ca::__anon6
+ways_mask	./lib/pqos.h	/^        uint32_t ways_mask;     \/**< bit mask for L2 cache ways *\/$/;"	m	struct:pqos_l2ca
+wrap_l2ca	./rdtset/common.h	/^static inline struct rdt_cfg wrap_l2ca(struct pqos_l2ca *l2)$/;"	f
+wrap_l3ca	./rdtset/common.h	/^static inline struct rdt_cfg wrap_l3ca(struct pqos_l3ca *l3)$/;"	f
+wrap_mba	./rdtset/common.h	/^static inline struct rdt_cfg wrap_mba(struct pqos_mba *mba)$/;"	f
+xml_child_close	./pqos/monitor.c	/^static const char *xml_child_close = "<\/record>";$/;"	v	file:
+xml_child_open	./pqos/monitor.c	/^static const char *xml_child_open = "<record>";$/;"	v	file:
+xml_root_close	./pqos/monitor.c	/^static const char *xml_root_close = "<\/records>";$/;"	v	file:
+xml_root_open	./pqos/monitor.c	/^static const char *xml_root_open = "<records>";$/;"	v	file:
+y	./py_modeling/train_model.py	/^y = np.asarray(df_update.values[:, 0])$/;"	v

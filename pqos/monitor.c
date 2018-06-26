@@ -171,6 +171,15 @@ static int stop_monitoring_loop = 0;
 static FILE *fp_monitor = NULL;
 
 /**
+ * Quxm add 2018.6.25
+ * File descriptor for writing monitored data into
+ * output to csv
+ */
+static FILE *fp_output_csv = NULL;
+const char *OUTPUT_FILE_NAME = "Muses_output.csv";
+
+
+/**
  * Maintains process statistics. It is used for getting N pids to be displayed
  * in top-pid monitoring mode.
  */
@@ -2147,6 +2156,11 @@ void monitor_cleanup(void)
                 fclose(fp_monitor);
         fp_monitor = NULL;
 
+        //退出监控时关闭文件 quxm add 2018.6.25
+        if (fp_output_csv != NULL)
+            fclose(fp_output_csv);
+        fp_output_csv = NULL;
+
         /**
          * Free allocated memory
          */
@@ -2183,6 +2197,8 @@ void monitor_loop_quxm(void)
         const int istext = !strcasecmp(sel_output_type, "text");
         const int isxml = !strcasecmp(sel_output_type, "xml");
         const int iscsv = !strcasecmp(sel_output_type, "csv");*/
+        //是否输出到csv文件，1开启，0关闭，quxm add 2018.6.25
+        const int to_csv = 1;
         const size_t sz_header = 128;
 //        char header[sz_header];
         unsigned mon_number = 0, display_num = 0;
@@ -2197,6 +2213,15 @@ void monitor_loop_quxm(void)
         mon_number = get_mon_arrays(&mon_grps, &mon_data);
         display_num = mon_number;
 
+        //如果输出到csv文件，先创建文件,每次创建新文件进行写入,如果存在则覆盖  quxm add 2018.6.25
+        if(to_csv)
+        {
+            fp_output_csv = fopen(OUTPUT_FILE_NAME,"w+");
+            //header
+            fprintf(fp_output_csv,"%s,%s,%s,%s,%s,%s,%s\n","IPC","CACHE_MISS(K)",
+                   "LLC(KB)","MemBW(MB)","MemBW(%)","CPU_Usage","VmRss(KB)");
+        }
+
         //quxm add:get online_group pid.2018.6.10
         FILE *fp_pid;
         char buf_online[32];
@@ -2205,11 +2230,11 @@ void monitor_loop_quxm(void)
         fp_pid = fopen("/sys/fs/cgroup/cpu,cpuacct/mysql_test/cgroup.procs","r");
         fgets(buf_online, sizeof(buf_online),fp_pid);
         sscanf(buf_online,"%d",&online_pid);
-        printf("===============online_pid==============:%d\n",online_pid);
+        printf("Quxm info online_pid:%d\n",online_pid);
         mon_grps[0]->perf_pid_ipc_enable = online_pid;
         mon_data[0]->perf_pid_ipc_enable = online_pid;
         fclose(fp_pid);
-    //add by quxm:use perf_event_open to get ipc based on pid.2018.6.10
+        //add by quxm:use perf_event_open to get ipc based on pid.2018.6.10
         struct perf_event_attr pe;
 
         memset(&pe, 0, sizeof(struct perf_event_attr));
@@ -2414,11 +2439,16 @@ void monitor_loop_quxm(void)
 
                         //printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
                         //       "LLC(KB)","MBL(MB)","MBR(MB)","CPU_Usage","VmRss(KB)");
-                    printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPC","CACHE_MISS(K)",
+                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPC","CACHE_MISS(K)",
                            "LLC(KB)","MemBW(MB)","MemBW(%)","CPU_Usage","VmRss(KB)");
                         printf("%lf\t%u\t%.1lf\t%.2lf\t%d\t%.4lf\t%ld\n",ipc,(unsigned)pv->llc_misses_delta/1000,
                                llc,mbl+mbr,mba_percent,pv->cpu_usage,pv->mem_vmrss);
-
+                        if(to_csv && fp_output_csv!=NULL)
+                        {
+                            fprintf(fp_output_csv,"%lf,%u,%.1lf,%.2lf,%d,%.4lf,%ld\n",ipc,
+                                    (unsigned)pv->llc_misses_delta/1000, llc,mbl+mbr,
+                                    mba_percent,pv->cpu_usage,pv->mem_vmrss);
+                        }
 /*                        if (istext)
                                 print_text_row(fp_monitor, mon_data[i],
                                                llc, mbr, mbl);
