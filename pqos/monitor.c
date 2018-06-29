@@ -2449,7 +2449,7 @@ void monitor_loop_quxm(void)
                                llc,mba_percent,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
                         if(to_csv && fp_output_csv!=NULL)
                         {
-                            fprintf(fp_output_csv,"%lf,%.4lf,%ld,%.1lf,%d,%.2lf,%u\n",ipc,pv->cpu_usage,pv->mem_vmrss,
+                            fprintf(fp_output_csv,"%lf,%.4lf,%ld,%.1lf,%d,%.2lf,%u\n",ips,pv->cpu_usage,pv->mem_vmrss,
                                     llc,mba_percent,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
                         }
 /*                        if (istext)
