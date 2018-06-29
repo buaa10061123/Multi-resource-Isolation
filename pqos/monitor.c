@@ -2218,8 +2218,8 @@ void monitor_loop_quxm(void)
         {
             fp_output_csv = fopen(OUTPUT_FILE_NAME,"w+");
             //header
-            fprintf(fp_output_csv,"%s,%s,%s,%s,%s,%s,%s\n","IPC","CACHE_MISS(K)",
-                   "LLC(KB)","MemBW(MB)","MemBW(%)","CPU_Usage","VmRss(KB)");
+            fprintf(fp_output_csv,"%s,%s,%s,%s,%s,%s,%s\n","IPC","CPU_Usage","VmRss(KB)","LLC(KB)",
+                    "MemBW(%)","MemBW(MB)","CACHE_MISS(K)");
         }
 
         //quxm add:get online_group pid.2018.6.10
@@ -2439,15 +2439,18 @@ void monitor_loop_quxm(void)
 
                         //printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
                         //       "LLC(KB)","MBL(MB)","MBR(MB)","CPU_Usage","VmRss(KB)");
-                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPC","CACHE_MISS(K)",
-                           "LLC(KB)","MemBW(MB)","MemBW(%)","CPU_Usage","VmRss(KB)");
-                        printf("%lf\t%u\t%.1lf\t%.2lf\t%d\t%.4lf\t%ld\n",ipc,(unsigned)pv->llc_misses_delta/1000,
-                               llc,mbl+mbr,mba_percent,pv->cpu_usage,pv->mem_vmrss);
+
+                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPS(M/s)","CPU_Usage","VmRss(KB)",
+                           "LLC(KB)","MemBW(%)","MemBW(MB)","CACHE_MISS(K)");
+                        // ic/1000000表示单位为每1M个指令，interval/1000000表示单位为1秒
+                        //输出由ipc改为ips，by quxm 2018.6.29
+                        double ips = (double)ic/1000000/(interval/1000000);
+                        printf("%lf\t%.4lf\t%ld\t%.1lf\t%d\t%.2lf\t%u\n",ips,pv->cpu_usage,pv->mem_vmrss,
+                               llc,mba_percent,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
                         if(to_csv && fp_output_csv!=NULL)
                         {
-                            fprintf(fp_output_csv,"%lf,%u,%.1lf,%.2lf,%d,%.4lf,%ld\n",ipc,
-                                    (unsigned)pv->llc_misses_delta/1000, llc,mbl+mbr,
-                                    mba_percent,pv->cpu_usage,pv->mem_vmrss);
+                            fprintf(fp_output_csv,"%lf,%.4lf,%ld,%.1lf,%d,%.2lf,%u\n",ipc,pv->cpu_usage,pv->mem_vmrss,
+                                    llc,mba_percent,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
                         }
 /*                        if (istext)
                                 print_text_row(fp_monitor, mon_data[i],

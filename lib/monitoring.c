@@ -736,6 +736,7 @@ pqos_core_poll(struct pqos_mon_data *p)
                 pv->ipc_unhalted_delta = unhalted - pv->ipc_unhalted;
                 pv->ipc_unhalted = unhalted;
 
+                //上面是读取cycles，逻辑跟之前一样没变化，下面读取instructions使用了PMU的perf_event_open得到的fd
                 long long count;
 
                 read(pv->fd_ins, &count, sizeof(long long));
