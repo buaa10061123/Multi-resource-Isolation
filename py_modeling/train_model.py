@@ -13,13 +13,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 #加载数据
-data = "/Users/quximing/Desktop/4d_0525_puredata_20W.xlsx"
-df = pd.read_excel(data, header=0, parse_cols="A:E")
+data = "/Users/quximing/Desktop/Muses_output.csv"
+# df = pd.read_excel(data, header=0, parse_cols="A:E")
+df = pd.read_csv(data, header=0, usecols=[0,1,2,3,4])
+
 
 df_update = df[df.CPU > 0]
-df_update = df_update[(df.IPC/df.CPU < 0.5)]
+#df_update = df_update[(df.IPS/df.CPU < 0.5)]
 print("Rows of df: %d, Rows of df_update: %d \n" % (len(df.index),len(df_update.index)))
-
+#print(df_update)
 import types
 #df_update['IPC/CPU'] = df_update['IPC']/df_update['CPU']
 #print(df_update)
@@ -78,7 +80,7 @@ def try_different_method(model):
     # plt.title('score: %f'%score)
     # plt.legend()
     # plt.show()
-    #joblib.dump(model,'GBRT.model')
+    joblib.dump(model,'GBRT.model')
 
 
 ###########3.具体方法选择##########
