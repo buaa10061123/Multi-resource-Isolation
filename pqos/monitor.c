@@ -2218,8 +2218,7 @@ void monitor_loop_quxm(void)
         {
             fp_output_csv = fopen(OUTPUT_FILE_NAME,"w+");
             //header
-            fprintf(fp_output_csv,"%s,%s,%s,%s,%s,%s,%s\n","IPC","CPU_Usage","VmRss(KB)","LLC(KB)",
-                    "MemBW(%)","MemBW(MB)","CACHE_MISS(K)");
+            fprintf(fp_output_csv,"%s,%s,%s,%s,%s,%s,%s\n","IPS","CPU","MEM(KB)","LLC(KB)","MemBW(%)","MemBW(MB)","CACHE_MISS(K)");
         }
 
         //quxm add:get online_group pid.2018.6.10
