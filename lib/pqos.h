@@ -370,6 +370,9 @@ struct pqos_event_values {
 
     //quxm add instructions fd.2018.6.10
     int fd_ins;
+
+    //quxm add server threads
+    int thread_count;
 };
 
 /**

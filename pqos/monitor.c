@@ -2434,6 +2434,21 @@ void monitor_loop_quxm(void)
                         fclose(fp3);
                         sscanf(buf3,"%s %ld",&mem_name,&vmrss);
                         pv->mem_vmrss = vmrss;
+
+                        //quxm add --server thread counts
+                        FILE *fp_server_tasks;
+                        int count = 0;
+                        char buf_task[32];
+                        fp_server_tasks = fopen("/sys/fs/cgroup/cpu,cpuacct/mysql_test/tasks","r");
+                        //获取tasks文件行数
+                        if(!fp_server_tasks){
+                            printf("Error: FILE /sys/fs/cgroup/cpu,cpuacct/mysql_test/tasks is null.");
+                            return;
+                        }
+                        while(fgets(buf_task,sizeof(buf_task),fp_server_tasks)){
+                            count++;
+                        }
+                        pv->thread_count = count;
                     }
 
                         //printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
@@ -2444,12 +2459,12 @@ void monitor_loop_quxm(void)
                         // ic/1000000表示单位为每1M个指令，interval/1000000表示单位为1秒
                         //输出由ipc改为ips，by quxm 2018.6.29
                         double ips = (double)ic/1000000/(interval/1000000);
-                        printf("%lf\t%.4lf\t%ld\t%.1lf\t%d\t%.2lf\t%u\n",ips,pv->cpu_usage,pv->mem_vmrss,
-                               llc,mba_percent,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
+                        printf("%lf\t%.4lf\t%ld\t%.1lf\t%d\t%d\t%.2lf\t%u\n",ips,pv->cpu_usage,pv->mem_vmrss,
+                               llc,mba_percent,pv->thread_count,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
                         if(to_csv && fp_output_csv!=NULL)
                         {
-                            fprintf(fp_output_csv,"%lf,%.4lf,%ld,%.1lf,%d,%.2lf,%u\n",ips,pv->cpu_usage,pv->mem_vmrss,
-                                    llc,mba_percent,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
+                            fprintf(fp_output_csv,"%lf,%.4lf,%ld,%.1lf,%d,%d,%.2lf,%u\n",ips,pv->cpu_usage,pv->mem_vmrss,
+                                    llc,mba_percent,pv->thread_count,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
                         }
 /*                        if (istext)
                                 print_text_row(fp_monitor, mon_data[i],
