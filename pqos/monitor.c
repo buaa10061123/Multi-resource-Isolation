@@ -2451,6 +2451,7 @@ void monitor_loop_quxm(void)
                             count++;
                         }
                         pv->thread_count = count;
+                        fclose(fp_server_tasks);
                     }
 
                         //printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
