@@ -352,13 +352,16 @@ struct pqos_event_values {
 	uint64_t mbm_local_delta;       /**< bandwidth local - delta */
 	uint64_t mbm_total_delta;       /**< bandwidth total - delta */
 	uint64_t mbm_remote_delta;      /**< bandwidth remote - delta */
-        uint64_t ipc_retired;           /**< instructions retired - reading */
-        uint64_t ipc_retired_delta;     /**< instructions retired - delta */
-        uint64_t ipc_unhalted;          /**< unhalted cycles - reading */
-        uint64_t ipc_unhalted_delta;    /**< unhalted cycles - delta */
-        double ipc;                     /**< retired instructions / cycles */
-        uint64_t llc_misses;            /**< LLC misses - reading */
-        uint64_t llc_misses_delta;      /**< LLC misses - delta */
+    //quxm add:原指令数测量保持不变，以core为粒度，新增以pid为粒度的测量
+    uint64_t ipc_retired;           /**< instructions retired - reading of core*/
+    uint64_t ipc_retired_delta;     /**< instructions retired - delta of core*/
+    uint64_t ipc_retired_pid;           /**< instructions retired - reading of pid*/
+    uint64_t ipc_retired_delta_pid;     /**< instructions retired - delta of pid*/
+    uint64_t ipc_unhalted;          /**< unhalted cycles - reading */
+    uint64_t ipc_unhalted_delta;    /**< unhalted cycles - delta */
+    double ipc;                     /**< retired instructions / cycles */
+    uint64_t llc_misses;            /**< LLC misses - reading */
+    uint64_t llc_misses_delta;      /**< LLC misses - delta */
 
     //quxm 增加cpu使用率和内存情况
     long int cpu_all;
@@ -420,7 +423,7 @@ struct pqos_mon_data {
         unsigned num_cores;             /**< number of cores in the group */
         int valid_mbm_read;             /**< flag to discard 1st invalid read */
 
-        int perf_pid_ipc_enable ;   //add by quxm, recognize whether use perf_event_open to get ipc or not.2018.6.10
+        int perf_pid_ipc_enable;   //add by quxm, recognize whether use perf_event_open to get ipc or not.2018.6.10
 };
 
 /**

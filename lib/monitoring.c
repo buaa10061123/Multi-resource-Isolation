@@ -677,12 +677,10 @@ pqos_core_poll(struct pqos_mon_data *p)
                  * If multiple cores monitored in one group
                  * then we have to accumulate the values in the group.
                  */
-                //changed by quxm:if perf_event_open is used. 2018.6.10
-            if(p->perf_pid_ipc_enable == 0)
-            {
+                //changed by quxm:perf_event_open is used. 2018.6.10
                 uint64_t unhalted = 0, retired = 0;
                 unsigned n;
-
+                //以逻辑核为粒度的测量：
                 for (n = 0; n < p->num_cores; n++) {
                         uint64_t tmp = 0;
                         int ret = msr_read(p->cores[n],
@@ -714,43 +712,17 @@ pqos_core_poll(struct pqos_mon_data *p)
                 else
                         pv->ipc = (double) pv->ipc_retired_delta /
                                 (double) pv->ipc_unhalted_delta;
-            }
-            else
-            {
-                uint64_t unhalted = 0, retired = 0;
-                unsigned n;
-                for (n = 0; n < p->num_cores; n++) {
-                    uint64_t tmp = 0;
-                    //ret = msr_read(p->cores[n],
-                    //               IA32_MSR_CPU_UNHALTED_THREAD, &tmp);
-                    //quxm changed: use CPU_CLK_Unhalted.Ref instead. 2018.5.7
-                    int ret = msr_read(p->cores[n],
-                                   IA32_MSR_CPU_UNHALTED_REF, &tmp);
-                    if (ret != MACHINE_RETVAL_OK) {
-                        retval = PQOS_RETVAL_ERROR;
-                        goto pqos_core_poll__exit;
-                    }
-                    unhalted += tmp;
-                }
 
-                pv->ipc_unhalted_delta = unhalted - pv->ipc_unhalted;
-                pv->ipc_unhalted = unhalted;
+                uint64_t retired_pid = 0;
 
-                //上面是读取cycles，逻辑跟之前一样没变化，下面读取instructions使用了PMU的perf_event_open得到的fd
+                //下面读取instructions使用了PMU的perf_event_open得到的fd
+                //即以pid为粒度的测量
                 long long count;
 
                 read(pv->fd_ins, &count, sizeof(long long));
-                retired = count;
-                pv->ipc_retired_delta = retired - pv->ipc_retired;
-                pv->ipc_retired = retired;
-
-
-                if (pv->ipc_unhalted_delta == 0)
-                    pv->ipc = 0.0;
-                else
-                    pv->ipc = (double) pv->ipc_retired_delta /
-                              (double) pv->ipc_unhalted_delta;
-            }
+                retired_pid = count;
+                pv->ipc_retired_delta_pid = retired_pid - pv->ipc_retired_pid;
+                pv->ipc_retired_pid = retired_pid;
         }
         if (p->event & PQOS_PERF_EVENT_LLC_MISS) {
                 /**
