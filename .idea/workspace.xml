@@ -13,6 +13,18 @@
   <component name="ChangeListManager">
     <list default="true" id="b244cc32-4be9-4af6-b21b-eb450475950c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_CXX.bin" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/a.out" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/DependInfo.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/flags.make" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/intel_cmt_cat_master.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/intel_cmt_cat_master.cbp" />
       <change beforePath="$PROJECT_DIR$/pqos/main.c" afterPath="$PROJECT_DIR$/pqos/main.c" />
       <change beforePath="$PROJECT_DIR$/pqos/monitor.c" afterPath="$PROJECT_DIR$/pqos/monitor.c" />
     </list>
@@ -30,8 +42,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pqos/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="1053" column="18" lean-forward="false" selection-start-line="1053" selection-start-column="18" selection-end-line="1053" selection-end-column="18" />
+            <state relative-caret-position="410">
+              <caret line="694" column="9" lean-forward="true" selection-start-line="694" selection-start-column="9" selection-end-line="694" selection-end-column="9" />
               <folding>
                 <element signature="e#4079#4588#0" expanded="false" />
                 <element signature="e#4590#6978#0" expanded="false" />
@@ -46,21 +58,9 @@
       <file leaf-file-name="alloc.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pqos/alloc.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
+            <state relative-caret-position="19134">
               <caret line="1063" column="4" lean-forward="false" selection-start-line="1063" selection-start-column="4" selection-end-line="1063" selection-end-column="4" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/api.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17010">
-              <caret line="945" column="0" lean-forward="false" selection-start-line="945" selection-start-column="0" selection-end-line="945" selection-end-column="0" />
-              <folding>
-                <element signature="e#23575#23613#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -68,12 +68,23 @@
       <file leaf-file-name="monitor.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="2198" column="55" lean-forward="false" selection-start-line="2198" selection-start-column="55" selection-end-line="2198" selection-end-column="55" />
+            <state relative-caret-position="482">
+              <caret line="2460" column="55" lean-forward="true" selection-start-line="2460" selection-start-column="55" selection-end-line="2460" selection-end-column="55" />
               <folding>
                 <element signature="e#1703#1721#0" expanded="true" />
+                <element signature="e#2426#2445#0" expanded="true" />
                 <element signature="e#66995#73515#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="84" lean-forward="false" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,18 +92,8 @@
       <file leaf-file-name="monitor.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pqos/monitor.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
+            <state relative-caret-position="2322">
               <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stdio.h" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/stdio.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="215" column="5" lean-forward="false" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -104,18 +105,6 @@
             <state relative-caret-position="9738">
               <caret line="541" column="60" lean-forward="false" selection-start-line="541" selection-start-column="60" selection-end-line="541" selection-end-column="60" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monitoring.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/monitoring.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12726">
-              <caret line="707" column="23" lean-forward="false" selection-start-line="707" selection-start-column="20" selection-end-line="707" selection-end-column="23" />
-              <folding>
-                <element signature="e#1761#1780#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>PQOS_MSR_MBA_MASK_START</find>
       <find>mba</find>
       <find>alloc_print_config</find>
       <find>core</find>
@@ -183,6 +171,7 @@
       <find>sel_output_file</find>
       <find>selfn_monitor_file</find>
       <find>quxm</find>
+      <find>task</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -198,6 +187,7 @@
         <option value="$PROJECT_DIR$/lib/allocation.c" />
         <option value="$PROJECT_DIR$/lib/pqos.h" />
         <option value="$PROJECT_DIR$/lib/monitoring.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/pqos/main.c" />
         <option value="$PROJECT_DIR$/pqos/monitor.c" />
       </list>
@@ -271,7 +261,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="SearchEverywhereHistoryKey" value="PERF_COUNT_HW_CPU_CYCLES&#9;ACTION&#9;null&#10;perf_event_open&#9;null&#9;null&#10;API&#9;FILE&#9;file:///Users/quximing/graduate project/lib/api.c" />
   </component>
   <component name="RunDashboard">
@@ -323,11 +313,13 @@
       <workItem from="1528680766559" duration="10895000" />
       <workItem from="1529569655847" duration="2158000" />
       <workItem from="1529910296525" duration="10846000" />
+      <workItem from="1540343410761" duration="1161000" />
+      <workItem from="1540345364257" duration="1661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75021000" />
+    <option name="totallyTimeSpent" value="77843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -337,7 +329,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -349,6 +340,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -365,28 +357,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pqos/alloc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15966">
-          <caret line="887" column="36" lean-forward="false" selection-start-line="887" selection-start-column="36" selection-end-line="887" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/allocation.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16398">
-          <caret line="911" column="41" lean-forward="false" selection-start-line="911" selection-start-column="41" selection-end-line="911" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42462">
           <caret line="2359" column="0" lean-forward="true" selection-start-line="2359" selection-start-column="0" selection-end-line="2359" selection-end-column="0" />
           <folding>
             <element signature="e#1703#1721#0" expanded="true" />
+            <element signature="e#2426#2445#0" expanded="true" />
             <element signature="e#66995#73515#0" expanded="false" />
           </folding>
         </state>
@@ -457,7 +434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16398">
           <caret line="911" column="41" lean-forward="false" selection-start-line="911" selection-start-column="41" selection-end-line="911" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -489,6 +465,7 @@
           <caret line="2362" column="44" lean-forward="false" selection-start-line="2362" selection-start-column="44" selection-end-line="2362" selection-end-column="44" />
           <folding>
             <element signature="e#1703#1721#0" expanded="true" />
+            <element signature="e#2426#2445#0" expanded="true" />
             <element signature="e#66995#73515#0" expanded="false" />
           </folding>
         </state>
@@ -514,6 +491,7 @@
           <caret line="2301" column="29" lean-forward="false" selection-start-line="2301" selection-start-column="24" selection-end-line="2301" selection-end-column="29" />
           <folding>
             <element signature="e#1703#1721#0" expanded="true" />
+            <element signature="e#2426#2445#0" expanded="true" />
             <element signature="e#66995#73515#0" expanded="false" />
           </folding>
         </state>
@@ -599,13 +577,6 @@
     <entry file="file:///usr/include/sys/time.h" />
     <entry file="file:///usr/include/time.h" />
     <entry file="file:///usr/include/_types/_uint64_t.h" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/cap.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -646,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16398">
           <caret line="911" column="41" lean-forward="false" selection-start-line="911" selection-start-column="41" selection-end-line="911" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,13 +630,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/sys/_types/_pid_t.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/sys/_types/_pid_t.h" />
     <entry file="file://$PROJECT_DIR$/lib/perf.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
@@ -707,6 +671,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/include/sys/signal.h" />
+    <entry file="file://$PROJECT_DIR$/pqos/alloc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19134">
+          <caret line="1063" column="4" lean-forward="false" selection-start-line="1063" selection-start-column="4" selection-end-line="1063" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdio.h" />
+    <entry file="file://$PROJECT_DIR$/pqos/monitor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2322">
+          <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys/_types/_pid_t.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="84" lean-forward="false" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/monitoring.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12137">
+          <caret line="707" column="23" lean-forward="false" selection-start-line="707" selection-start-column="20" selection-end-line="707" selection-end-column="23" />
+          <folding>
+            <element signature="e#1761#1780#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/os_monitoring.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9738">
@@ -715,51 +723,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/sys/signal.h">
+    <entry file="file:///Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/linux/perf_event.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="83" column="8" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/monitoring.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12726">
-          <caret line="707" column="23" lean-forward="false" selection-start-line="707" selection-start-column="20" selection-end-line="707" selection-end-column="23" />
-          <folding>
-            <element signature="e#1761#1780#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pqos/alloc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="1063" column="4" lean-forward="false" selection-start-line="1063" selection-start-column="4" selection-end-line="1063" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/stdio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="215" column="5" lean-forward="false" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pqos/monitor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pqos/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="1053" column="18" lean-forward="false" selection-start-line="1053" selection-start-column="18" selection-end-line="1053" selection-end-column="18" />
+        <state relative-caret-position="410">
+          <caret line="694" column="9" lean-forward="true" selection-start-line="694" selection-start-column="9" selection-end-line="694" selection-end-column="9" />
           <folding>
             <element signature="e#4079#4588#0" expanded="false" />
             <element signature="e#4590#6978#0" expanded="false" />
@@ -772,10 +747,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="2198" column="55" lean-forward="false" selection-start-line="2198" selection-start-column="55" selection-end-line="2198" selection-end-column="55" />
+        <state relative-caret-position="482">
+          <caret line="2460" column="55" lean-forward="true" selection-start-line="2460" selection-start-column="55" selection-end-line="2460" selection-end-column="55" />
           <folding>
             <element signature="e#1703#1721#0" expanded="true" />
+            <element signature="e#2426#2445#0" expanded="true" />
             <element signature="e#66995#73515#0" expanded="false" />
           </folding>
         </state>

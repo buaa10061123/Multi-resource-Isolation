@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.9)
 project(intel_cmt_cat_master)
 
 set(CMAKE_CXX_STANDARD 11)
+include_directories(/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include;
+        /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers;
+        /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys)
 
 add_executable(intel_cmt_cat_master
         examples/c/CAT/allocation_app.c

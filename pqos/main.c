@@ -640,6 +640,7 @@ int main(int argc, char **argv)
         {
             case 'p':
                 //在线profiling组的pid
+                //以下操作为将传入的pid参数写入cpu、mem、cpuset子系统下的cgroup.procs文件内
                 sprintf(online_pid,"%.*s", strlen(optarg),optarg);
                 char *cg_cpu_procs_dir = (char*)malloc(100);
                 char *cg_mem_procs_dir = (char*)malloc(100);
@@ -674,6 +675,7 @@ int main(int argc, char **argv)
     }
 
         //quxm add : dynamic get cores of online cgroup
+        //此处的功能为，从cpuset.cpus中读出cores，并赋值给监控项，以便监控在线组的资源使用情况
         char *llc_flag = "llc:1=";
         char *all_flag = "all:[";
         char core_group1[64];
@@ -682,7 +684,7 @@ int main(int argc, char **argv)
         //for pqos -a "llc:1={core_group_pqos_a}"
         char *core_group_pqos_a = (char *)malloc(80);
 
-        //目录拼接成"/sys/fs/cgroup/cpuset/在线组/cpuset.cpus"
+        //目录拼接成"/sys/fs/cgroup/cpuset/在线组mysql_test/cpuset.cpus"
         char *cpuset_cpus_dir = (char *)malloc(100);
         sprintf(cpuset_cpus_dir,"%.*s%.*s",strlen(CG_CPUSET_PREFIX),CG_CPUSET_PREFIX,
                 strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
@@ -902,7 +904,7 @@ int main(int argc, char **argv)
                 exit_val = EXIT_FAILURE;
                 goto error_exit_1;
         }
-
+        //初始化llc等隔离功能
         ret = pqos_cap_get(&p_cap, &p_cpu);
         if (ret != PQOS_RETVAL_OK) {
                 printf("Error retrieving PQoS capabilities!\n");

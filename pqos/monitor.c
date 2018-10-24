@@ -2218,7 +2218,8 @@ void monitor_loop_quxm(void)
         {
             fp_output_csv = fopen(OUTPUT_FILE_NAME,"w+");
             //header
-            fprintf(fp_output_csv,"%s,%s,%s,%s,%s,%s,%s\n","IPS","CPU","MEM(KB)","LLC(KB)","MemBW(%)","MemBW(MB)","CACHE_MISS(K)");
+            fprintf(fp_output_csv,"%s,%s,%s,%s,%s,%s,%s,%s\n",
+                    "IPS","CPU","MEM(KB)","LLC(KB)","MemBW(%)","Tasks","MemBW(MB)","CACHE_MISS(K)");
         }
 
         //quxm add:get online_group pid.2018.6.10
@@ -2454,8 +2455,8 @@ void monitor_loop_quxm(void)
                         //printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IC","Cycles","IPC","CACHE_MISS(K)",
                         //       "LLC(KB)","MBL(MB)","MBR(MB)","CPU_Usage","VmRss(KB)");
 
-                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPS(M/s)","CPU_Usage","VmRss(KB)",
-                           "LLC(KB)","MemBW(%)","MemBW(MB)","CACHE_MISS(K)");
+                        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","IPS(M/s)","CPU_Usage","VmRss(KB)",
+                           "LLC(KB)","MemBW(%)","Tasks","MemBW(MB)","CACHE_MISS(K)");
                         // ic/1000000表示单位为每1M个指令，interval/1000000表示单位为1秒
                         //输出由ipc改为ips，by quxm 2018.6.29
                         double ips = (double)ic/1000000/(interval/1000000);
