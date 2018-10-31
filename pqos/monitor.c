@@ -2193,22 +2193,12 @@ void monitor_loop_quxm(void)
                 (long)sel_mon_interval * 100000LL; /* interval in [us] units */
         struct timeval tv_start, tv_s;
         int ret = PQOS_RETVAL_OK;
-        /*const int istty = isatty(fileno(fp_monitor));
-        const int istext = !strcasecmp(sel_output_type, "text");
-        const int isxml = !strcasecmp(sel_output_type, "xml");
-        const int iscsv = !strcasecmp(sel_output_type, "csv");*/
         //是否输出到csv文件，1开启，0关闭，quxm add 2018.6.25
         const int to_csv = 1;
         const size_t sz_header = 128;
 //        char header[sz_header];
         unsigned mon_number = 0, display_num = 0;
         struct pqos_mon_data **mon_data = NULL, **mon_grps = NULL;
-/*
-        if ((!istext)  && (!isxml) && (!iscsv)) {
-                printf("Invalid selection of output file type '%s'!\n",
-                       sel_output_type);
-                return;
-        }*/
 
         mon_number = get_mon_arrays(&mon_grps, &mon_data);
         display_num = mon_number;
@@ -2268,32 +2258,10 @@ void monitor_loop_quxm(void)
         if (signal(SIGHUP, monitoring_ctrlc) == SIG_ERR)
                 printf("Failed to catch SIGHUP!\n");
 
-/*        if (istty) {
-                struct winsize w;
-                unsigned max_lines = 0;
-
-                if (ioctl(fileno(fp_monitor), TIOCGWINSZ, &w) != -1) {
-                        max_lines = w.ws_row;
-                        if (max_lines < TERM_MIN_NUM_LINES)
-                                max_lines = TERM_MIN_NUM_LINES;
-
-                }
-                if ((display_num + TERM_MIN_NUM_LINES - 1) > max_lines)
-                        display_num = max_lines - TERM_MIN_NUM_LINES + 1;
-        }*/
-
         /**
          * Coefficient to display the data as MB / s
          */
         const double coeff = 10.0 / (double)sel_mon_interval;
-
-        /**
-         * Build the header
-         */
-//        build_header_row(header, sz_header, isxml, istext, iscsv);
-/*
-        if (iscsv)
-                fprintf(fp_monitor, "%s\n", header);*/
 
         gettimeofday(&tv_start, NULL);
         tv_s = tv_start;
@@ -2332,13 +2300,6 @@ void monitor_loop_quxm(void)
                 else
                         strncpy(cb_time, "error", sizeof(cb_time) - 1);
 
-/*                if (istty && istext)
-                        fprintf(fp_monitor,
-                                "\033[2J"      *//* Clear screen *//*
-                                        "\033[0;0H");  *//* move to position 0:0 *//*
-
-                if (istext)
-                        fprintf(fp_monitor, "TIME %s\n%s", cb_time, header);*/
 
                 for (i = 0; i < display_num; i++) {
 //                        const struct pqos_event_values *pv =
@@ -2470,20 +2431,9 @@ void monitor_loop_quxm(void)
                             fprintf(fp_output_csv,"%lf,%lf,%.4lf,%ld,%.1lf,%d,%d,%.2lf,%u\n",ips_pid,ips,pv->cpu_usage,pv->mem_vmrss,
                                     llc,mba_percent,pv->thread_count,mbl+mbr,(unsigned)pv->llc_misses_delta/1000);
                         }
-/*                        if (istext)
-                                print_text_row(fp_monitor, mon_data[i],
-                                               llc, mbr, mbl);
-                        if (isxml)
-                                print_xml_row(fp_monitor, cb_time, mon_data[i],
-                                              llc, mbr, mbl);
-                        if (iscsv)
-                                print_csv_row(fp_monitor, cb_time, mon_data[i],
-                                              llc, mbr, mbl);*/
-                }
-/*                if (!istty && istext)
-                        fputs("\n", fp_monitor);
 
-                fflush(fp_monitor);*/
+                }
+
 
                 gettimeofday(&tv_e, NULL);
 
@@ -2528,11 +2478,7 @@ void monitor_loop_quxm(void)
                                 break;
                 }
         }
-/*        if (isxml)
-                fprintf(fp_monitor, "%s\n", xml_root_close);
 
-        if (istty)
-                fputs("\n\n", fp_monitor);*/
 
         free(mon_grps);
         free(mon_data);

@@ -771,6 +771,33 @@ pqos/profiles.c.s:
 	$(MAKE) -f CMakeFiles/intel_cmt_cat_master.dir/build.make CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.s
 .PHONY : pqos/profiles.c.s
 
+pqos/pyapi.o: pqos/pyapi.c.o
+
+.PHONY : pqos/pyapi.o
+
+# target to build an object file
+pqos/pyapi.c.o:
+	$(MAKE) -f CMakeFiles/intel_cmt_cat_master.dir/build.make CMakeFiles/intel_cmt_cat_master.dir/pqos/pyapi.c.o
+.PHONY : pqos/pyapi.c.o
+
+pqos/pyapi.i: pqos/pyapi.c.i
+
+.PHONY : pqos/pyapi.i
+
+# target to preprocess a source file
+pqos/pyapi.c.i:
+	$(MAKE) -f CMakeFiles/intel_cmt_cat_master.dir/build.make CMakeFiles/intel_cmt_cat_master.dir/pqos/pyapi.c.i
+.PHONY : pqos/pyapi.c.i
+
+pqos/pyapi.s: pqos/pyapi.c.s
+
+.PHONY : pqos/pyapi.s
+
+# target to generate assembly for a file
+pqos/pyapi.c.s:
+	$(MAKE) -f CMakeFiles/intel_cmt_cat_master.dir/build.make CMakeFiles/intel_cmt_cat_master.dir/pqos/pyapi.c.s
+.PHONY : pqos/pyapi.c.s
+
 rdtset/common.o: rdtset/common.c.o
 
 .PHONY : rdtset/common.o
@@ -960,6 +987,9 @@ help:
 	@echo "... pqos/profiles.o"
 	@echo "... pqos/profiles.i"
 	@echo "... pqos/profiles.s"
+	@echo "... pqos/pyapi.o"
+	@echo "... pqos/pyapi.i"
+	@echo "... pqos/pyapi.s"
 	@echo "... rdtset/common.o"
 	@echo "... rdtset/common.i"
 	@echo "... rdtset/common.s"

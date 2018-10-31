@@ -4,7 +4,8 @@ project(intel_cmt_cat_master)
 set(CMAKE_CXX_STANDARD 11)
 include_directories(/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include;
         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers;
-        /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys)
+        /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys;
+        /Users/quximing/anaconda3/include)
 
 add_executable(intel_cmt_cat_master
         examples/c/CAT/allocation_app.c
@@ -89,4 +90,4 @@ add_executable(intel_cmt_cat_master
         rdtset/rdt.h
         rdtset/rdtset.8
         rdtset/rdtset.c
-        rdtset/README)
+        rdtset/README pqos/pyapi.c pqos/pyapi.h)

@@ -53,6 +53,8 @@
 #include "alloc.h"
 #include "cap.h"
 
+#include "pyapi.h"
+
 /**
  * Default CDP configuration option - don't enforce on or off
  */
@@ -112,6 +114,21 @@ const char *CG_CPU_PREFIX = "/sys/fs/cgroup/cpu/mysql_test/";
 const char *CG_MEM_PREFIX = "/sys/fs/cgroup/memory/mysql_test/";
 const char *CG_CGROUP_PROC_SUFFIX = "cgroup.procs";
 const char *CG_CPUSET_CPUS_SUFFIX = "cpuset.cpus";
+const char *CG_TASKS_SUFFIX = "tasks";
+const char *CG_YARN_ONLINE_CPUSET = "/sys/fs/cgroup/cpuset/hadoop-yarn/docker-online/";
+const char *CG_YARN_OFFLINE_CPUSET = "/sys/fs/cgroup/cpuset/hadoop-yarn/lxc-offline/";
+
+
+
+//当前节点的cpu core情况
+int ALL_CORES[32];
+const int CORE_NUMS = 32;
+int OFFLINE_LLC_WAYS = 1;
+int ONLINE_LLC_WAYS = 1;
+int OFFLINE_MBA_PERCENT = 10;
+int OFFLINE_MEM = -1;
+const int LLC_WAYS = 2047;
+
 /**
  * Selected library interface
  */
@@ -586,6 +603,13 @@ static void print_help(const int is_long)
                 printf(help_printf_long);
 }
 
+void init_cores(){
+    int i=0;
+    for(i=0;i<CORE_NUMS;i++){
+        ALL_CORES[i] = 0;
+    }
+}
+
 static struct option long_cmd_opts[] = {
         {"help",            no_argument,       0, 'h'},
         {"log-file",        required_argument, 0, 'l'},
@@ -612,13 +636,15 @@ static struct option long_cmd_opts[] = {
         {0, 0, 0, 0} /* end */
 };
 
+const struct pqos_cpuinfo *p_cpu = NULL;
+const struct pqos_cap *p_cap = NULL;
+const struct pqos_capability *cap_mon = NULL, *cap_l3ca = NULL,
+        *cap_l2ca = NULL, *cap_mba = NULL;
+
 int main(int argc, char **argv)
 {
     struct pqos_config cfg;
-    const struct pqos_cpuinfo *p_cpu = NULL;
-    const struct pqos_cap *p_cap = NULL;
-    const struct pqos_capability *cap_mon = NULL, *cap_l3ca = NULL,
-            *cap_l2ca = NULL, *cap_mba = NULL;
+
     unsigned sock_count, *sockets = NULL;
     int cmd, opt,ret, exit_val = EXIT_SUCCESS;
     int opt_index = 0, pid_flag = 0;
@@ -630,12 +656,80 @@ int main(int argc, char **argv)
 
     //-p参数传入在线任务的pid，将其写入各个cgroup组的cgroup.procs，quxm add 2018.6.23
     char *online_pid = (char*)malloc(20);
-    while ((opt = getopt(argc, argv, "p:")) != -1)
+    while ((opt = getopt(argc, argv, "p:i")) != -1)
     {
         //printf("opt = %c\n", opt);
         //printf("optarg = %s\n", optarg);
         //printf("optind = %d\n", optind);
         //printf("argv[optind - 1] = %s\n\n",  argv[optind - 1]);
+        selfn_verbose_mode(NULL);
+
+        cfg.verbose = sel_verbose_mode;
+        cfg.interface = sel_interface;
+        /**
+         * Set up file descriptor for message log
+         */
+        if (sel_log_file == NULL) {
+                cfg.fd_log = STDOUT_FILENO;
+        } else {
+                cfg.fd_log = open(sel_log_file, O_WRONLY|O_CREAT,
+                                  S_IRUSR|S_IWUSR);
+                if (cfg.fd_log == -1) {
+                        printf("Error opening %s log file!\n", sel_log_file);
+                        exit_val = EXIT_FAILURE;
+                        goto error_exit_1;
+                }
+        }
+
+        ret = pqos_init(&cfg);//输出cache信息
+        if (ret != PQOS_RETVAL_OK) {
+                printf("Error initializing PQoS library!\n");
+                exit_val = EXIT_FAILURE;
+                goto error_exit_1;
+        }
+        //初始化llc等隔离功能
+        ret = pqos_cap_get(&p_cap, &p_cpu);
+        if (ret != PQOS_RETVAL_OK) {
+                printf("Error retrieving PQoS capabilities!\n");
+                exit_val = EXIT_FAILURE;
+                goto error_exit_2;
+        }
+
+        sockets = pqos_cpu_get_sockets(p_cpu, &sock_count);
+        if (sockets == NULL) {
+                printf("Error retrieving CPU socket information!\n");
+                exit_val = EXIT_FAILURE;
+                goto error_exit_2;
+        }
+
+        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_MON, &cap_mon);
+        if (ret == PQOS_RETVAL_PARAM) {
+                printf("Error retrieving monitoring capabilities!\n");
+                exit_val = EXIT_FAILURE;
+                goto error_exit_2;
+        }
+
+        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_L3CA, &cap_l3ca);
+        if (ret == PQOS_RETVAL_PARAM) {
+                printf("Error retrieving L3 allocation capabilities!\n");
+                exit_val = EXIT_FAILURE;
+                goto error_exit_2;
+        }
+
+        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_L2CA, &cap_l2ca);
+        if (ret == PQOS_RETVAL_PARAM) {
+                printf("Error retrieving L2 allocation capabilities!\n");
+                exit_val = EXIT_FAILURE;
+                goto error_exit_2;
+        }
+
+        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_MBA, &cap_mba);
+        if (ret == PQOS_RETVAL_PARAM) {
+                printf("Error retrieving MB allocation capabilities!\n");
+                exit_val = EXIT_FAILURE;
+                goto error_exit_2;
+        }
+
         switch(opt)
         {
             case 'p':
@@ -671,6 +765,10 @@ int main(int argc, char **argv)
                 fclose(fp_mem_proc);
                 printf("%s\n","All cgroup.procs write complete!");
                 break;
+            case 'i':
+                //开启后台动态隔离进程
+                goto isolation_start;
+                break;
         }
     }
 
@@ -694,6 +792,8 @@ int main(int argc, char **argv)
         if(fp_cpuset_cpus == NULL)
         {
                 //error message
+            printf("ERROR:Can't find the file: cpuset.cpus!");
+            return -1;
         }
         fgets(core_group1,sizeof(core_group1),fp_cpuset_cpus);
 
@@ -708,24 +808,12 @@ int main(int argc, char **argv)
         sprintf(core_group_pqos_a,"%.*s%.*s",strlen(llc_flag),llc_flag,
             strlen(core_group1),core_group1);
 
-        printf("Quxm info:pqos -a = %s\n",core_group_pqos_a);
+        printf("Quxm info: Execute : pqos -a = %s\n",core_group_pqos_a);
 
 
-        //delete '\n' and add the ']',core_group1="0-31\n";
-//        if(core_group1[len-1] == '\n' || core_group1[len-1] == '\0') {
-//            core_group1[len - 1] = ']';
-//            core_group1[len] = '\0';
-//        }
-//        else
-//        {
-//            core_group1[len]=']';
-//            core_group1[len+1] = '\0';
-//        }
-
-        //llc_core_groups="all:[0-31]";
         sprintf(llc_core_groups,"%.*s%.*s%s",strlen(all_flag),all_flag,
             strlen(core_group1),core_group1,"]");
-        printf("Quxm info:pqos -m = %s\n",llc_core_groups);
+        printf("Quxm info:Execute : pqos -m = %s\n",llc_core_groups);
 
 
 
@@ -878,75 +966,75 @@ int main(int argc, char **argv)
                 goto error_exit_1;
         }*/
         //selfn_show_allocation(NULL);
-    //selfn_allocation_class(optarg);  eg. optarg="llc:1=0x7ff;"
-
-    selfn_verbose_mode(NULL);
-        cfg.verbose = sel_verbose_mode;
-        cfg.interface = sel_interface;
-        /**
-         * Set up file descriptor for message log
-         */
-        if (sel_log_file == NULL) {
-                cfg.fd_log = STDOUT_FILENO;
-        } else {
-                cfg.fd_log = open(sel_log_file, O_WRONLY|O_CREAT,
-                                  S_IRUSR|S_IWUSR);
-                if (cfg.fd_log == -1) {
-                        printf("Error opening %s log file!\n", sel_log_file);
-                        exit_val = EXIT_FAILURE;
-                        goto error_exit_1;
-                }
-        }
-
-        ret = pqos_init(&cfg);//输出cache信息
-        if (ret != PQOS_RETVAL_OK) {
-                printf("Error initializing PQoS library!\n");
-                exit_val = EXIT_FAILURE;
-                goto error_exit_1;
-        }
-        //初始化llc等隔离功能
-        ret = pqos_cap_get(&p_cap, &p_cpu);
-        if (ret != PQOS_RETVAL_OK) {
-                printf("Error retrieving PQoS capabilities!\n");
-                exit_val = EXIT_FAILURE;
-                goto error_exit_2;
-        }
-
-        sockets = pqos_cpu_get_sockets(p_cpu, &sock_count);
-        if (sockets == NULL) {
-                printf("Error retrieving CPU socket information!\n");
-                exit_val = EXIT_FAILURE;
-                goto error_exit_2;
-        }
-
-        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_MON, &cap_mon);
-        if (ret == PQOS_RETVAL_PARAM) {
-                printf("Error retrieving monitoring capabilities!\n");
-                exit_val = EXIT_FAILURE;
-                goto error_exit_2;
-        }
-
-        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_L3CA, &cap_l3ca);
-        if (ret == PQOS_RETVAL_PARAM) {
-                printf("Error retrieving L3 allocation capabilities!\n");
-                exit_val = EXIT_FAILURE;
-                goto error_exit_2;
-        }
-
-        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_L2CA, &cap_l2ca);
-        if (ret == PQOS_RETVAL_PARAM) {
-                printf("Error retrieving L2 allocation capabilities!\n");
-                exit_val = EXIT_FAILURE;
-                goto error_exit_2;
-        }
-
-        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_MBA, &cap_mba);
-        if (ret == PQOS_RETVAL_PARAM) {
-                printf("Error retrieving MB allocation capabilities!\n");
-                exit_val = EXIT_FAILURE;
-                goto error_exit_2;
-        }
-
+        //selfn_allocation_class(optarg);  eg. optarg="llc:1=0x7ff;"
+//++++++++++++++++++++++
+//        selfn_verbose_mode(NULL);
+//        cfg.verbose = sel_verbose_mode;
+//        cfg.interface = sel_interface;
+//        /**
+//         * Set up file descriptor for message log
+//         */
+//        if (sel_log_file == NULL) {
+//                cfg.fd_log = STDOUT_FILENO;
+//        } else {
+//                cfg.fd_log = open(sel_log_file, O_WRONLY|O_CREAT,
+//                                  S_IRUSR|S_IWUSR);
+//                if (cfg.fd_log == -1) {
+//                        printf("Error opening %s log file!\n", sel_log_file);
+//                        exit_val = EXIT_FAILURE;
+//                        goto error_exit_1;
+//                }
+//        }
+//
+//        ret = pqos_init(&cfg);//输出cache信息
+//        if (ret != PQOS_RETVAL_OK) {
+//                printf("Error initializing PQoS library!\n");
+//                exit_val = EXIT_FAILURE;
+//                goto error_exit_1;
+//        }
+//        //初始化llc等隔离功能
+//        ret = pqos_cap_get(&p_cap, &p_cpu);
+//        if (ret != PQOS_RETVAL_OK) {
+//                printf("Error retrieving PQoS capabilities!\n");
+//                exit_val = EXIT_FAILURE;
+//                goto error_exit_2;
+//        }
+//
+//        sockets = pqos_cpu_get_sockets(p_cpu, &sock_count);
+//        if (sockets == NULL) {
+//                printf("Error retrieving CPU socket information!\n");
+//                exit_val = EXIT_FAILURE;
+//                goto error_exit_2;
+//        }
+//
+//        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_MON, &cap_mon);
+//        if (ret == PQOS_RETVAL_PARAM) {
+//                printf("Error retrieving monitoring capabilities!\n");
+//                exit_val = EXIT_FAILURE;
+//                goto error_exit_2;
+//        }
+//
+//        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_L3CA, &cap_l3ca);
+//        if (ret == PQOS_RETVAL_PARAM) {
+//                printf("Error retrieving L3 allocation capabilities!\n");
+//                exit_val = EXIT_FAILURE;
+//                goto error_exit_2;
+//        }
+//
+//        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_L2CA, &cap_l2ca);
+//        if (ret == PQOS_RETVAL_PARAM) {
+//                printf("Error retrieving L2 allocation capabilities!\n");
+//                exit_val = EXIT_FAILURE;
+//                goto error_exit_2;
+//        }
+//
+//        ret = pqos_cap_get_type(p_cap, PQOS_CAP_TYPE_MBA, &cap_mba);
+//        if (ret == PQOS_RETVAL_PARAM) {
+//                printf("Error retrieving MB allocation capabilities!\n");
+//                exit_val = EXIT_FAILURE;
+//                goto error_exit_2;
+//        }
+//++++++++++++++++++++++++
         //quxm add: 直接执行pqos -a "llc:1=0-31" 2018.6.21
         //写到此处是因为必须要先检测功能，才能进行allocation，如果写前面会报错
         selfn_allocation_assoc(core_group_pqos_a);
@@ -1044,15 +1132,26 @@ int main(int argc, char **argv)
         //monitor_loop();
         monitor_loop_quxm();
         monitor_stop();
+        goto error_exit_1;
 
- allocation_exit:
- error_exit_2:
+    isolation_start:
+        init_cores();
+        get_online_cores(0,0);
+        printf("llcways=%d\n", OFFLINE_LLC_WAYS);
+        printf("mbapercents=%d\n", OFFLINE_MBA_PERCENT);
+        isolation_submit();
+        return 0;
+
+    allocation_exit:
+
+    error_exit_2:
         ret = pqos_fini();
         ASSERT(ret == PQOS_RETVAL_OK);
         if (ret != PQOS_RETVAL_OK)
                 printf("Error shutting down PQoS library!\n");
 
- error_exit_1:
+
+    error_exit_1:
         monitor_cleanup();
 
         /**
@@ -1074,6 +1173,122 @@ int main(int argc, char **argv)
                 free(sockets);
 
         return exit_val;
+}
+
+void isolation_submit(){
+    char *docker_cpus_dir = (char *)malloc(200);
+    sprintf(docker_cpus_dir,"%.*s%.*s",strlen(CG_YARN_ONLINE_CPUSET),CG_YARN_ONLINE_CPUSET,
+            strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
+
+    char *lxc_cpus_dir = (char *)malloc(200);
+    sprintf(lxc_cpus_dir,"%.*s%.*s",strlen(CG_YARN_OFFLINE_CPUSET),CG_YARN_OFFLINE_CPUSET,
+            strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
+
+    printf("%s\n%s\n",docker_cpus_dir,lxc_cpus_dir);
+
+    FILE *fp_docker_cpus,*fp_lxc_cpus;
+    fp_docker_cpus = fopen(docker_cpus_dir,"a");
+    fp_lxc_cpus = fopen(lxc_cpus_dir,"a");
+
+    char *online_cores = (char *)malloc(200);
+    char *offline_cores = (char *)malloc(200);
+    char *tmp_online_core = (char *)malloc(100);
+    char *tmp_offline_core = (char *)malloc(100);
+    strcpy(online_cores,"");
+    strcpy(offline_cores,"");
+
+
+    for(int i=0;i<CORE_NUMS;i++){
+        if(ALL_CORES[i] == 1){
+            sprintf(tmp_online_core,"%d,",i);
+            strcat(online_cores,tmp_online_core);
+        }
+        else{
+            sprintf(tmp_offline_core,"%d,",i);
+            strcat(offline_cores,tmp_offline_core);
+        }
+    }
+    printf("online cores : %s\n",online_cores);
+    printf("offline cores : %s\n",offline_cores);
+
+    fprintf(fp_docker_cpus,"%s",online_cores);
+    fprintf(fp_lxc_cpus,"%s",offline_cores);
+
+
+    fclose(fp_docker_cpus);
+    fclose(fp_lxc_cpus);
+
+
+    //LLC && MBA
+
+    char *llc_flag_cos1 = "llc:1=";
+    char *llc_flag_cos2 = "llc:2=";
+    char *mba_flag_cos1 = "mba:1=";
+    char *mba_flag_cos2 = "mba:2=";
+
+    char *allocation_1 = (char *)malloc(200);
+    char *allocation_2 = (char *)malloc(200);
+
+    char *pqos_e_llc2 = (char *)malloc(200);
+    char *pqos_e_mba2 = (char *)malloc(200);
+
+
+
+    sprintf(allocation_1,"%.*s%.*s",strlen(llc_flag_cos1),llc_flag_cos1,
+            strlen(online_cores),online_cores);
+
+    sprintf(allocation_2,"%.*s%.*s",strlen(llc_flag_cos2),llc_flag_cos2,
+            strlen(offline_cores),offline_cores);
+
+    //RESET
+    selfn_reset_alloc(NULL);
+
+
+    //submit allocation
+    selfn_allocation_assoc(allocation_1);
+    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
+        case 0: /* nothing to apply */
+            break;
+        case 1: /* new allocation config applied and all is good */
+            //goto allocation_exit;
+            printf("%s\n","Quxm info Online_llc_group : COS1(online) setting complete!");
+            break;
+    }
+
+    selfn_allocation_assoc(allocation_2);
+    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
+        case 0: /* nothing to apply */
+            break;
+        case 1: /* new allocation config applied and all is good */
+            //goto allocation_exit;
+            printf("%s\n","Quxm info Online_llc_group : COS2(offline) setting complete!");
+            break;
+    }
+
+
+    //change llc & mba
+    int current_offline_llc = LLC_WAYS;
+    for(int i=0;i<ONLINE_LLC_WAYS;i++){
+        current_offline_llc = current_offline_llc >> 1;
+    }
+
+    sprintf(pqos_e_llc2,"%.*s%d",strlen(llc_flag_cos2),llc_flag_cos2,current_offline_llc);
+    sprintf(pqos_e_mba2,"%.*s%d",strlen(mba_flag_cos2),mba_flag_cos2,OFFLINE_MBA_PERCENT);
+
+    printf("pqos -e %s\npqos -e %s\n",pqos_e_llc2,pqos_e_mba2);
+
+    //llc
+    selfn_allocation_class(pqos_e_llc2);
+    //memory bandwidth
+    selfn_allocation_class(pqos_e_mba2);
+    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
+        case 0: /* nothing to apply */
+            break;
+        case 1: /* new allocation config applied and all is good */
+            //goto allocation_exit;
+            printf("%s\n","Quxm info : COS2(offline) LLC & MBA setting complete!");
+            break;
+    }
 }
 /*
 int main(int argc, char **argv)

@@ -37,7 +37,7 @@
 
 LIBDIR ?= ../lib
 LDFLAGS = -L$(LIBDIR) -fPIE -z noexecstack -z relro -z now
-LDLIBS = -lpqos -lpthread
+LDLIBS = -lpqos -lpthread -lpython3.6m
 CFLAGS = -I$(LIBDIR) \
 	-W -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes \
 	-Wmissing-declarations -Wold-style-definition -Wpointer-arith \

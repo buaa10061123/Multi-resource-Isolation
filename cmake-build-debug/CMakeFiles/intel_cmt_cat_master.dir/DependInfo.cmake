@@ -28,6 +28,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/quximing/graduate project/pqos/main.c" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/pqos/main.c.o"
   "/Users/quximing/graduate project/pqos/monitor.c" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/pqos/monitor.c.o"
   "/Users/quximing/graduate project/pqos/profiles.c" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/pqos/profiles.c.o"
+  "/Users/quximing/graduate project/pqos/pyapi.c" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/pqos/pyapi.c.o"
   "/Users/quximing/graduate project/rdtset/common.c" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/rdtset/common.c.o"
   "/Users/quximing/graduate project/rdtset/cpu.c" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o"
   "/Users/quximing/graduate project/rdtset/rdt.c" "/Users/quximing/graduate project/cmake-build-debug/CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o"
@@ -40,6 +41,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"
   "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers"
   "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys"
+  "/Users/quximing/anaconda3/include"
   )
 
 # Targets to which this target links.

@@ -47,6 +47,7 @@
 					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers"/>
 					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys"/>
+					<Add directory="/Users/quximing/anaconda3/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
@@ -72,6 +73,7 @@
 					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers"/>
 					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys"/>
+					<Add directory="/Users/quximing/anaconda3/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
@@ -305,6 +307,12 @@
 			<Option target="intel_cmt_cat_master"/>
 		</Unit>
 		<Unit filename="/Users/quximing/graduate project/pqos/profiles.h">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/pqos/pyapi.c">
+			<Option target="intel_cmt_cat_master"/>
+		</Unit>
+		<Unit filename="/Users/quximing/graduate project/pqos/pyapi.h">
 			<Option target="intel_cmt_cat_master"/>
 		</Unit>
 		<Unit filename="/Users/quximing/graduate project/rdtset/Makefile">

@@ -27,6 +27,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/intel_cmt_cat_master.dir/rdtset/cpu.c.o"
   "CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdt.c.o"
   "CMakeFiles/intel_cmt_cat_master.dir/rdtset/rdtset.c.o"
+  "CMakeFiles/intel_cmt_cat_master.dir/pqos/pyapi.c.o"
   "intel_cmt_cat_master.pdb"
   "intel_cmt_cat_master"
 )
