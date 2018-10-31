@@ -1136,6 +1136,41 @@ int main(int argc, char **argv)
 
     isolation_start:
         init_cores();
+        int stop_loop = 0;
+        int last_tasks = 0;
+        int cur_task_count = 0;
+        char buf_task[32];
+        while(!stop_loop){
+            char *docker_tasks_dir = (char *)malloc(200);
+            sprintf(docker_tasks_dir,"%.*s%.*s",strlen(CG_YARN_ONLINE_CPUSET),CG_YARN_ONLINE_CPUSET,
+                    strlen(CG_TASKS_SUFFIX),CG_TASKS_SUFFIX);
+
+            printf("Docker container tasks dir: %s\n",docker_tasks_dir);
+            FILE *fp_docker_tasks;
+
+            cur_task_count = 0;
+            fp_docker_tasks = fopen(docker_tasks_dir,"r");
+            //获取tasks文件行数
+            if(!fp_docker_tasks){
+                printf("Error : FILE %s is null.\n",docker_tasks_dir);
+                return -1;
+            }
+            while(fgets(buf_task,sizeof(buf_task),fp_docker_tasks)){
+                cur_task_count++;
+            }
+            if(cur_task_count == 0){
+                printf("Warning : Docker Container doesn't exit!\n");
+            }
+            if(cur_task_count != last_tasks){
+                printf("Info : Tasks count changed.Pre is %d, Cur is %d.\n",last_tasks,cur_task_count);
+            }
+            last_tasks = cur_task_count;
+
+            free(docker_tasks_dir);
+            fclose(fp_docker_tasks);
+            //sleep 2s
+            usleep(2000000);
+        }
         get_online_cores(0,0);
         printf("llcways=%d\n", OFFLINE_LLC_WAYS);
         printf("mbapercents=%d\n", OFFLINE_MBA_PERCENT);
@@ -1176,6 +1211,9 @@ int main(int argc, char **argv)
 }
 
 void isolation_submit(){
+
+    //Online and Offline : change cores
+    //todo 所有子文件夹都要改才能生效
     char *docker_cpus_dir = (char *)malloc(200);
     sprintf(docker_cpus_dir,"%.*s%.*s",strlen(CG_YARN_ONLINE_CPUSET),CG_YARN_ONLINE_CPUSET,
             strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
