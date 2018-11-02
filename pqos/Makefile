@@ -62,8 +62,8 @@ CFLAGS += -g -O3
 endif
 
 # Build targets and dependencies
-APP = pqos
-MAN = pqos.8
+APP = Muses
+MAN = Muses.8
 
 # XXX: modify as desired
 PREFIX ?= /usr/local
