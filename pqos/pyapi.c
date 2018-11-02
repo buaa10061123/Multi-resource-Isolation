@@ -17,13 +17,16 @@ void get_online_cores(int ips,int tasks){
     extern int OFFLINE_MBA_PERCENT;
     extern const int LLC_WAYS;
 
-    Py_Initialize();
-    PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('./')");
+
+//    PyEval_ReleaseThread(PyThreadState_Get());
+//
+//    PyGILState_STATE state;
+//    state = PyGILState_Ensure();
 
     PyObject *pModule = NULL, *pDict = NULL, *pFunc = NULL, *pArg = NULL, *result = NULL;
 
     pModule = PyImport_ImportModule("get_best_quota");
+    PyErr_Print();
     pDict = PyModule_GetDict(pModule); //获取模块字典属性 //相当于Python模块对象的__dict__ 属性，得到模块名称空间下的字典对象
     pFunc = PyDict_GetItemString(pDict, "get_mysql_quota"); //从字典属性中获取函数
     pArg = Py_BuildValue("(i, i)", ips, tasks); //参数类型转换，传递两个整型参数
@@ -37,9 +40,15 @@ void get_online_cores(int ips,int tasks){
     printf("llc=%f\n", llc);
     printf("mba=%f\n", mba);
 
-    Py_Finalize();
 
-    int cores = (int)cpu +1;
+//    PyGILState_Release(state);
+
+    //Py_Finalize();
+
+    int cores = (int)cpu;
+    if(cpu > cores){
+        cores++;
+    }
     for(int i=0;i<cores;i++){
         ALL_CORES[2*i] = 1;
     }
@@ -48,9 +57,14 @@ void get_online_cores(int ips,int tasks){
 
 
     ONLINE_LLC_WAYS = (int)(llc/1024);
+    if(!((int)llc%1024 == 0)){
+        ONLINE_LLC_WAYS++;
+    }
     int all_ways = get_way_counts(LLC_WAYS);
     OFFLINE_LLC_WAYS = all_ways - ONLINE_LLC_WAYS;
-
+    if(OFFLINE_LLC_WAYS <= 0){
+        OFFLINE_LLC_WAYS = 1;
+    }
 
 }
 

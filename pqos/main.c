@@ -44,6 +44,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <getopt.h>                                     /**< getopt_long() */
+#include <errno.h>
 
 #include "../lib/pqos.h"
 
@@ -53,6 +54,8 @@
 #include "alloc.h"
 #include "cap.h"
 
+#include <signal.h>
+#include <python3.6m/Python.h>
 #include "pyapi.h"
 
 /**
@@ -128,6 +131,16 @@ int ONLINE_LLC_WAYS = 1;
 int OFFLINE_MBA_PERCENT = 10;
 int OFFLINE_MEM = -1;
 const int LLC_WAYS = 2047;
+
+//docker container中的服务线程数的偏移
+//mysql类型负载，线程数会多22，包括AM的线程等
+//这个值可能根据不同的在线任务而变化
+const int TASKS_OFFSET = -22;
+//中断监视循环
+volatile sig_atomic_t stop_loop = 0;
+static void my_handler(int sig){ // can be called asynchronously
+    stop_loop = 1; // set flag
+}
 
 /**
  * Selected library interface
@@ -604,8 +617,7 @@ static void print_help(const int is_long)
 }
 
 void init_cores(){
-    int i=0;
-    for(i=0;i<CORE_NUMS;i++){
+    for(int i=0;i<CORE_NUMS;i++){
         ALL_CORES[i] = 0;
     }
 }
@@ -768,7 +780,6 @@ int main(int argc, char **argv)
             case 'i':
                 //开启后台动态隔离进程
                 goto isolation_start;
-                break;
         }
     }
 
@@ -1135,46 +1146,135 @@ int main(int argc, char **argv)
         goto error_exit_1;
 
     isolation_start:
+
+        //检测Ctrl_C
+        signal(SIGINT, my_handler);
+        //初始化cores分配数组
         init_cores();
-        int stop_loop = 0;
+        int adjust_trigger = 0;
+        //初始化python环境
+        Py_Initialize();
+        if (!Py_IsInitialized()){
+            printf("Error : Python Init Failed.\n");
+            return -1;
+        }
+        PyRun_SimpleString("import sys");
+        PyRun_SimpleString("sys.path.append('./')");
+
+        //多维资源初始化
+        //给python预测脚本传入参数（0，0），即为初始化的参数值，默认得到90%IPS的资源值
+
+        //4维资源的划分在方法内已经执行完毕
+        get_online_cores(0,0);
+
+        printf("llcways=%d\n", OFFLINE_LLC_WAYS);
+        printf("mbapercents=%d\n", OFFLINE_MBA_PERCENT);
+
+        //提交初始化的配额，使其生效
+        isolation_submit();
+
+        //int stop_loop = 0;
         int last_tasks = 0;
         int cur_task_count = 0;
-        char buf_task[32];
+        //循环体外拼接shell command
+        char *shell_command_get_tasks = (char *)malloc(300);
+        char *get_tasks_shell_dir = "./getTaskCount.sh";
+        char shellbuff[100];
+
+        strcpy(shell_command_get_tasks,get_tasks_shell_dir);
+        strcat(shell_command_get_tasks," ");
+        strcat(shell_command_get_tasks,CG_YARN_ONLINE_CPUSET);
+        printf("Get Tasks Shell Command : %s\n",shell_command_get_tasks);
+
+
         while(!stop_loop){
-            char *docker_tasks_dir = (char *)malloc(200);
-            sprintf(docker_tasks_dir,"%.*s%.*s",strlen(CG_YARN_ONLINE_CPUSET),CG_YARN_ONLINE_CPUSET,
-                    strlen(CG_TASKS_SUFFIX),CG_TASKS_SUFFIX);
 
-            printf("Docker container tasks dir: %s\n",docker_tasks_dir);
-            FILE *fp_docker_tasks;
+            //原采用文件读取方式获取tasks行数，获取子目录文件较为麻烦，已弃用
+//            char *docker_tasks_dir = (char *)malloc(200);
+//            sprintf(docker_tasks_dir,"%.*s%.*s",strlen(CG_YARN_ONLINE_CPUSET),CG_YARN_ONLINE_CPUSET,
+//                    strlen(CG_TASKS_SUFFIX),CG_TASKS_SUFFIX);
+//
+//            printf("Docker container tasks dir: %s\n",docker_tasks_dir);
+//            FILE *fp_docker_tasks;
+//
+//            cur_task_count = 0;
+//            fp_docker_tasks = fopen(docker_tasks_dir,"r");
+//            //获取tasks文件行数
+//            if(!fp_docker_tasks){
+//                printf("Error : FILE %s is null.\n",docker_tasks_dir);
+//                return -1;
+//            }
+//            while(fgets(buf_task,sizeof(buf_task),fp_docker_tasks)){
+//                cur_task_count++;
+//            }
+//
+//            free(docker_tasks_dir);
+//            fclose(fp_docker_tasks);
 
-            cur_task_count = 0;
-            fp_docker_tasks = fopen(docker_tasks_dir,"r");
-            //获取tasks文件行数
-            if(!fp_docker_tasks){
-                printf("Error : FILE %s is null.\n",docker_tasks_dir);
-                return -1;
+            //shell脚本方式，获取所有在线任务的tasks数目
+
+            //1.执行shell获取tasks
+            FILE *fshellExecute_tasks=NULL;
+            memset(shellbuff,0,sizeof(shellbuff));
+            if(NULL==(fshellExecute_tasks=popen(shell_command_get_tasks,"r")))
+            {
+                fprintf(stderr,"Error : Execute Online command failed: %s",strerror(errno));
             }
-            while(fgets(buf_task,sizeof(buf_task),fp_docker_tasks)){
-                cur_task_count++;
+
+            if(NULL!=fgets(shellbuff, sizeof(shellbuff), fshellExecute_tasks)) {
+                //printf("%s",shellbuff);
+                cur_task_count = atoi(shellbuff);
             }
+            pclose(fshellExecute_tasks);
+
             if(cur_task_count == 0){
                 printf("Warning : Docker Container doesn't exit!\n");
             }
+
+            //2.判断tasks值是否波动，如果波动，则触发 动态配额调节
             if(cur_task_count != last_tasks){
-                printf("Info : Tasks count changed.Pre is %d, Cur is %d.\n",last_tasks,cur_task_count);
+                printf("Info : Tasks count changed. Pre is %d, Cur is %d.\n",last_tasks,cur_task_count);
+
+                //两轮tasks数量相差5以上时，再进行调节，5以内的线程波动，默认为可以不进行新的调节
+                //保证现有的task+offset的结果是大于10的，否则已开启的线程数太少，无需调节配额
+                //task波动过程中，不触发调节，只把trigger置1，当tasks稳定后，再进行调节
+                if(abs(cur_task_count - last_tasks) > 5 && (cur_task_count + TASKS_OFFSET) > 10){
+                    adjust_trigger = 1;
+                }
+
+            }
+            else{
+                if(adjust_trigger == 0){
+                    printf("Info : Tasks count remains unchanged. Cur is %d. Keep monitoring ......\n",cur_task_count);
+                }
+                else{
+                    //触发新一轮的动态调节
+                    printf("Info : The load is stable now. Cur is %d. \n",cur_task_count);
+                    printf("Info : Dynamic quota adjustment begins ......\n");
+
+                    //调用python预测得到新配额
+                    init_cores();
+
+                    get_online_cores(0,cur_task_count + TASKS_OFFSET);
+                    //执行调节操作
+                    //配额，使其生效
+                    isolation_submit();
+                    //置0
+                    adjust_trigger = 0;
+                    printf("Info : Dynamic quota adjustment success.\n");
+                }
             }
             last_tasks = cur_task_count;
-
-            free(docker_tasks_dir);
-            fclose(fp_docker_tasks);
+            if(stop_loop){
+                break;
+            }
             //sleep 2s
             usleep(2000000);
         }
-        get_online_cores(0,0);
-        printf("llcways=%d\n", OFFLINE_LLC_WAYS);
-        printf("mbapercents=%d\n", OFFLINE_MBA_PERCENT);
-        isolation_submit();
+
+        Py_Finalize();
+        printf("\nMuses Isolation is shutting down.\n");
+
         return 0;
 
     allocation_exit:
@@ -1213,20 +1313,28 @@ int main(int argc, char **argv)
 void isolation_submit(){
 
     //Online and Offline : change cores
-    //todo 所有子文件夹都要改才能生效
-    char *docker_cpus_dir = (char *)malloc(200);
-    sprintf(docker_cpus_dir,"%.*s%.*s",strlen(CG_YARN_ONLINE_CPUSET),CG_YARN_ONLINE_CPUSET,
-            strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
+    //所有子文件夹都要改才能生效
+    //调用update_cpus.sh
+    //文件访问的方式已经弃用，采用调用shell脚本对整个子目录的所有cpuset.cpus进行修改
+//    char *docker_cpus_dir = (char *)malloc(200);
+//    char *lxc_cpus_dir = (char *)malloc(200);
+    char *shell_command_online_cpus = (char *)malloc(300);
+    char *shell_command_offline_cpus = (char *)malloc(300);
+    char *update_cpu_shell_dir = "./update_cpus.sh";
 
-    char *lxc_cpus_dir = (char *)malloc(200);
-    sprintf(lxc_cpus_dir,"%.*s%.*s",strlen(CG_YARN_OFFLINE_CPUSET),CG_YARN_OFFLINE_CPUSET,
-            strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
 
-    printf("%s\n%s\n",docker_cpus_dir,lxc_cpus_dir);
+    //文件访问的方式已经弃用，采用调用shell脚本对整个子目录的所有cpuset.cpus进行修改
+//    sprintf(docker_cpus_dir,"%.*s%.*s",strlen(CG_YARN_ONLINE_CPUSET),CG_YARN_ONLINE_CPUSET,
+//            strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
+//
+//    sprintf(lxc_cpus_dir,"%.*s%.*s",strlen(CG_YARN_OFFLINE_CPUSET),CG_YARN_OFFLINE_CPUSET,
+//            strlen(CG_CPUSET_CPUS_SUFFIX),CG_CPUSET_CPUS_SUFFIX);
 
-    FILE *fp_docker_cpus,*fp_lxc_cpus;
-    fp_docker_cpus = fopen(docker_cpus_dir,"a");
-    fp_lxc_cpus = fopen(lxc_cpus_dir,"a");
+
+    //文件访问的方式已经弃用，采用调用shell脚本对整个子目录的所有cpuset.cpus进行修改
+//    FILE *fp_docker_cpus,*fp_lxc_cpus;
+//    fp_docker_cpus = fopen(docker_cpus_dir,"a");
+//    fp_lxc_cpus = fopen(lxc_cpus_dir,"a");
 
     char *online_cores = (char *)malloc(200);
     char *offline_cores = (char *)malloc(200);
@@ -1246,18 +1354,68 @@ void isolation_submit(){
             strcat(offline_cores,tmp_offline_core);
         }
     }
-    printf("online cores : %s\n",online_cores);
-    printf("offline cores : %s\n",offline_cores);
+//    printf("Info ：Online cores are %s\n",online_cores);
+//    printf("Info ：Offline cores are %s\n",offline_cores);
 
-    fprintf(fp_docker_cpus,"%s",online_cores);
-    fprintf(fp_lxc_cpus,"%s",offline_cores);
+    //拼接command
+    strcpy(shell_command_online_cpus,update_cpu_shell_dir);
+    strcat(shell_command_online_cpus," ");
+    strcat(shell_command_online_cpus,CG_YARN_ONLINE_CPUSET);
+    strcat(shell_command_online_cpus," ");
+    strcat(shell_command_online_cpus,online_cores);
+
+    strcpy(shell_command_offline_cpus,update_cpu_shell_dir);
+    strcat(shell_command_offline_cpus," ");
+    strcat(shell_command_offline_cpus,CG_YARN_OFFLINE_CPUSET);
+    strcat(shell_command_offline_cpus," ");
+    strcat(shell_command_offline_cpus,offline_cores);
+
+    printf("Online shell command : %s\nOffline shell command : %s\n",shell_command_online_cpus,shell_command_offline_cpus);
+
+    //shell execute
+    FILE *fshellExecute_online=NULL;
+    char buff[1024];
+    memset(buff,0,sizeof(buff));
+    if(NULL==(fshellExecute_online=popen(shell_command_online_cpus,"r")))
+    {
+        fprintf(stderr,"Error : Execute Online command failed: %s",strerror(errno));
+    }
+
+    while(NULL!=fgets(buff, sizeof(buff), fshellExecute_online)) {
+        printf("%s",buff);
+    }
+    pclose(fshellExecute_online);
+
+    FILE *fshellExecute_offline=NULL;
+    memset(buff,0,sizeof(buff));
+    if(NULL==(fshellExecute_offline=popen(shell_command_offline_cpus,"r")))
+    {
+        fprintf(stderr,"Error : Execute Offline command failed: %s",strerror(errno));
+    }
+
+    while(NULL!=fgets(buff, sizeof(buff), fshellExecute_offline)) {
+        printf("%s",buff);
+    }
+    pclose(fshellExecute_offline);
 
 
-    fclose(fp_docker_cpus);
-    fclose(fp_lxc_cpus);
+
+//    fprintf(fp_docker_cpus,"%s",online_cores);
+//    fprintf(fp_lxc_cpus,"%s",offline_cores);
+//
+//
+//    fclose(fp_docker_cpus);
+//    fclose(fp_lxc_cpus);
 
 
     //LLC && MBA
+
+    char *pqos_a_command1 = (char *)malloc(300);
+    char *pqos_a_command2 = (char *)malloc(300);
+    char *pqos_a_prefix = "./pqos -a \"";
+    char *pqos_e_prefix = "./pqos -e \"";
+    char *pqos_e_command_llc = (char *)malloc(200);
+    char *pqos_e_command_mba = (char *)malloc(200);
 
     char *llc_flag_cos1 = "llc:1=";
     char *llc_flag_cos2 = "llc:2=";
@@ -1279,29 +1437,73 @@ void isolation_submit(){
             strlen(offline_cores),offline_cores);
 
     //RESET
-    selfn_reset_alloc(NULL);
-
+//    selfn_reset_alloc(NULL);
+//    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
+//        case 0: /* nothing to apply */
+//            printf("%s\n","Quxm info : COS1(online) & COS2(offline) reset return 0!");
+//            break;
+//        case 1: /* new allocation config applied and all is good */
+//            //goto allocation_exit;
+//            printf("%s\n","Quxm info : COS1(online) & COS2(offline) reset complete!");
+//            break;
+//    }
 
     //submit allocation
-    selfn_allocation_assoc(allocation_1);
-    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
-        case 0: /* nothing to apply */
-            break;
-        case 1: /* new allocation config applied and all is good */
-            //goto allocation_exit;
-            printf("%s\n","Quxm info Online_llc_group : COS1(online) setting complete!");
-            break;
+    //传参调用方式弃用，换成命令行执行方法（传参在二次执行时会报错，原因暂时未知）
+
+//    selfn_allocation_assoc(allocation_1);
+//    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
+//        case 0: /* nothing to apply */
+//            break;
+//        case 1: /* new allocation config applied and all is good */
+//            //goto allocation_exit;
+//            printf("%s\n","Quxm info Online_llc_group : COS1(online) setting complete!");
+//            break;
+//    }
+    strcpy(pqos_a_command1,pqos_a_prefix);
+    strcat(pqos_a_command1,allocation_1);
+    strcat(pqos_a_command1,"\"");
+    printf("%s\n",pqos_a_command1);
+
+    FILE *fshellExecute_pqosa1=NULL;
+    char buffpqos[1024];
+    memset(buffpqos,0,sizeof(buffpqos));
+    if(NULL==(fshellExecute_pqosa1=popen(pqos_a_command1,"r")))
+    {
+        fprintf(stderr,"Error : Execute pqos -a command failed: %s",strerror(errno));
     }
 
-    selfn_allocation_assoc(allocation_2);
-    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
-        case 0: /* nothing to apply */
-            break;
-        case 1: /* new allocation config applied and all is good */
-            //goto allocation_exit;
-            printf("%s\n","Quxm info Online_llc_group : COS2(offline) setting complete!");
-            break;
+    while(NULL!=fgets(buffpqos, sizeof(buffpqos), fshellExecute_pqosa1)) {
+        printf("%s",buffpqos);
     }
+    pclose(fshellExecute_pqosa1);
+
+//    selfn_allocation_assoc(allocation_2);
+//    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
+//        case 0: /* nothing to apply */
+//            break;
+//        case 1: /* new allocation config applied and all is good */
+//            //goto allocation_exit;
+//            printf("%s\n","Quxm info Offline_llc_group : COS2(offline) setting complete!");
+//            break;
+//    }
+
+    strcpy(pqos_a_command2,pqos_a_prefix);
+    strcat(pqos_a_command2,allocation_2);
+    strcat(pqos_a_command2,"\"");
+    printf("%s\n",pqos_a_command2);
+
+    FILE *fshellExecute_pqosa2=NULL;
+    memset(buffpqos,0,sizeof(buffpqos));
+    if(NULL==(fshellExecute_pqosa2=popen(pqos_a_command2,"r")))
+    {
+        fprintf(stderr,"Error : Execute pqos -a command failed: %s",strerror(errno));
+    }
+
+    while(NULL!=fgets(buffpqos, sizeof(buffpqos), fshellExecute_pqosa2)) {
+        printf("%s",buffpqos);
+    }
+    pclose(fshellExecute_pqosa2);
 
 
     //change llc & mba
@@ -1313,20 +1515,47 @@ void isolation_submit(){
     sprintf(pqos_e_llc2,"%.*s%d",strlen(llc_flag_cos2),llc_flag_cos2,current_offline_llc);
     sprintf(pqos_e_mba2,"%.*s%d",strlen(mba_flag_cos2),mba_flag_cos2,OFFLINE_MBA_PERCENT);
 
-    printf("pqos -e %s\npqos -e %s\n",pqos_e_llc2,pqos_e_mba2);
+
+    strcpy(pqos_e_command_llc,pqos_e_prefix);
+    strcat(pqos_e_command_llc,pqos_e_llc2);
+    strcat(pqos_e_command_llc,"\"");
+
+    strcpy(pqos_e_command_mba,pqos_e_prefix);
+    strcat(pqos_e_command_mba,pqos_e_mba2);
+    strcat(pqos_e_command_mba,"\"");
+
+    printf("%s\n%s\n",pqos_e_command_llc,pqos_e_command_mba);
+
+    FILE *fshellExecute_pqose2llc=NULL;
+    memset(buffpqos,0,sizeof(buffpqos));
+    if(NULL==(fshellExecute_pqose2llc=popen(pqos_e_command_llc,"r")))
+    {
+        fprintf(stderr,"Error : Execute pqos -e command failed: %s",strerror(errno));
+    }
+
+    while(NULL!=fgets(buffpqos, sizeof(buffpqos), fshellExecute_pqose2llc)) {
+        printf("%s",buffpqos);
+    }
+    pclose(fshellExecute_pqose2llc);
+
+    FILE *fshellExecute_pqose2mba=NULL;
+    memset(buffpqos,0,sizeof(buffpqos));
+    if(NULL==(fshellExecute_pqose2mba=popen(pqos_e_command_mba,"r")))
+    {
+        fprintf(stderr,"Error : Execute pqos -e command failed: %s",strerror(errno));
+    }
+
+    while(NULL!=fgets(buffpqos, sizeof(buffpqos), fshellExecute_pqose2mba)) {
+        printf("%s",buffpqos);
+    }
+    pclose(fshellExecute_pqose2mba);
+
 
     //llc
-    selfn_allocation_class(pqos_e_llc2);
+//    selfn_allocation_class(pqos_e_llc2);
     //memory bandwidth
-    selfn_allocation_class(pqos_e_mba2);
-    switch (alloc_apply(cap_l3ca, cap_l2ca, cap_mba, p_cpu)) {
-        case 0: /* nothing to apply */
-            break;
-        case 1: /* new allocation config applied and all is good */
-            //goto allocation_exit;
-            printf("%s\n","Quxm info : COS2(offline) LLC & MBA setting complete!");
-            break;
-    }
+//    selfn_allocation_class(pqos_e_mba2);
+
 }
 /*
 int main(int argc, char **argv)

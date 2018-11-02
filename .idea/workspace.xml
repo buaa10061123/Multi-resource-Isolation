@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b244cc32-4be9-4af6-b21b-eb450475950c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/pqos/main.c" afterPath="$PROJECT_DIR$/pqos/main.c" />
+      <change beforePath="$PROJECT_DIR$/pqos/pyapi.c" afterPath="$PROJECT_DIR$/pqos/pyapi.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,15 +29,47 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pqos/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="1158" column="33" lean-forward="true" selection-start-line="1158" selection-start-column="33" selection-end-line="1158" selection-end-column="33" />
+            <state relative-caret-position="473">
+              <caret line="1261" column="24" lean-forward="false" selection-start-line="1261" selection-start-column="24" selection-end-line="1261" selection-end-column="24" />
               <folding>
                 <element signature="e#1697#1715#0" expanded="true" />
-                <element signature="e#4510#5019#0" expanded="false" />
-                <element signature="e#5021#7409#0" expanded="false" />
-                <element signature="e#7411#7659#0" expanded="false" />
-                <element signature="e#7661#8035#0" expanded="false" />
-                <element signature="e#11037#14732#0" expanded="false" />
+                <element signature="e#4833#5342#0" expanded="false" />
+                <element signature="e#5344#7732#0" expanded="false" />
+                <element signature="e#7734#7982#0" expanded="false" />
+                <element signature="e#7984#8358#0" expanded="false" />
+                <element signature="e#11360#15055#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alloc.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pqos/alloc.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="1063" column="0" lean-forward="false" selection-start-line="1063" selection-start-column="0" selection-end-line="1063" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pqos/main.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/api.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding>
+                <element signature="e#23575#23613#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,8 +78,8 @@
       <file leaf-file-name="pyapi.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pqos/pyapi.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+            <state relative-caret-position="383">
+              <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -76,20 +109,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitor.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="2403" column="41" lean-forward="false" selection-start-line="2403" selection-start-column="41" selection-end-line="2403" selection-end-column="41" />
-              <folding>
-                <element signature="e#1703#1721#0" expanded="true" />
-                <element signature="e#2426#2445#0" expanded="true" />
-                <element signature="e#66995#73515#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="monitor.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pqos/monitor.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,10 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>start_perf</find>
-      <find>stop_monitoring_loop</find>
-      <find>mon_grps</find>
-      <find>monitoring_ctrlc</find>
       <find>ipc</find>
       <find>allocation_exit</find>
       <find>fp1</find>
@@ -129,13 +144,17 @@
       <find>LDLIBS</find>
       <find>monitor</find>
       <find>get_online_cores</find>
-      <find>isolation</find>
       <find>CG_CPUSET_PREFIX</find>
       <find>CG_CPUSET_CPUS_SUFFIX</find>
       <find>isol</find>
       <find>CG_CPU_PREFIX</find>
       <find>cap_mba</find>
       <find>quxm</find>
+      <find>stop_monitoring_loop</find>
+      <find>docker_cpus_dir</find>
+      <find>pqos -e</find>
+      <find>isolation</find>
+      <find>signal</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -284,12 +303,12 @@
       <workItem from="1540343410761" duration="1161000" />
       <workItem from="1540345364257" duration="5103000" />
       <workItem from="1540372565325" duration="1343000" />
-      <workItem from="1540949812944" duration="19009000" />
+      <workItem from="1540949812944" duration="31487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101637000" />
+    <option name="totallyTimeSpent" value="114115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -327,50 +346,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pqos/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11160">
-          <caret line="620" column="0" lean-forward="false" selection-start-line="620" selection-start-column="0" selection-end-line="620" selection-end-column="0" />
-          <folding>
-            <element signature="e#1697#1715#0" expanded="true" />
-            <element signature="e#4510#5019#0" expanded="false" />
-            <element signature="e#5021#7409#0" expanded="false" />
-            <element signature="e#7411#7659#0" expanded="false" />
-            <element signature="e#7661#8035#0" expanded="false" />
-            <element signature="e#11037#14732#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41418">
-          <caret line="2301" column="29" lean-forward="false" selection-start-line="2301" selection-start-column="24" selection-end-line="2301" selection-end-column="29" />
-          <folding>
-            <element signature="e#1703#1721#0" expanded="true" />
-            <element signature="e#2426#2445#0" expanded="true" />
-            <element signature="e#66995#73515#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/api.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17460">
-          <caret line="970" column="28" lean-forward="false" selection-start-line="970" selection-start-column="28" selection-end-line="970" selection-end-column="28" />
-          <folding>
-            <element signature="e#23575#23613#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/perf.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/os_monitoring.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4824">
@@ -412,11 +387,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1697#1715#0" expanded="true" />
-            <element signature="e#4510#5019#0" expanded="false" />
-            <element signature="e#5021#7409#0" expanded="false" />
-            <element signature="e#7411#7659#0" expanded="false" />
-            <element signature="e#7661#8035#0" expanded="false" />
-            <element signature="e#11037#14732#0" expanded="false" />
+            <element signature="e#4833#5342#0" expanded="false" />
+            <element signature="e#5344#7732#0" expanded="false" />
+            <element signature="e#7734#7982#0" expanded="false" />
+            <element signature="e#7984#8358#0" expanded="false" />
+            <element signature="e#11360#15055#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -505,16 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/api.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17010">
-          <caret line="945" column="0" lean-forward="false" selection-start-line="945" selection-start-column="0" selection-end-line="945" selection-end-column="0" />
-          <folding>
-            <element signature="e#23575#23613#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/monitoring.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12942">
@@ -529,14 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pqos/main.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="71" column="8" lean-forward="false" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -593,14 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-993">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/include/python3.6m/pyport.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -651,28 +600,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pqos/pyapi.c">
+    <entry file="file://$PROJECT_DIR$/examples/c/CMT_MBM/monitor_app.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pqos/alloc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="773" column="25" lean-forward="false" selection-start-line="773" selection-start-column="14" selection-end-line="773" selection-end-column="25" />
+        <state relative-caret-position="-347">
+          <caret line="318" column="29" lean-forward="true" selection-start-line="318" selection-start-column="29" selection-end-line="318" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pqos/monitor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="2403" column="41" lean-forward="false" selection-start-line="2403" selection-start-column="41" selection-end-line="2403" selection-end-column="41" />
+        <state relative-caret-position="212">
+          <caret line="1542" column="22" lean-forward="false" selection-start-line="1542" selection-start-column="22" selection-end-line="1542" selection-end-column="22" />
           <folding>
             <element signature="e#1703#1721#0" expanded="true" />
             <element signature="e#2426#2445#0" expanded="true" />
@@ -681,17 +620,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-993">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pqos/pyapi.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/api.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="e#23575#23613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pqos/main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pqos/alloc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="1063" column="0" lean-forward="false" selection-start-line="1063" selection-start-column="0" selection-end-line="1063" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="389" column="10" lean-forward="false" selection-start-line="389" selection-start-column="10" selection-end-line="389" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/signal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pqos/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="1158" column="33" lean-forward="true" selection-start-line="1158" selection-start-column="33" selection-end-line="1158" selection-end-column="33" />
+        <state relative-caret-position="473">
+          <caret line="1261" column="24" lean-forward="false" selection-start-line="1261" selection-start-column="24" selection-end-line="1261" selection-end-column="24" />
           <folding>
             <element signature="e#1697#1715#0" expanded="true" />
-            <element signature="e#4510#5019#0" expanded="false" />
-            <element signature="e#5021#7409#0" expanded="false" />
-            <element signature="e#7411#7659#0" expanded="false" />
-            <element signature="e#7661#8035#0" expanded="false" />
-            <element signature="e#11037#14732#0" expanded="false" />
+            <element signature="e#4833#5342#0" expanded="false" />
+            <element signature="e#5344#7732#0" expanded="false" />
+            <element signature="e#7734#7982#0" expanded="false" />
+            <element signature="e#7984#8358#0" expanded="false" />
+            <element signature="e#11360#15055#0" expanded="false" />
           </folding>
         </state>
       </provider>
