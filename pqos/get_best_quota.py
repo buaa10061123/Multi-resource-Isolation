@@ -68,7 +68,7 @@ def get_quota_from_ipc():
                         cur_cost = minCostFunction(cpu,mem,llc,membw)
                         if cur_cost < min_cost:
                             min_cost = cur_cost
-                            #print(min_cost)
+                            print(min_cost)
                             best_quota = (float('%.2f' % cpu),mem,llc,membw)
     #print(count)
     #print(IPS,TASKS)
@@ -126,6 +126,10 @@ def init_mysql_const(ips,tasks):
 #100clients: max = 4150 tasks=127
 #25 clients: max = 3500 tasks=52
 def mysql_90_ips(tasks):
+    if tasks > 127:
+        tasks = 127
+    if tasks < 52:
+        tasks = 52
     k = (4150 - 3500)/(127 - 52)
     b = 3500 - 52 * k
     return (k * tasks + b) * 0.9
@@ -133,5 +137,5 @@ def mysql_90_ips(tasks):
 # best_quota = get_quota_from_ipc(2080)
 # print(best_quota)
 
-#get_mysql_quota(0,127)
+get_mysql_quota(0,54)
 #print(model.predict([[4,40000,11264,100]])[0])

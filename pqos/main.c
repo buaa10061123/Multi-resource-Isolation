@@ -133,9 +133,9 @@ int OFFLINE_MEM = -1;
 const int LLC_WAYS = 2047;
 
 //docker container中的服务线程数的偏移
-//mysql类型负载，线程数会多22，包括AM的线程等
+//mysql类型负载，线程数会多54，包括AM的线程等
 //这个值可能根据不同的在线任务而变化
-const int TASKS_OFFSET = -22;
+const int TASKS_OFFSET = -54;
 //中断监视循环
 volatile sig_atomic_t stop_loop = 0;
 static void my_handler(int sig){ // can be called asynchronously
@@ -1510,6 +1510,14 @@ void isolation_submit(){
     int current_offline_llc = LLC_WAYS;
     for(int i=0;i<ONLINE_LLC_WAYS;i++){
         current_offline_llc = current_offline_llc >> 1;
+    }
+
+    //llc最小是1，内存带宽最小为10%
+    if(current_offline_llc < 1){
+        current_offline_llc = 1;
+    }
+    if(OFFLINE_MBA_PERCENT < 10){
+        OFFLINE_MBA_PERCENT = 10;
     }
 
     sprintf(pqos_e_llc2,"%.*s%d",strlen(llc_flag_cos2),llc_flag_cos2,current_offline_llc);
